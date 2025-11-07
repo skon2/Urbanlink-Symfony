@@ -1,0 +1,242 @@
+{# templates/back_office/course/index.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block title %}Ride Management{% endblock %}
+{% block page_title %}Rides{% endblock %}
+
+{% block stylesheets %}
+  {{ parent() }}
+  {# DataTables CSS via CDN #}
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css">
+  <style>
+    /* 3D Card effect */
+    .card-3d {
+      background: #fff;
+      border-radius: 0.75rem;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transform-style: preserve-3d;
+    }
+    .card-3d:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+    }
+    /* Header with gradient and white title */
+    .header-3d {
+      padding: 1rem 1.5rem;
+      background: linear-gradient(135deg, #2D3748, #4A5568);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .header-3d h6 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin: 0;
+      color: #fff;
+    }
+    /* Add Ride button, white text and border style */
+    .btn-add {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      background: transparent;
+      border: 2px solid #fff;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      font-size: 0.75rem;
+      color: #fff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+    }
+    .btn-add:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+    }
+    /* Table container */
+    .table-3d {
+      padding: 1rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.75rem; /* Smaller text to optimize space */
+      min-width: 1200px;  /* Minimum width to avoid overlap */
+    }
+    thead {
+      background-color: #edf2f7;
+    }
+    th, td {
+      padding: 0.5rem 0.75rem;
+      text-align: left;
+    }
+    th {
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #4a5568;
+    }
+    td {
+      color: #718096;
+    }
+    tbody tr:hover {
+      background-color: #f7fafc;
+    }
+    /* Action buttons with 3D effect and same size */
+    .btn-action {
+      display: inline-block;
+      padding: 0.35rem 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      border: none;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      font-size: 0.65rem;
+      color: #fff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+      width: 100%;
+    }
+    .btn-edit {
+      background: #00007d;
+    }
+    .btn-delete {
+      background: #b91c1c;
+    }
+    .btn-action:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+    }
+    /* Vertical container for action buttons */
+    .actions-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      max-width: 100px;
+      margin: 0 auto;
+    }
+    /* Container responsiveness for horizontal scrolling */
+    .responsive-table {
+      overflow-x: auto;
+    }
+    /* Fixing the Actions column to remain visible */
+    th.actions, td.actions {
+      position: sticky;
+      right: 0;
+      background: #fff;
+      z-index: 2;
+      box-shadow: -2px 0 4px rgba(0,0,0,0.1);
+    }
+  </style>
+{% endblock %}
+
+{% block body %}
+<div class="container mx-auto p-6">
+  <div class="card-3d">
+    <div class="header-3d">
+      <h6>Rides List</h6>
+      <a href="{{ path('course_new') }}">
+        <button type="button" class="btn-add">
+          + Add Ride
+        </button>
+      </a>
+    </div>
+    <div class="table-3d responsive-table">
+      <table id="datatable-courses">
+        <thead>
+          <tr>
+            <th>Taxi Driver Name</th>
+            <th>Taxi Brand</th>
+            <th>Taxi Model</th>
+            <th>License Plate</th>
+            <th>Client</th>
+            <th>Driver</th>
+            <th>Client Name</th>
+            <th>Date</th>
+            <th>Departure</th>
+            <th>Arrival</th>
+            <th>Distance</th>
+            <th>Amount</th>
+            <th>Status</th>
+            <th class="actions">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for course in courses %}
+            <tr>
+              <td>{{ course.taxi ? course.taxi.user.name : '—' }}</td>
+              <td>{{ course.taxi ? course.taxi.marque : '—' }}</td>
+              <td>{{ course.taxi ? course.taxi.modele : '—' }}</td>
+              <td>{{ course.taxi ? course.taxi.immatriculation : '—' }}</td>
+              <td>{{ course.user ? course.user.name : '—' }}</td>
+              <td>{{ course.taxi ? course.taxi.user.name : '—' }}</td>
+              <td>{{ course.user ? course.user.name : '—' }}</td>
+              <td>{{ course.dateCourse ? course.dateCourse|date('d/m/Y H:i') : '—' }}</td>
+              {# Modification on Departure and Arrival columns #}
+              <td>{{ presentation[course.id].depart }}</td>
+              <td>{{ presentation[course.id].arrivee }}</td>
+              <td>{{ course.distanceKm }} km</td>
+              <td>{{ course.montant }} DT</td>
+              <td>
+                {% if course.statut == 'Acceptée' %}
+                  <span class="text-green-600 font-semibold">Accepted</span>
+                {% elseif course.statut == 'Refusée' %}
+                  <span class="text-red-500 font-semibold">Rejected</span>
+                {% else %}
+                  <span class="text-yellow-500 font-semibold">Pending</span>
+                {% endif %}
+              </td>
+              <td class="actions">
+                <div class="actions-container">
+                  <a href="{{ path('course_edit', {'id': course.id}) }}">
+                    <button type="button" class="btn-action btn-edit">Edit</button>
+                  </a>
+                  <form method="post" action="{{ path('course_delete', {'id': course.id}) }}" onsubmit="return confirm('Confirm deletion?');">
+                    <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ course.id) }}">
+                    <button type="submit" class="btn-action btn-delete">Delete</button>
+                  </form>
+                </div>
+              </td>
+            </tr>
+          {% else %}
+            <tr>
+              <td colspan="14" class="text-center text-slate-400">No rides found.</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block javascripts %}
+  {{ parent() }}
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      // DataTables initialization
+      $('#datatable-courses').DataTable({
+        language: {
+          search: "Search:",
+          lengthMenu: "Show _MENU_ entries",
+          info: "Showing _START_ to _END_ of _TOTAL_ entries",
+          paginate: {
+            previous: "Previous",
+            next: "Next"
+          },
+          zeroRecords: "No matching records found"
+        },
+        responsive: true,
+        autoWidth: false
+      });
+
+      // Nominatim reverse geocoding function
+      
+      
+  </script>
+{% endblock %}

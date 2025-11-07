@@ -1,0 +1,117 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Driver Statistics{% endblock %}
+
+{% block body %}
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 p-6">
+    <!-- Bar chart: number of rides -->
+    <div class="bg-white p-4 rounded shadow w-full">
+      <h6 class="font-semibold mb-2">Top 5 Drivers (Number of Rides)</h6>
+      <div class="h-64">
+        <canvas id="chart-count" class="w-full h-full"></canvas>
+      </div>
+    </div>
+
+    <!-- Bar chart: total revenue -->
+    <div class="bg-white p-4 rounded shadow w-full">
+      <h6 class="font-semibold mb-2">Top 5 Drivers (Total Revenue)</h6>
+      <div class="h-64">
+        <canvas id="chart-revenue" class="w-full h-full"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 p-6">
+    <!-- Underperformers -->
+    <div class="bg-white p-4 rounded shadow w-full">
+      <h6 class="font-semibold mb-2">Underperforming Taxis (&lt; 3 rides/week)</h6>
+      <ul class="list-disc pl-5">
+        {% for t in underperformers %}
+          <li>{{ t.name }} — {{ t.count }} rides last week</li>
+        {% else %}
+          <li>No underperforming taxis.</li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <!-- Donut chart: acceptance rate -->
+    <div class="bg-white p-4 rounded shadow w-full">
+      <h6 class="font-semibold mb-2">Ride Acceptance Rate</h6>
+      <div class="h-64">
+        <canvas id="chart-donut" class="w-full h-full"></canvas>
+      </div>
+      <p class="mt-2 text-sm">
+        Accepted: <strong>{{ accepted }}</strong> /
+        Rejected: <strong>{{ refused }}</strong>
+      </p>
+    </div>
+  </div>
+{% endblock %}
+
+{% block javascripts %}
+  {{ parent() }}
+  <script src="{{ asset('assets/js/plugins/chartjs.min.js') }}"></script>
+  <script>
+    const topCountLabels = {{ topCount|map(t => t.name)|json_encode|raw }};
+    const topCountData   = {{ topCount|map(t => t.count)|json_encode|raw }};
+    const topRevLabels   = {{ topRevenue|map(t => t.name)|json_encode|raw }};
+    const topRevData     = {{ topRevenue|map(t => t.revenue)|json_encode|raw }};
+    const acceptData     = {{ [accepted, refused]|json_encode|raw }};
+
+    new Chart(document.getElementById('chart-count'), {
+      type: 'bar',
+      data: {
+        labels: topCountLabels,
+        datasets: [{
+          label: 'Number of rides',
+          data: topCountData,
+          backgroundColor: 'rgba(54, 162, 235, 0.6)',
+          borderColor:     'rgba(54, 162, 235, 1)',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: { y: { beginAtZero: true } }
+      }
+    });
+
+    new Chart(document.getElementById('chart-revenue'), {
+      type: 'bar',
+      data: {
+        labels: topRevLabels,
+        datasets: [{
+          label: 'Total revenue (TND)',
+          data: topRevData,
+          backgroundColor: 'rgba(75, 192, 192, 0.6)',
+          borderColor:     'rgba(75, 192, 192, 1)',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: { y: { beginAtZero: true } }
+      }
+    });
+
+    new Chart(document.getElementById('chart-donut'), {
+      type: 'doughnut',
+      data: {
+        labels: ['Accepted', 'Rejected'],
+        datasets: [{
+          data: acceptData,
+          backgroundColor: ['rgba(40, 167, 69, 0.6)', 'rgba(220, 53, 69, 0.6)'],
+          borderColor:     ['rgba(40, 167, 69, 1)',   'rgba(220, 53, 69, 1)'],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        cutout: '70%'
+      }
+    });
+  </script>
+{% endblock %}

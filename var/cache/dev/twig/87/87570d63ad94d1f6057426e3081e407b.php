@@ -1,0 +1,2372 @@
+<?php
+
+use Twig\Environment;
+use Twig\Error\LoaderError;
+use Twig\Error\RuntimeError;
+use Twig\Extension\CoreExtension;
+use Twig\Extension\SandboxExtension;
+use Twig\Markup;
+use Twig\Sandbox\SecurityError;
+use Twig\Sandbox\SecurityNotAllowedTagError;
+use Twig\Sandbox\SecurityNotAllowedFilterError;
+use Twig\Sandbox\SecurityNotAllowedFunctionError;
+use Twig\Source;
+use Twig\Template;
+use Twig\TemplateWrapper;
+
+/* auth/registration/register.html.twig */
+class __TwigTemplate_cea1d3a5b859a77583e9030588a7ff52 extends Template
+{
+    private Source $source;
+    /**
+     * @var array<string, Template>
+     */
+    private array $macros = [];
+
+    public function __construct(Environment $env)
+    {
+        parent::__construct($env);
+
+        $this->source = $this->getSourceContext();
+
+        $this->blocks = [
+            'title' => [$this, 'block_title'],
+            'stylesheets' => [$this, 'block_stylesheets'],
+            'javascripts' => [$this, 'block_javascripts'],
+            'body' => [$this, 'block_body'],
+        ];
+    }
+
+    protected function doGetParent(array $context): bool|string|Template|TemplateWrapper
+    {
+        // line 1
+        return "base.html.twig";
+    }
+
+    protected function doDisplay(array $context, array $blocks = []): iterable
+    {
+        $macros = $this->macros;
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "auth/registration/register.html.twig"));
+
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "auth/registration/register.html.twig"));
+
+        $this->parent = $this->load("base.html.twig", 1);
+        yield from $this->parent->unwrap()->yield($context, array_merge($this->blocks, $blocks));
+        
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
+
+        
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
+
+    }
+
+    // line 3
+    /**
+     * @return iterable<null|scalar|\Stringable>
+     */
+    public function block_title(array $context, array $blocks = []): iterable
+    {
+        $macros = $this->macros;
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
+
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
+
+        yield "Register - UrbanLink";
+        
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
+
+        
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
+
+        yield from [];
+    }
+
+    // line 5
+    /**
+     * @return iterable<null|scalar|\Stringable>
+     */
+    public function block_stylesheets(array $context, array $blocks = []): iterable
+    {
+        $macros = $this->macros;
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheets"));
+
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheets"));
+
+        // line 6
+        yield "    ";
+        yield from $this->yieldParentBlock("stylesheets", $context, $blocks);
+        yield "
+    <style>
+        :root {
+            --primary: #3b82f6;
+            --primary-light: #93c5fd;
+            --primary-dark: #1d4ed8;
+            --secondary: #10b981;
+            --secondary-light: #6ee7b7;
+            --accent: #f59e0b;
+            --accent-light: #fcd34d;
+            --dark: #1e293b;
+            --dark-light: #334155;
+            --light: #f8fafc;
+            --light-dark: #e2e8f0;
+            --danger: #ef4444;
+            --danger-light: #fca5a5;
+            --success: #22c55e;
+            --success-light: #86efac;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            --shadow-xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            --shadow-primary: 0 4px 14px 0 rgba(59, 130, 246, 0.3);
+            --shadow-primary-hover: 0 6px 20px 0 rgba(59, 130, 246, 0.4);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif;
+        }
+
+        body {
+            background: transparent; /* Changed from gradient to transparent */
+            color: var(--dark);
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        /* Enhanced Navbar with glass morphism */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            box-shadow: var(--shadow-sm);
+            padding: 1rem 2rem;
+            z-index: 100;
+            border-radius: 0 0 16px 16px;
+            transition: var(--transition);
+        }
+
+        .navbar.scrolled {
+            box-shadow: var(--shadow);
+            padding: 0.75rem 2rem;
+        }
+
+        .navbar-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: var(--dark);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .logo:hover {
+            color: var(--primary);
+        }
+
+        .logo img {
+            height: 2rem;
+            margin-right: 0.75rem;
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover img {
+            transform: rotate(-5deg) scale(1.05);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 1rem;
+        }
+
+        .nav-link {
+            display: flex;
+            align-items: center;
+            color: var(--dark);
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 500;
+            transition: var(--transition);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .nav-link:hover {
+            color: var(--primary);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: var(--transition);
+            transform: translateX(-50%);
+        }
+
+        .nav-link:hover::after {
+            width: 60%;
+        }
+
+        .nav-link i {
+            margin-right: 0.5rem;
+            opacity: 0.75;
+        }
+
+        main {
+            padding-top: 6rem;
+            min-height: calc(100vh - 6rem);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Enhanced Register Container */
+        .register-container {
+            display: flex;
+            width: 96%;
+            max-width: 1200px;
+            margin: 2rem auto;
+            box-shadow: var(--shadow-xl);
+            border-radius: 24px;
+            overflow: hidden;
+            background: white;
+            position: relative;
+            transform: translateY(0);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .register-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Enhanced Image Section */
+        .register-image {
+            flex: 1;
+            background-image: url('https://images.squarespace-cdn.com/content/v1/5b6b4226f8370aa16b12275b/1602416984799-XZSZGB7K3AJKG8VT5F3Z/positano-creativeroamers-wlochy-italia-italy-travelcouple-roadtrip.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 600px;
+            overflow: hidden;
+            border-radius: 24px 0 0 24px; /* Add rounded corners to left side */
+        }
+
+        /* Add this to ensure rounded corners work with overflow hidden */
+        .register-container {
+            overflow: hidden;
+        }
+
+        .register-image::before {
+            content: \"\";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.85) 0%, rgba(16, 185, 129, 0.75) 100%);
+            z-index: 1;
+        }
+
+        .register-image-content {
+            position: relative;
+            z-index: 2;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            width: 90%;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .register-image-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .register-image-content p {
+            font-size: 1.125rem;
+            line-height: 1.7;
+            max-width: 80%;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+        }
+
+        /* Form Container */
+        .register-form-container {
+            flex: 1;
+            padding: 3rem;
+            z-index: 2;
+            overflow-y: auto;
+            max-height: 90vh;
+        }
+
+        .form-header {
+            margin-bottom: 2rem;
+            animation: fadeIn 0.6s ease;
+        }
+
+        .form-header h1 {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            display: inline-block;
+        }
+
+        .form-header p {
+            color: #64748b;
+            font-size: 0.95rem;
+        }
+
+        /* Form Sections */
+        .form-section {
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #f1f5f9;
+            animation: fadeIn 0.6s ease forwards;
+            opacity: 0;
+            animation-delay: 0.2s;
+        }
+
+        .form-section:nth-child(2) {
+            animation-delay: 0.3s;
+        }
+
+        .form-section:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        .form-section-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .form-section-title::before {
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--primary);
+            margin-right: 0.75rem;
+        }
+
+        /* Form Groups */
+        .form-group {
+            margin-bottom: 1.25rem;
+            position: relative;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 1.25rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .form-row .form-group {
+            flex: 1;
+            margin-bottom: 0;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+        }
+
+        /* Enhanced Form Controls */
+        .form-control {
+            width: 100%;
+            padding: 0.85rem 1.25rem;
+            font-size: 0.95rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            transition: var(--transition);
+            background-color: #f8fafc;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.15);
+            background-color: white;
+        }
+
+        .form-control::placeholder {
+            color: #94a3b8;
+            opacity: 1;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 1.25rem;
+        }
+
+        .form-text {
+            display: block;
+            margin-top: 0.5rem;
+            font-size: 0.75rem;
+            color: #64748b;
+        }
+
+        .form-error {
+            color: var(--danger);
+            font-size: 0.75rem;
+            margin-top: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .form-error i {
+            margin-right: 0.25rem;
+            font-size: 0.9em;
+        }
+
+        /* Checkbox Styles */
+        .form-check {
+            display: flex;
+            align-items: flex-start;
+            padding-left: 1.75rem;
+            position: relative;
+            margin-top: 0.5rem;
+        }
+
+        .form-check-input {
+            position: absolute;
+            margin-top: 0.25rem;
+            margin-left: -1.75rem;
+            width: 1.1rem;
+            height: 1.1rem;
+            appearance: none;
+            border: 2px solid #cbd5e1;
+            border-radius: 4px;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .form-check-input:checked {
+            background-color: var(--primary);
+            border-color: var(--primary);
+            background-image: url(\"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='white' d='M5.707 7.293a1 1 0 0 0-1.414 1.414l2 2a1 1 0 0 0 1.414 0l4-4a1 1 0 0 0-1.414-1.414L7 8.586 5.707 7.293z'/%3e%3c/svg%3e\");
+            background-size: 70%;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .form-check-input:focus {
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+        }
+
+        .form-check-label {
+            font-size: 0.875rem;
+            color: var(--dark);
+            cursor: pointer;
+            line-height: 1.5;
+        }
+
+        .form-check-label a {
+            color: var(--primary);
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .form-check-label a:hover {
+            text-decoration: underline;
+            color: var(--primary-dark);
+        }
+
+        /* Button Styles */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 2rem;
+            font-weight: 600;
+            border-radius: 12px;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            box-shadow: var(--shadow-primary);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-primary-hover);
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: 0.5s;
+        }
+
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+
+        .btn-block {
+            width: 100%;
+        }
+
+        /* File Upload Styles */
+        .file-upload {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .file-upload-label {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 120px;
+            border: 2px dashed #cbd5e1;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: var(--transition);
+            background-color: #f8fafc;
+        }
+
+        .file-upload-label:hover {
+            border-color: var(--primary-light);
+            background-color: rgba(59, 130, 246, 0.05);
+            transform: translateY(-2px);
+        }
+
+        .file-upload-label.dragover {
+            border-color: var(--primary);
+            background-color: rgba(59, 130, 246, 0.1);
+            box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+        }
+
+        .file-upload-icon {
+            font-size: 1.75rem;
+            color: #94a3b8;
+            margin-bottom: 0.75rem;
+            transition: var(--transition);
+        }
+
+        .file-upload-label:hover .file-upload-icon {
+            color: var(--primary);
+            transform: scale(1.1);
+        }
+
+        .file-upload-text {
+            font-size: 0.875rem;
+            color: #64748b;
+            transition: var(--transition);
+        }
+
+        .file-upload-label:hover .file-upload-text {
+            color: var(--primary);
+        }
+
+        .file-upload-input {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        /* Form Footer */
+        .form-footer {
+            margin-top: 2rem;
+            text-align: center;
+            font-size: 0.875rem;
+            color: #64748b;
+            animation: fadeIn 0.6s ease forwards;
+            opacity: 0;
+            animation-delay: 0.5s;
+        }
+
+        .form-footer-link {
+            color: var(--primary);
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .form-footer-link:hover {
+            text-decoration: underline;
+            color: var(--primary-dark);
+        }
+
+        /* Background Animation */
+        .moving-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -3; /* Make sure this is lower than overlay */
+            overflow: hidden;
+        }
+
+        .moving-background::before {
+            content: \"\";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background-image:
+                    radial-gradient(circle at 80% 30%, rgba(59, 130, 246, 0.1) 0%, transparent 20%),
+                    radial-gradient(circle at 20% 80%, rgba(16, 185, 129, 0.1) 0%, transparent 20%),
+                    radial-gradient(circle at 50% 50%, rgba(245, 158, 11, 0.08) 0%, transparent 30%);
+            animation: backgroundMove 25s infinite linear;
+        }
+
+        @keyframes backgroundMove {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Floating Elements */
+        .floating-element {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(5px);
+            animation: float 15s infinite ease-in-out;
+        }
+
+        .floating-element:nth-child(1) {
+            width: 100px;
+            height: 100px;
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .floating-element:nth-child(2) {
+            width: 150px;
+            height: 150px;
+            bottom: 15%;
+            right: 10%;
+            animation-delay: 2s;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-20px) rotate(5deg);
+            }
+        }
+
+        /* City Skyline Animation */
+        .city-animation {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 150px;
+            background-image: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 200' preserveAspectRatio='none'%3E%3Cpath fill='rgba(255,255,255,0.25)' d='M0,200 L0,160 L30,160 L30,150 L45,150 L45,140 L60,140 L60,130 L75,130 L75,150 L90,150 L90,140 L105,140 L105,160 L120,160 L120,170 L135,170 L135,160 L150,160 L150,140 L165,140 L165,130 L180,130 L180,120 L195,120 L195,140 L210,140 L210,150 L225,150 L225,130 L240,130 L240,140 L255,140 L255,130 L270,130 L270,140 L285,140 L285,120 L300,120 L300,100 L315,100 L315,120 L330,120 L330,130 L345,130 L345,140 L360,140 L360,130 L375,130 L375,110 L390,110 L390,100 L405,100 L405,90 L420,90 L420,100 L435,100 L435,120 L450,120 L450,130 L465,130 L465,140 L480,140 L480,130 L495,130 L495,120 L510,120 L510,100 L525,100 L525,110 L540,110 L540,130 L555,130 L555,120 L570,120 L570,100 L585,100 L585,90 L600,90 L600,80 L615,80 L615,100 L630,100 L630,110 L645,110 L645,100 L660,100 L660,90 L675,90 L675,110 L690,110 L690,120 L705,120 L705,130 L720,130 L720,120 L735,120 L735,100 L750,100 L750,90 L765,90 L765,110 L780,110 L780,130 L795,130 L795,120 L810,120 L810,100 L825,100 L825,110 L840,110 L840,130 L855,130 L855,140 L870,140 L870,130 L885,130 L885,120 L900,120 L900,130 L915,130 L915,140 L930,140 L930,150 L945,150 L945,160 L960,160 L960,170 L975,170 L975,180 L990,180 L990,190 L1000,190 L1000,200 L0,200 Z'%3E%3C/path%3E%3C/svg%3E\");
+            background-size: cover;
+            z-index: 1;
+            animation: cityMove 30s infinite linear;
+        }
+
+        @keyframes cityMove {
+            0% {
+                background-position-x: 0;
+            }
+            100% {
+                background-position-x: 1000px;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .register-image {
+                display: none;
+            }
+
+            .register-form-container {
+                padding: 2.5rem;
+            }
+
+            .register-container {
+                width: 90%;
+                margin: 1.5rem auto;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 0.75rem 1.5rem;
+            }
+
+            .register-form-container {
+                padding: 2rem;
+            }
+
+            .form-header h1 {
+                font-size: 1.75rem;
+            }
+
+            .form-row {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .navbar {
+                padding: 0.75rem 1rem;
+            }
+
+            .nav-links {
+                gap: 0.5rem;
+            }
+
+            .nav-link {
+                padding: 0.5rem;
+            }
+
+            .register-form-container {
+                padding: 1.5rem;
+            }
+
+            .form-header h1 {
+                font-size: 1.5rem;
+            }
+
+            .form-section-title {
+                font-size: 1rem;
+            }
+
+            .btn {
+                padding: 0.85rem 1.5rem;
+            }
+        }
+
+        .background-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            background-image: url('https://wallpapercat.com/w/full/c/0/4/738962-3840x2160-desktop-4k-highway-background-photo.jpg ');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .background-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(16, 185, 129, 0.15) 100%);
+        }
+    </style>
+";
+        
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
+
+        
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
+
+        yield from [];
+    }
+
+    // line 770
+    /**
+     * @return iterable<null|scalar|\Stringable>
+     */
+    public function block_javascripts(array $context, array $blocks = []): iterable
+    {
+        $macros = $this->macros;
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
+
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
+
+        // line 771
+        yield "    ";
+        yield from $this->yieldParentBlock("javascripts", $context, $blocks);
+        yield "
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // ─── Navbar scroll effect ───────────────────────────────────────────────────
+            const navbar = document.querySelector('.navbar');
+            if (navbar) {
+                window.addEventListener('scroll', () => {
+                    navbar.classList.toggle('scrolled', window.scrollY > 10);
+                });
+            }
+
+            // ─── Phone number formatting ───────────────────────────────────────────────
+            const countrySelect = document.getElementById('countrySelect');
+            const phoneInput = document.getElementById('phoneInput');
+            const form = document.querySelector('form');
+
+            if (form) {
+                form.addEventListener('submit', function(e) {
+                    if (countrySelect && phoneInput) {
+                        const selectedOption = countrySelect.options[countrySelect.selectedIndex];
+                        const countryCode = selectedOption.getAttribute('data-code');
+                        const number = phoneInput.value.replace(/\\D/g, '');
+                        if (!number.startsWith(countryCode.replace('+', ''))) {
+                            phoneInput.value = countryCode + number;
+                        }
+                    }
+                });
+            }
+
+            // ─── Role select: Toggle license field ─────────────────────────────────────
+            const roleSelect = document.getElementById('roleSelect');
+            const licenseField = document.getElementById('licenseField');
+
+            function toggleLicenseField() {
+                const showRoles = ['ROLE_DRIVER', 'ROLE_TAXI'];
+                if (roleSelect && licenseField) {
+                    licenseField.style.display = showRoles.includes(roleSelect.value) ? '' : 'none';
+                }
+            }
+
+            if (roleSelect) {
+                roleSelect.addEventListener('change', toggleLicenseField);
+                toggleLicenseField(); // Initialize on page load
+            }
+
+            // ─── Drag & drop file upload preview ───────────────────────────────────────
+            const fileInput = document.getElementById('registrationForm_image');
+            const fileLabel = document.querySelector('.file-upload-label');
+
+            if (fileInput && fileLabel) {
+                ['dragenter','dragover','dragleave','drop'].forEach(evt => {
+                    fileLabel.addEventListener(evt, e => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                    });
+                });
+
+                ['dragenter','dragover'].forEach(evt => {
+                    fileLabel.addEventListener(evt, () => fileLabel.classList.add('dragover'));
+                });
+                ['dragleave','drop'].forEach(evt => {
+                    fileLabel.addEventListener(evt, () => fileLabel.classList.remove('dragover'));
+                });
+
+                fileInput.addEventListener('change', function() {
+                    if (this.files[0]) updateFileLabel(this.files[0]);
+                });
+
+                fileLabel.addEventListener('drop', function(e) {
+                    const dt = e.dataTransfer;
+                    fileInput.files = dt.files;
+                    updateFileLabel(dt.files[0]);
+                });
+
+                function updateFileLabel(file) {
+                    const txt = document.querySelector('.file-upload-text');
+                    const icon = document.querySelector('.file-upload-icon');
+                    if (txt && icon) {
+                        txt.textContent = file.name;
+                        icon.className = 'fas fa-check-circle file-upload-icon';
+                        icon.style.color = 'var(--success)';
+                        fileLabel.style.borderColor = 'var(--success)';
+                        fileLabel.style.backgroundColor = 'rgba(34,197,94,0.05)';
+                    }
+
+                    if (file.type.match('image.*')) {
+                        const reader = new FileReader();
+                        reader.onload = function(e) {
+                            const preview = document.createElement('div');
+                            Object.assign(preview.style, {
+                                backgroundImage: `url(\${e.target.result})`,
+                                backgroundSize: 'cover',
+                                backgroundPosition: 'center',
+                                position: 'absolute',
+                                top: 0, left: 0,
+                                width: '100%', height: '100%',
+                                opacity: 0.3,
+                                borderRadius: '10px'
+                            });
+                            fileLabel.appendChild(preview);
+                        };
+                        reader.readAsDataURL(file);
+                    }
+                }
+            }
+
+            // ─── Floating background elements ───────────────────────────────────────────
+            const movingBackground = document.querySelector('.moving-background');
+            if (movingBackground) {
+                for (let i = 0; i < 3; i++) {
+                    const el = document.createElement('div');
+                    el.className = 'floating-element';
+                    movingBackground.appendChild(el);
+                }
+            }
+        });
+    </script>
+";
+        
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
+
+        
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
+
+        yield from [];
+    }
+
+    // line 891
+    /**
+     * @return iterable<null|scalar|\Stringable>
+     */
+    public function block_body(array $context, array $blocks = []): iterable
+    {
+        $macros = $this->macros;
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
+
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
+
+        // line 892
+        yield "    <div class=\"background-image\"></div>
+    <div class=\"background-overlay\"></div>
+    <div class=\"moving-background\"></div>
+    <div class=\"register-container\">
+        <div class=\"register-image\">
+            <div class=\"city-animation\"></div>
+            <div class=\"register-image-content\">
+                <h2>Join Our Community</h2>
+                <p>Connect with fellow commuters and discover smarter ways to navigate your city with UrbanLink.</p>
+            </div>
+        </div>
+
+        <div class=\"register-form-container\">
+            <div class=\"form-header\">
+                <h1>Create Your Account</h1>
+                <p>Sign up to start your UrbanLink journey</p>
+            </div>
+
+            ";
+        // line 910
+        yield         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 910, $this->source); })()), 'form_start', ["attr" => ["class" => "text-left", "role" => "form", "novalidate" => "novalidate", "enctype" => "multipart/form-data"]]);
+        // line 917
+        yield "
+
+            <!-- Personal Information Section -->
+            <div class=\"form-section\">
+                <h3 class=\"form-section-title\">Personal Information</h3>
+
+                <!-- Name Field -->
+                <div class=\"form-group\">
+                    <label class=\"form-label\" for=\"";
+        // line 925
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 925, $this->source); })()), "name", [], "any", false, false, false, 925), "vars", [], "any", false, false, false, 925), "id", [], "any", false, false, false, 925), "html", null, true);
+        yield "\">Full Name</label>
+                    ";
+        // line 926
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 926, $this->source); })()), "name", [], "any", false, false, false, 926), 'widget', ["attr" => ["class" => "form-control", "placeholder" => "Enter your full name"]]);
+        // line 931
+        yield "
+                    ";
+        // line 932
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 932, $this->source); })()), "name", [], "any", false, false, false, 932), 'errors', ["attr" => ["class" => "form-error"]]);
+        yield "
+                </div>
+
+                <!-- Email Field -->
+                <div class=\"form-group\">
+                    <label class=\"form-label\" for=\"";
+        // line 937
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 937, $this->source); })()), "email", [], "any", false, false, false, 937), "vars", [], "any", false, false, false, 937), "id", [], "any", false, false, false, 937), "html", null, true);
+        yield "\">Email Address</label>
+                    ";
+        // line 938
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 938, $this->source); })()), "email", [], "any", false, false, false, 938), 'widget', ["attr" => ["class" => "form-control", "placeholder" => "Enter your email address"]]);
+        // line 943
+        yield "
+                    ";
+        // line 944
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 944, $this->source); })()), "email", [], "any", false, false, false, 944), 'errors', ["attr" => ["class" => "form-error"]]);
+        yield "
+                </div>
+
+                <!-- Phone Field -->
+                <div class=\"form-group\">
+                    <label class=\"form-label\">Phone Number</label>
+                    <div class=\"form-grid\">
+                        <select
+                                id=\"countrySelect\"
+                                class=\"form-control\"
+                        >
+                            <option value=\"US\" data-code=\"+1\">United States (+1)</option>
+                            <option value=\"TN\" data-code=\"+216\">Tunisia (+216)</option>
+                            <option value=\"FR\" data-code=\"+33\">France (+33)</option>
+                            <option value=\"DE\" data-code=\"+49\">Germany (+49)</option>
+                            <option value=\"GB\" data-code=\"+44\">UK (+44)</option>
+                        </select>
+                        ";
+        // line 961
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 961, $this->source); })()), "phone", [], "any", false, false, false, 961), 'widget', ["attr" => ["id" => "phoneInput", "class" => "form-control", "placeholder" => "Phone number"]]);
+        // line 967
+        yield "
+                    </div>
+                    ";
+        // line 969
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 969, $this->source); })()), "phone", [], "any", false, false, false, 969), 'errors', ["attr" => ["class" => "form-error"]]);
+        yield "
+                </div>
+
+                <!-- Role Field -->
+                <div class=\"form-group\">
+                    <label for=\"roleSelect\" class=\"form-label\">Role</label>
+                    <select id=\"roleSelect\" name=\"registrationForm[role]\" class=\"form-control\">
+                        <option value=\"ROLE_CLIENT\">Client</option>
+                        <option value=\"ROLE_DRIVER\">Driver</option>
+                        <option value=\"ROLE_TAXI\">Taxi</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <!-- Address & License Section -->
+            <div class=\"form-section\">
+                <h3 class=\"form-section-title\">Address & License</h3>
+
+                <!-- Home Address Field -->
+                <div class=\"form-group\">
+                    <label class=\"form-label\" for=\"";
+        // line 990
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 990, $this->source); })()), "homeAddress", [], "any", false, false, false, 990), "vars", [], "any", false, false, false, 990), "id", [], "any", false, false, false, 990), "html", null, true);
+        yield "\">Home Address</label>
+                    ";
+        // line 991
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 991, $this->source); })()), "homeAddress", [], "any", false, false, false, 991), 'widget', ["attr" => ["class" => "form-control", "placeholder" => "Enter your home address"]]);
+        // line 996
+        yield "
+                    ";
+        // line 997
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 997, $this->source); })()), "homeAddress", [], "any", false, false, false, 997), 'errors', ["attr" => ["class" => "form-error"]]);
+        yield "
+                </div>
+
+                <!-- License Field (only for DRIVER or TAXI) -->
+                <div class=\"form-group\" id=\"licenseField\" style=\"display: none;\">
+                    ";
+        // line 1002
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 1002, $this->source); })()), "license", [], "any", false, false, false, 1002), 'label', ["label_attr" => ["class" => "form-label"], "label" => "License Number"]);
+        yield "
+                    ";
+        // line 1003
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 1003, $this->source); })()), "license", [], "any", false, false, false, 1003), 'widget', ["attr" => ["class" => "form-control", "placeholder" => "Enter your driver's license number"]]);
+        // line 1008
+        yield "
+                    ";
+        // line 1009
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 1009, $this->source); })()), "license", [], "any", false, false, false, 1009), 'errors');
+        yield "
+                </div>
+
+            </div>
+
+            <!-- Profile & Security Section -->
+            <div class=\"form-section\">
+                <h3 class=\"form-section-title\">Profile & Security</h3>
+
+                <!-- Image Upload Field -->
+                <div class=\"form-group\">
+                    <label class=\"form-label\">Profile Image</label>
+                    <div class=\"file-upload\">
+                        <label class=\"file-upload-label\">
+                            <i class=\"fas fa-cloud-upload-alt file-upload-icon\"></i>
+                            <span class=\"file-upload-text\">Click to upload an image</span>
+                            ";
+        // line 1025
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 1025, $this->source); })()), "image", [], "any", false, false, false, 1025), 'widget', ["attr" => ["class" => "file-upload-input"]]);
+        // line 1029
+        yield "
+                        </label>
+                    </div>
+                    ";
+        // line 1032
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 1032, $this->source); })()), "image", [], "any", false, false, false, 1032), 'errors', ["attr" => ["class" => "form-error"]]);
+        yield "
+                </div>
+
+                <!-- Password Field -->
+                <div class=\"form-group\">
+                    <label class=\"form-label\" for=\"";
+        // line 1037
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 1037, $this->source); })()), "plainPassword", [], "any", false, false, false, 1037), "vars", [], "any", false, false, false, 1037), "id", [], "any", false, false, false, 1037), "html", null, true);
+        yield "\">Password</label>
+                    ";
+        // line 1038
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 1038, $this->source); })()), "plainPassword", [], "any", false, false, false, 1038), 'widget', ["attr" => ["class" => "form-control", "placeholder" => "Choose a secure password"]]);
+        // line 1043
+        yield "
+                    ";
+        // line 1044
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 1044, $this->source); })()), "plainPassword", [], "any", false, false, false, 1044), 'errors', ["attr" => ["class" => "form-error"]]);
+        yield "
+                </div>
+
+                <!-- Terms Checkbox -->
+                <div class=\"form-group\">
+                    <div class=\"form-check\">
+                        ";
+        // line 1050
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 1050, $this->source); })()), "agreeTerms", [], "any", false, false, false, 1050), 'widget', ["attr" => ["class" => "form-check-input"]]);
+        // line 1054
+        yield "
+                        <label class=\"form-check-label\" for=\"";
+        // line 1055
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 1055, $this->source); })()), "agreeTerms", [], "any", false, false, false, 1055), "vars", [], "any", false, false, false, 1055), "id", [], "any", false, false, false, 1055), "html", null, true);
+        yield "\">
+                            I agree to the <a href=\"#\">Terms and Conditions</a>
+                        </label>
+                    </div>
+                    ";
+        // line 1059
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 1059, $this->source); })()), "agreeTerms", [], "any", false, false, false, 1059), 'errors', ["attr" => ["class" => "form-error"]]);
+        yield "
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <button type=\"submit\" class=\"btn btn-primary btn-block\">
+                <i class=\"fas fa-user-plus\"></i> Create Account
+            </button>
+
+            <div class=\"form-footer\">
+                Already have an account?
+                <a href=\"";
+        // line 1070
+        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
+        yield "\" class=\"form-footer-link\">Sign in here</a>
+            </div>
+
+            ";
+        // line 1073
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 1073, $this->source); })()), 'rest');
+        yield "
+            ";
+        // line 1074
+        yield         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 1074, $this->source); })()), 'form_end');
+        yield "
+        </div>
+    </div>
+";
+        
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
+
+        
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
+
+        yield from [];
+    }
+
+    /**
+     * @codeCoverageIgnore
+     */
+    public function getTemplateName(): string
+    {
+        return "auth/registration/register.html.twig";
+    }
+
+    /**
+     * @codeCoverageIgnore
+     */
+    public function isTraitable(): bool
+    {
+        return false;
+    }
+
+    /**
+     * @codeCoverageIgnore
+     */
+    public function getDebugInfo(): array
+    {
+        return array (  1254 => 1074,  1250 => 1073,  1244 => 1070,  1230 => 1059,  1223 => 1055,  1220 => 1054,  1218 => 1050,  1209 => 1044,  1206 => 1043,  1204 => 1038,  1200 => 1037,  1192 => 1032,  1187 => 1029,  1185 => 1025,  1166 => 1009,  1163 => 1008,  1161 => 1003,  1157 => 1002,  1149 => 997,  1146 => 996,  1144 => 991,  1140 => 990,  1116 => 969,  1112 => 967,  1110 => 961,  1090 => 944,  1087 => 943,  1085 => 938,  1081 => 937,  1073 => 932,  1070 => 931,  1068 => 926,  1064 => 925,  1054 => 917,  1052 => 910,  1032 => 892,  1019 => 891,  889 => 771,  876 => 770,  102 => 6,  89 => 5,  66 => 3,  43 => 1,);
+    }
+
+    public function getSourceContext(): Source
+    {
+        return new Source("{% extends 'base.html.twig' %}
+
+{% block title %}Register - UrbanLink{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <style>
+        :root {
+            --primary: #3b82f6;
+            --primary-light: #93c5fd;
+            --primary-dark: #1d4ed8;
+            --secondary: #10b981;
+            --secondary-light: #6ee7b7;
+            --accent: #f59e0b;
+            --accent-light: #fcd34d;
+            --dark: #1e293b;
+            --dark-light: #334155;
+            --light: #f8fafc;
+            --light-dark: #e2e8f0;
+            --danger: #ef4444;
+            --danger-light: #fca5a5;
+            --success: #22c55e;
+            --success-light: #86efac;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            --shadow-xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            --shadow-primary: 0 4px 14px 0 rgba(59, 130, 246, 0.3);
+            --shadow-primary-hover: 0 6px 20px 0 rgba(59, 130, 246, 0.4);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif;
+        }
+
+        body {
+            background: transparent; /* Changed from gradient to transparent */
+            color: var(--dark);
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        /* Enhanced Navbar with glass morphism */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            box-shadow: var(--shadow-sm);
+            padding: 1rem 2rem;
+            z-index: 100;
+            border-radius: 0 0 16px 16px;
+            transition: var(--transition);
+        }
+
+        .navbar.scrolled {
+            box-shadow: var(--shadow);
+            padding: 0.75rem 2rem;
+        }
+
+        .navbar-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: var(--dark);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .logo:hover {
+            color: var(--primary);
+        }
+
+        .logo img {
+            height: 2rem;
+            margin-right: 0.75rem;
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover img {
+            transform: rotate(-5deg) scale(1.05);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 1rem;
+        }
+
+        .nav-link {
+            display: flex;
+            align-items: center;
+            color: var(--dark);
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 500;
+            transition: var(--transition);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .nav-link:hover {
+            color: var(--primary);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: var(--transition);
+            transform: translateX(-50%);
+        }
+
+        .nav-link:hover::after {
+            width: 60%;
+        }
+
+        .nav-link i {
+            margin-right: 0.5rem;
+            opacity: 0.75;
+        }
+
+        main {
+            padding-top: 6rem;
+            min-height: calc(100vh - 6rem);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Enhanced Register Container */
+        .register-container {
+            display: flex;
+            width: 96%;
+            max-width: 1200px;
+            margin: 2rem auto;
+            box-shadow: var(--shadow-xl);
+            border-radius: 24px;
+            overflow: hidden;
+            background: white;
+            position: relative;
+            transform: translateY(0);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .register-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Enhanced Image Section */
+        .register-image {
+            flex: 1;
+            background-image: url('https://images.squarespace-cdn.com/content/v1/5b6b4226f8370aa16b12275b/1602416984799-XZSZGB7K3AJKG8VT5F3Z/positano-creativeroamers-wlochy-italia-italy-travelcouple-roadtrip.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 600px;
+            overflow: hidden;
+            border-radius: 24px 0 0 24px; /* Add rounded corners to left side */
+        }
+
+        /* Add this to ensure rounded corners work with overflow hidden */
+        .register-container {
+            overflow: hidden;
+        }
+
+        .register-image::before {
+            content: \"\";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.85) 0%, rgba(16, 185, 129, 0.75) 100%);
+            z-index: 1;
+        }
+
+        .register-image-content {
+            position: relative;
+            z-index: 2;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            width: 90%;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .register-image-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .register-image-content p {
+            font-size: 1.125rem;
+            line-height: 1.7;
+            max-width: 80%;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+        }
+
+        /* Form Container */
+        .register-form-container {
+            flex: 1;
+            padding: 3rem;
+            z-index: 2;
+            overflow-y: auto;
+            max-height: 90vh;
+        }
+
+        .form-header {
+            margin-bottom: 2rem;
+            animation: fadeIn 0.6s ease;
+        }
+
+        .form-header h1 {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            display: inline-block;
+        }
+
+        .form-header p {
+            color: #64748b;
+            font-size: 0.95rem;
+        }
+
+        /* Form Sections */
+        .form-section {
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #f1f5f9;
+            animation: fadeIn 0.6s ease forwards;
+            opacity: 0;
+            animation-delay: 0.2s;
+        }
+
+        .form-section:nth-child(2) {
+            animation-delay: 0.3s;
+        }
+
+        .form-section:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        .form-section-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .form-section-title::before {
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--primary);
+            margin-right: 0.75rem;
+        }
+
+        /* Form Groups */
+        .form-group {
+            margin-bottom: 1.25rem;
+            position: relative;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 1.25rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .form-row .form-group {
+            flex: 1;
+            margin-bottom: 0;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+        }
+
+        /* Enhanced Form Controls */
+        .form-control {
+            width: 100%;
+            padding: 0.85rem 1.25rem;
+            font-size: 0.95rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            transition: var(--transition);
+            background-color: #f8fafc;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.15);
+            background-color: white;
+        }
+
+        .form-control::placeholder {
+            color: #94a3b8;
+            opacity: 1;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 1.25rem;
+        }
+
+        .form-text {
+            display: block;
+            margin-top: 0.5rem;
+            font-size: 0.75rem;
+            color: #64748b;
+        }
+
+        .form-error {
+            color: var(--danger);
+            font-size: 0.75rem;
+            margin-top: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .form-error i {
+            margin-right: 0.25rem;
+            font-size: 0.9em;
+        }
+
+        /* Checkbox Styles */
+        .form-check {
+            display: flex;
+            align-items: flex-start;
+            padding-left: 1.75rem;
+            position: relative;
+            margin-top: 0.5rem;
+        }
+
+        .form-check-input {
+            position: absolute;
+            margin-top: 0.25rem;
+            margin-left: -1.75rem;
+            width: 1.1rem;
+            height: 1.1rem;
+            appearance: none;
+            border: 2px solid #cbd5e1;
+            border-radius: 4px;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .form-check-input:checked {
+            background-color: var(--primary);
+            border-color: var(--primary);
+            background-image: url(\"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='white' d='M5.707 7.293a1 1 0 0 0-1.414 1.414l2 2a1 1 0 0 0 1.414 0l4-4a1 1 0 0 0-1.414-1.414L7 8.586 5.707 7.293z'/%3e%3c/svg%3e\");
+            background-size: 70%;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .form-check-input:focus {
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+        }
+
+        .form-check-label {
+            font-size: 0.875rem;
+            color: var(--dark);
+            cursor: pointer;
+            line-height: 1.5;
+        }
+
+        .form-check-label a {
+            color: var(--primary);
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .form-check-label a:hover {
+            text-decoration: underline;
+            color: var(--primary-dark);
+        }
+
+        /* Button Styles */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 2rem;
+            font-weight: 600;
+            border-radius: 12px;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            box-shadow: var(--shadow-primary);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-primary-hover);
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: 0.5s;
+        }
+
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+
+        .btn-block {
+            width: 100%;
+        }
+
+        /* File Upload Styles */
+        .file-upload {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .file-upload-label {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 120px;
+            border: 2px dashed #cbd5e1;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: var(--transition);
+            background-color: #f8fafc;
+        }
+
+        .file-upload-label:hover {
+            border-color: var(--primary-light);
+            background-color: rgba(59, 130, 246, 0.05);
+            transform: translateY(-2px);
+        }
+
+        .file-upload-label.dragover {
+            border-color: var(--primary);
+            background-color: rgba(59, 130, 246, 0.1);
+            box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+        }
+
+        .file-upload-icon {
+            font-size: 1.75rem;
+            color: #94a3b8;
+            margin-bottom: 0.75rem;
+            transition: var(--transition);
+        }
+
+        .file-upload-label:hover .file-upload-icon {
+            color: var(--primary);
+            transform: scale(1.1);
+        }
+
+        .file-upload-text {
+            font-size: 0.875rem;
+            color: #64748b;
+            transition: var(--transition);
+        }
+
+        .file-upload-label:hover .file-upload-text {
+            color: var(--primary);
+        }
+
+        .file-upload-input {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        /* Form Footer */
+        .form-footer {
+            margin-top: 2rem;
+            text-align: center;
+            font-size: 0.875rem;
+            color: #64748b;
+            animation: fadeIn 0.6s ease forwards;
+            opacity: 0;
+            animation-delay: 0.5s;
+        }
+
+        .form-footer-link {
+            color: var(--primary);
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .form-footer-link:hover {
+            text-decoration: underline;
+            color: var(--primary-dark);
+        }
+
+        /* Background Animation */
+        .moving-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -3; /* Make sure this is lower than overlay */
+            overflow: hidden;
+        }
+
+        .moving-background::before {
+            content: \"\";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background-image:
+                    radial-gradient(circle at 80% 30%, rgba(59, 130, 246, 0.1) 0%, transparent 20%),
+                    radial-gradient(circle at 20% 80%, rgba(16, 185, 129, 0.1) 0%, transparent 20%),
+                    radial-gradient(circle at 50% 50%, rgba(245, 158, 11, 0.08) 0%, transparent 30%);
+            animation: backgroundMove 25s infinite linear;
+        }
+
+        @keyframes backgroundMove {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Floating Elements */
+        .floating-element {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(5px);
+            animation: float 15s infinite ease-in-out;
+        }
+
+        .floating-element:nth-child(1) {
+            width: 100px;
+            height: 100px;
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .floating-element:nth-child(2) {
+            width: 150px;
+            height: 150px;
+            bottom: 15%;
+            right: 10%;
+            animation-delay: 2s;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-20px) rotate(5deg);
+            }
+        }
+
+        /* City Skyline Animation */
+        .city-animation {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 150px;
+            background-image: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 200' preserveAspectRatio='none'%3E%3Cpath fill='rgba(255,255,255,0.25)' d='M0,200 L0,160 L30,160 L30,150 L45,150 L45,140 L60,140 L60,130 L75,130 L75,150 L90,150 L90,140 L105,140 L105,160 L120,160 L120,170 L135,170 L135,160 L150,160 L150,140 L165,140 L165,130 L180,130 L180,120 L195,120 L195,140 L210,140 L210,150 L225,150 L225,130 L240,130 L240,140 L255,140 L255,130 L270,130 L270,140 L285,140 L285,120 L300,120 L300,100 L315,100 L315,120 L330,120 L330,130 L345,130 L345,140 L360,140 L360,130 L375,130 L375,110 L390,110 L390,100 L405,100 L405,90 L420,90 L420,100 L435,100 L435,120 L450,120 L450,130 L465,130 L465,140 L480,140 L480,130 L495,130 L495,120 L510,120 L510,100 L525,100 L525,110 L540,110 L540,130 L555,130 L555,120 L570,120 L570,100 L585,100 L585,90 L600,90 L600,80 L615,80 L615,100 L630,100 L630,110 L645,110 L645,100 L660,100 L660,90 L675,90 L675,110 L690,110 L690,120 L705,120 L705,130 L720,130 L720,120 L735,120 L735,100 L750,100 L750,90 L765,90 L765,110 L780,110 L780,130 L795,130 L795,120 L810,120 L810,100 L825,100 L825,110 L840,110 L840,130 L855,130 L855,140 L870,140 L870,130 L885,130 L885,120 L900,120 L900,130 L915,130 L915,140 L930,140 L930,150 L945,150 L945,160 L960,160 L960,170 L975,170 L975,180 L990,180 L990,190 L1000,190 L1000,200 L0,200 Z'%3E%3C/path%3E%3C/svg%3E\");
+            background-size: cover;
+            z-index: 1;
+            animation: cityMove 30s infinite linear;
+        }
+
+        @keyframes cityMove {
+            0% {
+                background-position-x: 0;
+            }
+            100% {
+                background-position-x: 1000px;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .register-image {
+                display: none;
+            }
+
+            .register-form-container {
+                padding: 2.5rem;
+            }
+
+            .register-container {
+                width: 90%;
+                margin: 1.5rem auto;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 0.75rem 1.5rem;
+            }
+
+            .register-form-container {
+                padding: 2rem;
+            }
+
+            .form-header h1 {
+                font-size: 1.75rem;
+            }
+
+            .form-row {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .navbar {
+                padding: 0.75rem 1rem;
+            }
+
+            .nav-links {
+                gap: 0.5rem;
+            }
+
+            .nav-link {
+                padding: 0.5rem;
+            }
+
+            .register-form-container {
+                padding: 1.5rem;
+            }
+
+            .form-header h1 {
+                font-size: 1.5rem;
+            }
+
+            .form-section-title {
+                font-size: 1rem;
+            }
+
+            .btn {
+                padding: 0.85rem 1.5rem;
+            }
+        }
+
+        .background-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            background-image: url('https://wallpapercat.com/w/full/c/0/4/738962-3840x2160-desktop-4k-highway-background-photo.jpg ');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .background-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(16, 185, 129, 0.15) 100%);
+        }
+    </style>
+{% endblock %}
+
+
+{% block javascripts %}
+    {{ parent() }}
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // ─── Navbar scroll effect ───────────────────────────────────────────────────
+            const navbar = document.querySelector('.navbar');
+            if (navbar) {
+                window.addEventListener('scroll', () => {
+                    navbar.classList.toggle('scrolled', window.scrollY > 10);
+                });
+            }
+
+            // ─── Phone number formatting ───────────────────────────────────────────────
+            const countrySelect = document.getElementById('countrySelect');
+            const phoneInput = document.getElementById('phoneInput');
+            const form = document.querySelector('form');
+
+            if (form) {
+                form.addEventListener('submit', function(e) {
+                    if (countrySelect && phoneInput) {
+                        const selectedOption = countrySelect.options[countrySelect.selectedIndex];
+                        const countryCode = selectedOption.getAttribute('data-code');
+                        const number = phoneInput.value.replace(/\\D/g, '');
+                        if (!number.startsWith(countryCode.replace('+', ''))) {
+                            phoneInput.value = countryCode + number;
+                        }
+                    }
+                });
+            }
+
+            // ─── Role select: Toggle license field ─────────────────────────────────────
+            const roleSelect = document.getElementById('roleSelect');
+            const licenseField = document.getElementById('licenseField');
+
+            function toggleLicenseField() {
+                const showRoles = ['ROLE_DRIVER', 'ROLE_TAXI'];
+                if (roleSelect && licenseField) {
+                    licenseField.style.display = showRoles.includes(roleSelect.value) ? '' : 'none';
+                }
+            }
+
+            if (roleSelect) {
+                roleSelect.addEventListener('change', toggleLicenseField);
+                toggleLicenseField(); // Initialize on page load
+            }
+
+            // ─── Drag & drop file upload preview ───────────────────────────────────────
+            const fileInput = document.getElementById('registrationForm_image');
+            const fileLabel = document.querySelector('.file-upload-label');
+
+            if (fileInput && fileLabel) {
+                ['dragenter','dragover','dragleave','drop'].forEach(evt => {
+                    fileLabel.addEventListener(evt, e => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                    });
+                });
+
+                ['dragenter','dragover'].forEach(evt => {
+                    fileLabel.addEventListener(evt, () => fileLabel.classList.add('dragover'));
+                });
+                ['dragleave','drop'].forEach(evt => {
+                    fileLabel.addEventListener(evt, () => fileLabel.classList.remove('dragover'));
+                });
+
+                fileInput.addEventListener('change', function() {
+                    if (this.files[0]) updateFileLabel(this.files[0]);
+                });
+
+                fileLabel.addEventListener('drop', function(e) {
+                    const dt = e.dataTransfer;
+                    fileInput.files = dt.files;
+                    updateFileLabel(dt.files[0]);
+                });
+
+                function updateFileLabel(file) {
+                    const txt = document.querySelector('.file-upload-text');
+                    const icon = document.querySelector('.file-upload-icon');
+                    if (txt && icon) {
+                        txt.textContent = file.name;
+                        icon.className = 'fas fa-check-circle file-upload-icon';
+                        icon.style.color = 'var(--success)';
+                        fileLabel.style.borderColor = 'var(--success)';
+                        fileLabel.style.backgroundColor = 'rgba(34,197,94,0.05)';
+                    }
+
+                    if (file.type.match('image.*')) {
+                        const reader = new FileReader();
+                        reader.onload = function(e) {
+                            const preview = document.createElement('div');
+                            Object.assign(preview.style, {
+                                backgroundImage: `url(\${e.target.result})`,
+                                backgroundSize: 'cover',
+                                backgroundPosition: 'center',
+                                position: 'absolute',
+                                top: 0, left: 0,
+                                width: '100%', height: '100%',
+                                opacity: 0.3,
+                                borderRadius: '10px'
+                            });
+                            fileLabel.appendChild(preview);
+                        };
+                        reader.readAsDataURL(file);
+                    }
+                }
+            }
+
+            // ─── Floating background elements ───────────────────────────────────────────
+            const movingBackground = document.querySelector('.moving-background');
+            if (movingBackground) {
+                for (let i = 0; i < 3; i++) {
+                    const el = document.createElement('div');
+                    el.className = 'floating-element';
+                    movingBackground.appendChild(el);
+                }
+            }
+        });
+    </script>
+{% endblock %}
+
+
+{% block body %}
+    <div class=\"background-image\"></div>
+    <div class=\"background-overlay\"></div>
+    <div class=\"moving-background\"></div>
+    <div class=\"register-container\">
+        <div class=\"register-image\">
+            <div class=\"city-animation\"></div>
+            <div class=\"register-image-content\">
+                <h2>Join Our Community</h2>
+                <p>Connect with fellow commuters and discover smarter ways to navigate your city with UrbanLink.</p>
+            </div>
+        </div>
+
+        <div class=\"register-form-container\">
+            <div class=\"form-header\">
+                <h1>Create Your Account</h1>
+                <p>Sign up to start your UrbanLink journey</p>
+            </div>
+
+            {{ form_start(registrationForm, {
+                'attr': {
+                    'class': 'text-left',
+                    'role': 'form',
+                    'novalidate': 'novalidate',
+                    'enctype': 'multipart/form-data'
+                }
+            }) }}
+
+            <!-- Personal Information Section -->
+            <div class=\"form-section\">
+                <h3 class=\"form-section-title\">Personal Information</h3>
+
+                <!-- Name Field -->
+                <div class=\"form-group\">
+                    <label class=\"form-label\" for=\"{{ registrationForm.name.vars.id }}\">Full Name</label>
+                    {{ form_widget(registrationForm.name, {
+                        'attr': {
+                            'class': 'form-control',
+                            'placeholder': 'Enter your full name'
+                        }
+                    }) }}
+                    {{ form_errors(registrationForm.name, { 'attr': {'class': 'form-error'} }) }}
+                </div>
+
+                <!-- Email Field -->
+                <div class=\"form-group\">
+                    <label class=\"form-label\" for=\"{{ registrationForm.email.vars.id }}\">Email Address</label>
+                    {{ form_widget(registrationForm.email, {
+                        'attr': {
+                            'class': 'form-control',
+                            'placeholder': 'Enter your email address'
+                        }
+                    }) }}
+                    {{ form_errors(registrationForm.email, { 'attr': {'class': 'form-error'} }) }}
+                </div>
+
+                <!-- Phone Field -->
+                <div class=\"form-group\">
+                    <label class=\"form-label\">Phone Number</label>
+                    <div class=\"form-grid\">
+                        <select
+                                id=\"countrySelect\"
+                                class=\"form-control\"
+                        >
+                            <option value=\"US\" data-code=\"+1\">United States (+1)</option>
+                            <option value=\"TN\" data-code=\"+216\">Tunisia (+216)</option>
+                            <option value=\"FR\" data-code=\"+33\">France (+33)</option>
+                            <option value=\"DE\" data-code=\"+49\">Germany (+49)</option>
+                            <option value=\"GB\" data-code=\"+44\">UK (+44)</option>
+                        </select>
+                        {{ form_widget(registrationForm.phone, {
+                            'attr': {
+                                'id': 'phoneInput',
+                                'class': 'form-control',
+                                'placeholder': 'Phone number'
+                            }
+                        }) }}
+                    </div>
+                    {{ form_errors(registrationForm.phone, { 'attr': {'class': 'form-error'} }) }}
+                </div>
+
+                <!-- Role Field -->
+                <div class=\"form-group\">
+                    <label for=\"roleSelect\" class=\"form-label\">Role</label>
+                    <select id=\"roleSelect\" name=\"registrationForm[role]\" class=\"form-control\">
+                        <option value=\"ROLE_CLIENT\">Client</option>
+                        <option value=\"ROLE_DRIVER\">Driver</option>
+                        <option value=\"ROLE_TAXI\">Taxi</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <!-- Address & License Section -->
+            <div class=\"form-section\">
+                <h3 class=\"form-section-title\">Address & License</h3>
+
+                <!-- Home Address Field -->
+                <div class=\"form-group\">
+                    <label class=\"form-label\" for=\"{{ registrationForm.homeAddress.vars.id }}\">Home Address</label>
+                    {{ form_widget(registrationForm.homeAddress, {
+                        'attr': {
+                            'class': 'form-control',
+                            'placeholder': 'Enter your home address'
+                        }
+                    }) }}
+                    {{ form_errors(registrationForm.homeAddress, { 'attr': {'class': 'form-error'} }) }}
+                </div>
+
+                <!-- License Field (only for DRIVER or TAXI) -->
+                <div class=\"form-group\" id=\"licenseField\" style=\"display: none;\">
+                    {{ form_label(registrationForm.license, 'License Number', { 'label_attr': { 'class': 'form-label' } }) }}
+                    {{ form_widget(registrationForm.license, {
+                        'attr': {
+                            'class': 'form-control',
+                            'placeholder': \"Enter your driver's license number\"
+                        }
+                    }) }}
+                    {{ form_errors(registrationForm.license) }}
+                </div>
+
+            </div>
+
+            <!-- Profile & Security Section -->
+            <div class=\"form-section\">
+                <h3 class=\"form-section-title\">Profile & Security</h3>
+
+                <!-- Image Upload Field -->
+                <div class=\"form-group\">
+                    <label class=\"form-label\">Profile Image</label>
+                    <div class=\"file-upload\">
+                        <label class=\"file-upload-label\">
+                            <i class=\"fas fa-cloud-upload-alt file-upload-icon\"></i>
+                            <span class=\"file-upload-text\">Click to upload an image</span>
+                            {{ form_widget(registrationForm.image, {
+                                'attr': {
+                                    'class': 'file-upload-input'
+                                }
+                            }) }}
+                        </label>
+                    </div>
+                    {{ form_errors(registrationForm.image, { 'attr': {'class': 'form-error'} }) }}
+                </div>
+
+                <!-- Password Field -->
+                <div class=\"form-group\">
+                    <label class=\"form-label\" for=\"{{ registrationForm.plainPassword.vars.id }}\">Password</label>
+                    {{ form_widget(registrationForm.plainPassword, {
+                        'attr': {
+                            'class': 'form-control',
+                            'placeholder': 'Choose a secure password'
+                        }
+                    }) }}
+                    {{ form_errors(registrationForm.plainPassword, { 'attr': {'class': 'form-error'} }) }}
+                </div>
+
+                <!-- Terms Checkbox -->
+                <div class=\"form-group\">
+                    <div class=\"form-check\">
+                        {{ form_widget(registrationForm.agreeTerms, {
+                            'attr': {
+                                'class': 'form-check-input'
+                            }
+                        }) }}
+                        <label class=\"form-check-label\" for=\"{{ registrationForm.agreeTerms.vars.id }}\">
+                            I agree to the <a href=\"#\">Terms and Conditions</a>
+                        </label>
+                    </div>
+                    {{ form_errors(registrationForm.agreeTerms, { 'attr': {'class': 'form-error'} }) }}
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <button type=\"submit\" class=\"btn btn-primary btn-block\">
+                <i class=\"fas fa-user-plus\"></i> Create Account
+            </button>
+
+            <div class=\"form-footer\">
+                Already have an account?
+                <a href=\"{{ path('app_login') }}\" class=\"form-footer-link\">Sign in here</a>
+            </div>
+
+            {{ form_rest(registrationForm) }}
+            {{ form_end(registrationForm) }}
+        </div>
+    </div>
+{% endblock %}", "auth/registration/register.html.twig", "C:\\Users\\skonb\\Desktop\\UrbanLink_Symfony-Production\\templates\\auth\\registration\\register.html.twig");
+    }
+}

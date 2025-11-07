@@ -1,0 +1,1942 @@
+<?php
+
+use Twig\Environment;
+use Twig\Error\LoaderError;
+use Twig\Error\RuntimeError;
+use Twig\Extension\CoreExtension;
+use Twig\Extension\SandboxExtension;
+use Twig\Markup;
+use Twig\Sandbox\SecurityError;
+use Twig\Sandbox\SecurityNotAllowedTagError;
+use Twig\Sandbox\SecurityNotAllowedFilterError;
+use Twig\Sandbox\SecurityNotAllowedFunctionError;
+use Twig\Source;
+use Twig\Template;
+use Twig\TemplateWrapper;
+
+/* maintenance/new.html.twig */
+class __TwigTemplate_4410cf677f92314cc7571bd682aa6f28 extends Template
+{
+    private Source $source;
+    /**
+     * @var array<string, Template>
+     */
+    private array $macros = [];
+
+    public function __construct(Environment $env)
+    {
+        parent::__construct($env);
+
+        $this->source = $this->getSourceContext();
+
+        $this->blocks = [
+            'title' => [$this, 'block_title'],
+            'body' => [$this, 'block_body'],
+        ];
+    }
+
+    protected function doGetParent(array $context): bool|string|Template|TemplateWrapper
+    {
+        // line 1
+        return $this->load((isset($context["baseTemplate"]) || array_key_exists("baseTemplate", $context) ? $context["baseTemplate"] : (function () { throw new RuntimeError('Variable "baseTemplate" does not exist.', 1, $this->source); })()), 1);
+    }
+
+    protected function doDisplay(array $context, array $blocks = []): iterable
+    {
+        $macros = $this->macros;
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "maintenance/new.html.twig"));
+
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "maintenance/new.html.twig"));
+
+        yield from $this->getParent($context)->unwrap()->yield($context, array_merge($this->blocks, $blocks));
+        
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
+
+        
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
+
+    }
+
+    // line 3
+    /**
+     * @return iterable<null|scalar|\Stringable>
+     */
+    public function block_title(array $context, array $blocks = []): iterable
+    {
+        $macros = $this->macros;
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
+
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
+
+        yield "Create Maintenance";
+        
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
+
+        
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
+
+        yield from [];
+    }
+
+    // line 5
+    /**
+     * @return iterable<null|scalar|\Stringable>
+     */
+    public function block_body(array $context, array $blocks = []): iterable
+    {
+        $macros = $this->macros;
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
+
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
+
+        // line 6
+        yield "    <style>
+        :root {
+            --primary: #5e60ce;
+            --primary-dark: #4a4bd1;
+            --secondary: #6930c3;
+            --accent: #64dfdf;
+            --accent-light: #80ffdb;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --gray: #6c757d;
+            --success: #06d6a0;
+            --danger: #ef476f;
+            --warning: #ffd166;
+            --info: #118ab2;
+            --card-shadow: 0 10px 30px rgba(94, 96, 206, 0.15);
+            --input-shadow: 0 4px 10px rgba(94, 96, 206, 0.07);
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #f5f7ff 0%, #e9f0ff 100%);
+            color: var(--dark);
+            line-height: 1.6;
+            min-height: 100vh;
+            margin: 0;
+            padding: 2rem 0;
+        }
+        
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        
+        .page-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-weight: 800;
+            font-size: 2.5rem;
+            background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 16px;
+            box-shadow: var(--card-shadow);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+        
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 8px;
+            background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%);
+        }
+        
+        .card-header {
+            padding: 2rem 2.5rem 1.5rem;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+            position: relative;
+        }
+        
+        .card-header h1 {
+            margin: 0;
+            font-size: 1.8rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: var(--primary);
+        }
+        
+        .card-body {
+            padding: 2rem 2.5rem;
+        }
+        
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+        
+        .form-group.full-width {
+            grid-column: span 2;
+        }
+        
+        .form-label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+            letter-spacing: 0.5px;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 0.85rem 1rem;
+            font-size: 1rem;
+            color: var(--dark);
+            background-color: #fff;
+            border: 2px solid rgba(94, 96, 206, 0.1);
+            border-radius: 10px;
+            box-shadow: var(--input-shadow);
+            transition: all 0.2s ease;
+        }
+        
+        .form-control:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(94, 96, 206, 0.15);
+            outline: 0;
+        }
+        
+        /* Input icon styling */
+        .input-icon {
+            position: absolute;
+            top: 2.6rem;
+            right: 1rem;
+            color: var(--gray);
+            pointer-events: none;
+            transition: color 0.2s ease;
+        }
+        
+        .form-control:focus + .input-icon {
+            color: var(--primary);
+        }
+        
+        select.form-control {
+            appearance: none;
+            background-image: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%236c757d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E\");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            background-size: 16px;
+            padding-right: 3rem;
+        }
+        
+        textarea.form-control {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        /* Tooltip */
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            margin-left: 0.5rem;
+        }
+        
+        .tooltip-icon {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: rgba(94, 96, 206, 0.1);
+            color: var(--primary);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            font-weight: bold;
+            cursor: help;
+        }
+        
+        .tooltip-text {
+            visibility: hidden;
+            width: 200px;
+            background-color: var(--dark);
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 0.5rem;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -100px;
+            opacity: 0;
+            transition: opacity 0.3s;
+            font-size: 0.8rem;
+            font-weight: normal;
+        }
+        
+        .tooltip:hover .tooltip-text {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        /* Button styling */
+        .btn-group {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2.5rem;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.85rem 1.75rem;
+            border-radius: 10px;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: none;
+            font-size: 1rem;
+            flex: 1;
+        }
+        
+        .btn svg {
+            margin-right: 0.5rem;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(94, 96, 206, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-primary:hover {
+            box-shadow: 0 6px 20px rgba(94, 96, 206, 0.4);
+            transform: translateY(-2px);
+        }
+        
+        .btn-primary::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: 0.6s;
+        }
+        
+        .btn-primary:hover::after {
+            left: 100%;
+        }
+        
+        .btn-secondary {
+            background: white;
+            color: var(--primary);
+            border: 2px solid rgba(94, 96, 206, 0.15);
+        }
+        
+        .btn-secondary:hover {
+            background-color: rgba(94, 96, 206, 0.05);
+            border-color: rgba(94, 96, 206, 0.3);
+        }
+        
+        /* Form errors */
+        .form-error {
+            color: var(--danger);
+            font-size: 0.8rem;
+            margin-top: 0.25rem;
+        }
+        
+        .is-invalid {
+            border-color: var(--danger) !important;
+        }
+
+        /* Payment processing */
+        .payment-processing {
+            display: none;
+            text-align: center;
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: rgba(245, 247, 255, 0.8);
+            border-radius: 10px;
+        }
+
+        .payment-processing .spinner-border {
+            width: 3rem;
+            height: 3rem;
+            color: var(--primary);
+        }
+
+        .payment-processing p {
+            color: var(--primary);
+            font-weight: 500;
+            margin-top: 1rem;
+            margin-bottom: 0;
+        }
+
+        /* Custom Modal Styles */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-container {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            width: 90%;
+            max-width: 500px;
+            transform: translateY(20px);
+            transition: transform 0.3s ease;
+            overflow: hidden;
+        }
+
+        .modal-overlay.active .modal-container {
+            transform: translateY(0);
+        }
+
+        .modal-header {
+            padding: 1.5rem 2rem;
+            background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            font-weight: 600;
+            font-size: 1.25rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0;
+            line-height: 1;
+        }
+
+        .modal-body {
+            padding: 2rem;
+        }
+
+        .modal-body p {
+            margin: 0 0 1.5rem;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        .modal-footer {
+            padding: 1rem 2rem;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: flex-end;
+            gap: 1rem;
+        }
+
+        .modal-btn {
+            padding: 0.65rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: none;
+        }
+
+        .modal-btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .modal-btn-primary:hover {
+            background: var(--primary-dark);
+        }
+
+        .modal-btn-secondary {
+            background: white;
+            color: var(--primary);
+            border: 1px solid rgba(94, 96, 206, 0.3);
+        }
+
+        .modal-btn-secondary:hover {
+            background: rgba(94, 96, 206, 0.05);
+        }
+
+        .error-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 1.5rem;
+        }
+
+        .error-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(239, 71, 111, 0.1);
+            color: var(--danger);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .error-list li:before {
+            content: '✕';
+            color: var(--danger);
+            font-weight: bold;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .form-group.full-width {
+                grid-column: span 1;
+            }
+            
+            .btn-group {
+                flex-direction: column;
+            }
+            
+            .card-header, .card-body {
+                padding: 1.5rem;
+            }
+
+            .modal-container {
+                width: 95%;
+            }
+
+            .modal-header,
+            .modal-body,
+            .modal-footer {
+                padding: 1.25rem;
+            }
+        }
+    </style>
+
+    <!-- Modal Template -->
+    <div class=\"modal-overlay\" id=\"error-modal\">
+        <div class=\"modal-container\">
+            <div class=\"modal-header\">
+                <span>Form Errors</span>
+                <button class=\"modal-close\" id=\"modal-close\">&times;</button>
+            </div>
+            <div class=\"modal-body\">
+                <p>Please fix the following errors:</p>
+                <ul class=\"error-list\" id=\"error-list\"></ul>
+            </div>
+            <div class=\"modal-footer\">
+                <button class=\"modal-btn modal-btn-primary\" id=\"modal-confirm\">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <div class=\"modal-overlay\" id=\"success-modal\">
+        <div class=\"modal-container\">
+            <div class=\"modal-header\" style=\"background: linear-gradient(90deg, var(--success) 0%, #06b6d4 100%);\">
+                <span>Success</span>
+                <button class=\"modal-close\" id=\"success-modal-close\">&times;</button>
+            </div>
+            <div class=\"modal-body\">
+                <p id=\"success-message\"></p>
+            </div>
+            <div class=\"modal-footer\">
+                <button class=\"modal-btn modal-btn-primary\" id=\"success-modal-confirm\">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <div class=\"container\">
+        <h1 class=\"page-title\">Fleet Management System</h1>
+        
+        <div class=\"card\">
+            <div class=\"card-header\">
+                <h1>
+                    <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">
+                        <path d=\"M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z\"></path>
+                    </svg>
+                    Create New Maintenance
+                </h1>
+            </div>
+            
+            <div class=\"card-body\">
+                ";
+        // line 506
+        yield         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 506, $this->source); })()), 'form_start', ["attr" => ["novalidate" => "novalidate", "class" => "maintenance-form", "id" => "maintenance-form"]]);
+        yield "
+                    <div class=\"form-grid\">
+                        <div class=\"form-group\">
+                            ";
+        // line 509
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 509, $this->source); })()), "vehicle", [], "any", false, false, false, 509), 'label', ["label_attr" => ["class" => "form-label"], "label" => "Vehicle"]);
+        yield "
+                            ";
+        // line 510
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 510, $this->source); })()), "vehicle", [], "any", false, false, false, 510), 'widget', ["attr" => ["class" => ("form-control" . (((($tmp = Twig\Extension\CoreExtension::length($this->env->getCharset(), CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source,         // line 512
+(isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 512, $this->source); })()), "vehicle", [], "any", false, false, false, 512), "vars", [], "any", false, false, false, 512), "errors", [], "any", false, false, false, 512))) && $tmp instanceof Markup ? (string) $tmp : $tmp)) ? (" is-invalid") : (""))), "required" => "required"]]);
+        // line 515
+        yield "
+                            <div class=\"input-icon\">
+                                <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">
+                                    <rect x=\"1\" y=\"3\" width=\"15\" height=\"13\"></rect>
+                                    <polyline points=\"16 8 20 8 23 11 23 16 20 16 20 18 9 18\"></polyline>
+                                    <circle cx=\"5.5\" cy=\"18.5\" r=\"2.5\"></circle>
+                                    <circle cx=\"18.5\" cy=\"18.5\" r=\"2.5\"></circle>
+                                </svg>
+                            </div>
+                            ";
+        // line 524
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 524, $this->source); })()), "vehicle", [], "any", false, false, false, 524), 'errors');
+        yield "
+                        </div>
+                        
+                        <div class=\"form-group\">
+                            ";
+        // line 528
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 528, $this->source); })()), "maintenanceDate", [], "any", false, false, false, 528), 'label', ["label_attr" => ["class" => "form-label"], "label" => "Maintenance Date"]);
+        yield "
+                            ";
+        // line 529
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 529, $this->source); })()), "maintenanceDate", [], "any", false, false, false, 529), 'widget', ["attr" => ["class" => ("form-control" . (((($tmp = Twig\Extension\CoreExtension::length($this->env->getCharset(), CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source,         // line 531
+(isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 531, $this->source); })()), "maintenanceDate", [], "any", false, false, false, 531), "vars", [], "any", false, false, false, 531), "errors", [], "any", false, false, false, 531))) && $tmp instanceof Markup ? (string) $tmp : $tmp)) ? (" is-invalid") : (""))), "required" => "required"]]);
+        // line 534
+        yield "
+                            <div class=\"input-icon\">
+                                <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">
+                                    <rect x=\"3\" y=\"4\" width=\"18\" height=\"18\" rx=\"2\" ry=\"2\"></rect>
+                                    <line x1=\"16\" y1=\"2\" x2=\"16\" y2=\"6\"></line>
+                                    <line x1=\"8\" y1=\"2\" x2=\"8\" y2=\"6\"></line>
+                                    <line x1=\"3\" y1=\"10\" x2=\"21\" y2=\"10\"></line>
+                                </svg>
+                            </div>
+                            ";
+        // line 543
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 543, $this->source); })()), "maintenanceDate", [], "any", false, false, false, 543), 'errors');
+        yield "
+                        </div>
+                        
+                        <div class=\"form-group\">
+                            ";
+        // line 547
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 547, $this->source); })()), "serviceType", [], "any", false, false, false, 547), 'label', ["label_attr" => ["class" => "form-label", "data-tooltip" => "Select the type of service needed for this maintenance"], "label" => "Service Type"]);
+        // line 552
+        yield "
+                            ";
+        // line 553
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 553, $this->source); })()), "serviceType", [], "any", false, false, false, 553), 'widget', ["attr" => ["class" => ("form-control" . (((($tmp = Twig\Extension\CoreExtension::length($this->env->getCharset(), CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source,         // line 555
+(isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 555, $this->source); })()), "serviceType", [], "any", false, false, false, 555), "vars", [], "any", false, false, false, 555), "errors", [], "any", false, false, false, 555))) && $tmp instanceof Markup ? (string) $tmp : $tmp)) ? (" is-invalid") : (""))), "required" => "required"]]);
+        // line 558
+        yield "
+                            <div class=\"input-icon\">
+                                <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">
+                                    <path d=\"M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z\"></path>
+                                </svg>
+                            </div>
+                            ";
+        // line 564
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 564, $this->source); })()), "serviceType", [], "any", false, false, false, 564), 'errors');
+        yield "
+                        </div>
+                        
+                        <div class=\"form-group\">
+                            ";
+        // line 568
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 568, $this->source); })()), "serviceProvider", [], "any", false, false, false, 568), 'label', ["label_attr" => ["class" => "form-label"], "label" => "Service Provider"]);
+        yield "
+                            ";
+        // line 569
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 569, $this->source); })()), "serviceProvider", [], "any", false, false, false, 569), 'widget', ["attr" => ["class" => ("form-control" . (((($tmp = Twig\Extension\CoreExtension::length($this->env->getCharset(), CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source,         // line 571
+(isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 571, $this->source); })()), "serviceProvider", [], "any", false, false, false, 571), "vars", [], "any", false, false, false, 571), "errors", [], "any", false, false, false, 571))) && $tmp instanceof Markup ? (string) $tmp : $tmp)) ? (" is-invalid") : (""))), "required" => "required"]]);
+        // line 574
+        yield "
+                            <div class=\"input-icon\">
+                                <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">
+                                    <path d=\"M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2\"></path>
+                                    <circle cx=\"12\" cy=\"7\" r=\"4\"></circle>
+                                </svg>
+                            </div>
+                            ";
+        // line 581
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 581, $this->source); })()), "serviceProvider", [], "any", false, false, false, 581), 'errors');
+        yield "
+                        </div>
+                        
+                        <div class=\"form-group\">
+                            ";
+        // line 585
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 585, $this->source); })()), "cost", [], "any", false, false, false, 585), 'label', ["label_attr" => ["class" => "form-label"], "label" => "Cost (€)"]);
+        yield "
+                            ";
+        // line 586
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 586, $this->source); })()), "cost", [], "any", false, false, false, 586), 'widget', ["attr" => ["class" => ("form-control" . (((($tmp = Twig\Extension\CoreExtension::length($this->env->getCharset(), CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source,         // line 588
+(isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 588, $this->source); })()), "cost", [], "any", false, false, false, 588), "vars", [], "any", false, false, false, 588), "errors", [], "any", false, false, false, 588))) && $tmp instanceof Markup ? (string) $tmp : $tmp)) ? (" is-invalid") : (""))), "required" => "required", "readonly" => "readonly"]]);
+        // line 592
+        yield "
+                            <div class=\"input-icon\">
+                                <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">
+                                    <line x1=\"12\" y1=\"1\" x2=\"12\" y2=\"23\"></line>
+                                    <path d=\"M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6\"></path>
+                                </svg>
+                            </div>
+                            ";
+        // line 599
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 599, $this->source); })()), "cost", [], "any", false, false, false, 599), 'errors');
+        yield "
+                        </div>
+                        
+                        <div class=\"form-group full-width\">
+                            ";
+        // line 603
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 603, $this->source); })()), "description", [], "any", false, false, false, 603), 'label', ["label_attr" => ["class" => "form-label", "data-tooltip" => "Provide details about the maintenance service needed"], "label" => "Description"]);
+        // line 608
+        yield "
+                            ";
+        // line 609
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 609, $this->source); })()), "description", [], "any", false, false, false, 609), 'widget', ["attr" => ["class" => ("form-control" . (((($tmp = Twig\Extension\CoreExtension::length($this->env->getCharset(), CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source,         // line 611
+(isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 611, $this->source); })()), "description", [], "any", false, false, false, 611), "vars", [], "any", false, false, false, 611), "errors", [], "any", false, false, false, 611))) && $tmp instanceof Markup ? (string) $tmp : $tmp)) ? (" is-invalid") : (""))), "required" => "required", "rows" => 5]]);
+        // line 615
+        yield "
+                            ";
+        // line 616
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 616, $this->source); })()), "description", [], "any", false, false, false, 616), 'errors');
+        yield "
+                        </div>
+                    </div>
+                    
+                    <div class=\"btn-group\">
+                        <button type=\"submit\" class=\"btn btn-primary\" id=\"submit-button\">
+                            <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">
+                                <path d=\"M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z\"></path>
+                                <polyline points=\"17 21 17 13 7 13 7 21\"></polyline>
+                                <polyline points=\"7 3 7 8 15 8\"></polyline>
+                            </svg>
+                            Create Maintenance & Pay
+                        </button>
+                        ";
+        // line 629
+        if ((($tmp = $this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN")) && $tmp instanceof Markup ? (string) $tmp : $tmp)) {
+            // line 630
+            yield "                            <a href=\"";
+            yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_maintenances_index");
+            yield "\" class=\"btn btn-secondary\">
+                                <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">
+                                    <line x1=\"19\" y1=\"12\" x2=\"5\" y2=\"12\"></line>
+                                    <polyline points=\"12 19 5 12 12 5\"></polyline>
+                                </svg>
+                                Back to list
+                            </a>
+                        ";
+        } else {
+            // line 638
+            yield "                            <a href=\"";
+            yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("my_vehicle");
+            yield "\" class=\"btn btn-secondary\">
+                                <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">
+                                    <line x1=\"19\" y1=\"12\" x2=\"5\" y2=\"12\"></line>
+                                    <polyline points=\"12 19 5 12 12 5\"></polyline>
+                                </svg>
+                                Back to list
+                            </a>
+                        ";
+        }
+        // line 646
+        yield "                    </div>
+                ";
+        // line 647
+        yield         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 647, $this->source); })()), 'form_end');
+        yield "
+
+                <div class=\"payment-processing\" id=\"payment-processing\">
+                    <div class=\"spinner-border\" role=\"status\">
+                        <span class=\"visually-hidden\">Loading...</span>
+                    </div>
+                    <p>Processing your payment. Please wait...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Stripe.js library -->
+    <script src=\"https://js.stripe.com/v3/\"></script>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Initialize modals
+        const errorModal = document.getElementById('error-modal');
+        const successModal = document.getElementById('success-modal');
+        const modalClose = document.getElementById('modal-close');
+        const successModalClose = document.getElementById('success-modal-close');
+        const modalConfirm = document.getElementById('modal-confirm');
+        const successModalConfirm = document.getElementById('success-modal-confirm');
+        const errorList = document.getElementById('error-list');
+        const successMessage = document.getElementById('success-message');
+
+        // Modal control functions
+        function showErrorModal(errors) {
+            errorList.innerHTML = '';
+            errors.forEach(error => {
+                const li = document.createElement('li');
+                li.textContent = error;
+                errorList.appendChild(li);
+            });
+            errorModal.classList.add('active');
+        }
+
+        function showSuccessModal(message) {
+            successMessage.textContent = message;
+            successModal.classList.add('active');
+        }
+
+        function hideErrorModal() {
+            errorModal.classList.remove('active');
+        }
+
+        function hideSuccessModal() {
+            successModal.classList.remove('active');
+        }
+
+        // Modal event listeners
+        modalClose.addEventListener('click', hideErrorModal);
+        successModalClose.addEventListener('click', hideSuccessModal);
+        modalConfirm.addEventListener('click', hideErrorModal);
+        successModalConfirm.addEventListener('click', hideSuccessModal);
+
+        // Close modal when clicking outside
+        errorModal.addEventListener('click', function(e) {
+            if (e.target === errorModal) {
+                hideErrorModal();
+            }
+        });
+
+        successModal.addEventListener('click', function(e) {
+            if (e.target === successModal) {
+                hideSuccessModal();
+            }
+        });
+
+        // Form functionality
+        const serviceTypeSelect = document.getElementById('";
+        // line 718
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 718, $this->source); })()), "serviceType", [], "any", false, false, false, 718), "vars", [], "any", false, false, false, 718), "id", [], "any", false, false, false, 718), "html", null, true);
+        yield "');
+        const serviceProviderSelect = document.getElementById('";
+        // line 719
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 719, $this->source); })()), "serviceProvider", [], "any", false, false, false, 719), "vars", [], "any", false, false, false, 719), "id", [], "any", false, false, false, 719), "html", null, true);
+        yield "');
+        const costInput = document.getElementById('";
+        // line 720
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 720, $this->source); })()), "cost", [], "any", false, false, false, 720), "vars", [], "any", false, false, false, 720), "id", [], "any", false, false, false, 720), "html", null, true);
+        yield "');
+        
+        const servicesData = {
+            ";
+        // line 723
+        $context['_parent'] = $context;
+        $context['_seq'] = CoreExtension::ensureTraversable((isset($context["services"]) || array_key_exists("services", $context) ? $context["services"] : (function () { throw new RuntimeError('Variable "services" does not exist.', 723, $this->source); })()));
+        foreach ($context['_seq'] as $context["serviceType"] => $context["serviceData"]) {
+            // line 724
+            yield "                '";
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($context["serviceType"], "html", null, true);
+            yield "': {
+                    price: ";
+            // line 725
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["serviceData"], "price", [], "any", false, false, false, 725), "html", null, true);
+            yield ",
+                    providers: ";
+            // line 726
+            yield json_encode(CoreExtension::getAttribute($this->env, $this->source, $context["serviceData"], "providers", [], "any", false, false, false, 726));
+            yield "
+                },
+            ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['serviceType'], $context['serviceData'], $context['_parent']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 729
+        yield "        };
+        
+        // Update service provider options when service type changes
+        serviceTypeSelect.addEventListener('change', function() {
+            const selectedService = this.value;
+            
+            if (selectedService && servicesData[selectedService]) {
+                // Clear existing options
+                serviceProviderSelect.innerHTML = '';
+                
+                // Add default option
+                const defaultOption = document.createElement('option');
+                defaultOption.value = '';
+                defaultOption.disabled = true;
+                defaultOption.selected = true;
+                defaultOption.textContent = '-- Select Provider --';
+                serviceProviderSelect.appendChild(defaultOption);
+                
+                // Add providers for selected service
+                const providers = servicesData[selectedService].providers;
+                providers.forEach(provider => {
+                    const option = document.createElement('option');
+                    option.value = provider;
+                    option.textContent = provider;
+                    serviceProviderSelect.appendChild(option);
+                });
+                
+                // Update cost
+                costInput.value = servicesData[selectedService].price;
+            } else {
+                serviceProviderSelect.innerHTML = '';
+                costInput.value = '';
+            }
+        });
+        
+        // Initialize form if returning with errors
+        if (serviceTypeSelect.value) {
+            serviceTypeSelect.dispatchEvent(new Event('change'));
+            
+            // Reselect previously selected provider if any
+            if ('";
+        // line 769
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 769, $this->source); })()), "serviceProvider", [], "any", false, false, false, 769), "vars", [], "any", false, false, false, 769), "value", [], "any", false, false, false, 769), "html", null, true);
+        yield "') {
+                serviceProviderSelect.value = '";
+        // line 770
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 770, $this->source); })()), "serviceProvider", [], "any", false, false, false, 770), "vars", [], "any", false, false, false, 770), "value", [], "any", false, false, false, 770), "html", null, true);
+        yield "';
+            }
+        }
+        
+        // Tooltip functionality
+        document.querySelectorAll('[data-tooltip]').forEach(element => {
+            const tooltip = document.createElement('span');
+            tooltip.className = 'tooltip';
+            tooltip.innerHTML = `
+                <span class=\"tooltip-icon\">i</span>
+                <span class=\"tooltip-text\">\${element.dataset.tooltip}</span>
+            `;
+            element.appendChild(tooltip);
+        });
+
+        // Stripe payment handling
+        const form = document.getElementById('maintenance-form');
+        const submitButton = document.getElementById('submit-button');
+        const paymentProcessing = document.getElementById('payment-processing');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Show processing UI
+            submitButton.disabled = true;
+            submitButton.innerHTML = `
+                <span class=\"spinner-border spinner-border-sm\" role=\"status\" aria-hidden=\"true\"></span>
+                Processing...
+            `;
+            paymentProcessing.style.display = 'block';
+            
+            // Submit the form via AJAX
+            fetch(form.action, {
+                method: form.method,
+                body: new FormData(form),
+                headers: {
+                    'Accept': 'application/json',
+                    'X-Requested-With': 'XMLHttpRequest'
+                }
+            })
+            .then(async response => {
+                const contentType = response.headers.get('content-type');
+                if (!contentType || !contentType.includes('application/json')) {
+                    const text = await response.text();
+                    throw new Error(`Expected JSON but got: \${text.substring(0, 100)}...`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                if (data.success && data.redirectUrl) {
+                    // Redirect to Stripe checkout
+                    window.location.href = data.redirectUrl;
+                } else {
+                    // Handle form errors
+                    paymentProcessing.style.display = 'none';
+                    submitButton.disabled = false;
+                    submitButton.innerHTML = `
+                        <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">
+                            <path d=\"M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z\"></path>
+                            <polyline points=\"17 21 17 13 7 13 7 21\"></polyline>
+                            <polyline points=\"7 3 7 8 15 8\"></polyline>
+                        </svg>
+                        Create Maintenance & Pay
+                    `;
+                    
+                    if (data.errors) {
+                        // Display form errors in modal
+                        const errorMessages = [];
+                        for (const field in data.errors) {
+                            // Format field names for display
+                            const fieldName = field.replace(/([A-Z])/g, ' \$1').replace(/^./, str => str.toUpperCase());
+                            errorMessages.push(`\${fieldName}: \${data.errors[field]}`);
+                        }
+                        showErrorModal(errorMessages);
+                    } else if (data.error) {
+                        showErrorModal([data.error]);
+                    } else {
+                        showErrorModal(['An unknown error occurred. Please try again.']);
+                    }
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                paymentProcessing.style.display = 'none';
+                submitButton.disabled = false;
+                submitButton.innerHTML = `
+                    <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">
+                        <path d=\"M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z\"></path>
+                        <polyline points=\"17 21 17 13 7 13 7 21\"></polyline>
+                        <polyline points=\"7 3 7 8 15 8\"></polyline>
+                    </svg>
+                    Create Maintenance & Pay
+                `;
+                showErrorModal(['Network error occurred. Please check your connection and try again.']);
+            });
+        });
+    });
+    </script>
+";
+        
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
+
+        
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
+
+        yield from [];
+    }
+
+    /**
+     * @codeCoverageIgnore
+     */
+    public function getTemplateName(): string
+    {
+        return "maintenance/new.html.twig";
+    }
+
+    /**
+     * @codeCoverageIgnore
+     */
+    public function isTraitable(): bool
+    {
+        return false;
+    }
+
+    /**
+     * @codeCoverageIgnore
+     */
+    public function getDebugInfo(): array
+    {
+        return array (  938 => 770,  934 => 769,  892 => 729,  883 => 726,  879 => 725,  874 => 724,  870 => 723,  864 => 720,  860 => 719,  856 => 718,  782 => 647,  779 => 646,  767 => 638,  755 => 630,  753 => 629,  737 => 616,  734 => 615,  732 => 611,  731 => 609,  728 => 608,  726 => 603,  719 => 599,  710 => 592,  708 => 588,  707 => 586,  703 => 585,  696 => 581,  687 => 574,  685 => 571,  684 => 569,  680 => 568,  673 => 564,  665 => 558,  663 => 555,  662 => 553,  659 => 552,  657 => 547,  650 => 543,  639 => 534,  637 => 531,  636 => 529,  632 => 528,  625 => 524,  614 => 515,  612 => 512,  611 => 510,  607 => 509,  601 => 506,  99 => 6,  86 => 5,  63 => 3,  41 => 1,);
+    }
+
+    public function getSourceContext(): Source
+    {
+        return new Source("{% extends baseTemplate %}
+
+{% block title %}Create Maintenance{% endblock %}
+
+{% block body %}
+    <style>
+        :root {
+            --primary: #5e60ce;
+            --primary-dark: #4a4bd1;
+            --secondary: #6930c3;
+            --accent: #64dfdf;
+            --accent-light: #80ffdb;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --gray: #6c757d;
+            --success: #06d6a0;
+            --danger: #ef476f;
+            --warning: #ffd166;
+            --info: #118ab2;
+            --card-shadow: 0 10px 30px rgba(94, 96, 206, 0.15);
+            --input-shadow: 0 4px 10px rgba(94, 96, 206, 0.07);
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #f5f7ff 0%, #e9f0ff 100%);
+            color: var(--dark);
+            line-height: 1.6;
+            min-height: 100vh;
+            margin: 0;
+            padding: 2rem 0;
+        }
+        
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        
+        .page-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-weight: 800;
+            font-size: 2.5rem;
+            background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 16px;
+            box-shadow: var(--card-shadow);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+        
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 8px;
+            background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%);
+        }
+        
+        .card-header {
+            padding: 2rem 2.5rem 1.5rem;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+            position: relative;
+        }
+        
+        .card-header h1 {
+            margin: 0;
+            font-size: 1.8rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: var(--primary);
+        }
+        
+        .card-body {
+            padding: 2rem 2.5rem;
+        }
+        
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+        
+        .form-group.full-width {
+            grid-column: span 2;
+        }
+        
+        .form-label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+            letter-spacing: 0.5px;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 0.85rem 1rem;
+            font-size: 1rem;
+            color: var(--dark);
+            background-color: #fff;
+            border: 2px solid rgba(94, 96, 206, 0.1);
+            border-radius: 10px;
+            box-shadow: var(--input-shadow);
+            transition: all 0.2s ease;
+        }
+        
+        .form-control:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(94, 96, 206, 0.15);
+            outline: 0;
+        }
+        
+        /* Input icon styling */
+        .input-icon {
+            position: absolute;
+            top: 2.6rem;
+            right: 1rem;
+            color: var(--gray);
+            pointer-events: none;
+            transition: color 0.2s ease;
+        }
+        
+        .form-control:focus + .input-icon {
+            color: var(--primary);
+        }
+        
+        select.form-control {
+            appearance: none;
+            background-image: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%236c757d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E\");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            background-size: 16px;
+            padding-right: 3rem;
+        }
+        
+        textarea.form-control {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        /* Tooltip */
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            margin-left: 0.5rem;
+        }
+        
+        .tooltip-icon {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: rgba(94, 96, 206, 0.1);
+            color: var(--primary);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            font-weight: bold;
+            cursor: help;
+        }
+        
+        .tooltip-text {
+            visibility: hidden;
+            width: 200px;
+            background-color: var(--dark);
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 0.5rem;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -100px;
+            opacity: 0;
+            transition: opacity 0.3s;
+            font-size: 0.8rem;
+            font-weight: normal;
+        }
+        
+        .tooltip:hover .tooltip-text {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        /* Button styling */
+        .btn-group {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2.5rem;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.85rem 1.75rem;
+            border-radius: 10px;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: none;
+            font-size: 1rem;
+            flex: 1;
+        }
+        
+        .btn svg {
+            margin-right: 0.5rem;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(94, 96, 206, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-primary:hover {
+            box-shadow: 0 6px 20px rgba(94, 96, 206, 0.4);
+            transform: translateY(-2px);
+        }
+        
+        .btn-primary::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: 0.6s;
+        }
+        
+        .btn-primary:hover::after {
+            left: 100%;
+        }
+        
+        .btn-secondary {
+            background: white;
+            color: var(--primary);
+            border: 2px solid rgba(94, 96, 206, 0.15);
+        }
+        
+        .btn-secondary:hover {
+            background-color: rgba(94, 96, 206, 0.05);
+            border-color: rgba(94, 96, 206, 0.3);
+        }
+        
+        /* Form errors */
+        .form-error {
+            color: var(--danger);
+            font-size: 0.8rem;
+            margin-top: 0.25rem;
+        }
+        
+        .is-invalid {
+            border-color: var(--danger) !important;
+        }
+
+        /* Payment processing */
+        .payment-processing {
+            display: none;
+            text-align: center;
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: rgba(245, 247, 255, 0.8);
+            border-radius: 10px;
+        }
+
+        .payment-processing .spinner-border {
+            width: 3rem;
+            height: 3rem;
+            color: var(--primary);
+        }
+
+        .payment-processing p {
+            color: var(--primary);
+            font-weight: 500;
+            margin-top: 1rem;
+            margin-bottom: 0;
+        }
+
+        /* Custom Modal Styles */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-container {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            width: 90%;
+            max-width: 500px;
+            transform: translateY(20px);
+            transition: transform 0.3s ease;
+            overflow: hidden;
+        }
+
+        .modal-overlay.active .modal-container {
+            transform: translateY(0);
+        }
+
+        .modal-header {
+            padding: 1.5rem 2rem;
+            background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            font-weight: 600;
+            font-size: 1.25rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0;
+            line-height: 1;
+        }
+
+        .modal-body {
+            padding: 2rem;
+        }
+
+        .modal-body p {
+            margin: 0 0 1.5rem;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        .modal-footer {
+            padding: 1rem 2rem;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: flex-end;
+            gap: 1rem;
+        }
+
+        .modal-btn {
+            padding: 0.65rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: none;
+        }
+
+        .modal-btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .modal-btn-primary:hover {
+            background: var(--primary-dark);
+        }
+
+        .modal-btn-secondary {
+            background: white;
+            color: var(--primary);
+            border: 1px solid rgba(94, 96, 206, 0.3);
+        }
+
+        .modal-btn-secondary:hover {
+            background: rgba(94, 96, 206, 0.05);
+        }
+
+        .error-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 1.5rem;
+        }
+
+        .error-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(239, 71, 111, 0.1);
+            color: var(--danger);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .error-list li:before {
+            content: '✕';
+            color: var(--danger);
+            font-weight: bold;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .form-group.full-width {
+                grid-column: span 1;
+            }
+            
+            .btn-group {
+                flex-direction: column;
+            }
+            
+            .card-header, .card-body {
+                padding: 1.5rem;
+            }
+
+            .modal-container {
+                width: 95%;
+            }
+
+            .modal-header,
+            .modal-body,
+            .modal-footer {
+                padding: 1.25rem;
+            }
+        }
+    </style>
+
+    <!-- Modal Template -->
+    <div class=\"modal-overlay\" id=\"error-modal\">
+        <div class=\"modal-container\">
+            <div class=\"modal-header\">
+                <span>Form Errors</span>
+                <button class=\"modal-close\" id=\"modal-close\">&times;</button>
+            </div>
+            <div class=\"modal-body\">
+                <p>Please fix the following errors:</p>
+                <ul class=\"error-list\" id=\"error-list\"></ul>
+            </div>
+            <div class=\"modal-footer\">
+                <button class=\"modal-btn modal-btn-primary\" id=\"modal-confirm\">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <div class=\"modal-overlay\" id=\"success-modal\">
+        <div class=\"modal-container\">
+            <div class=\"modal-header\" style=\"background: linear-gradient(90deg, var(--success) 0%, #06b6d4 100%);\">
+                <span>Success</span>
+                <button class=\"modal-close\" id=\"success-modal-close\">&times;</button>
+            </div>
+            <div class=\"modal-body\">
+                <p id=\"success-message\"></p>
+            </div>
+            <div class=\"modal-footer\">
+                <button class=\"modal-btn modal-btn-primary\" id=\"success-modal-confirm\">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <div class=\"container\">
+        <h1 class=\"page-title\">Fleet Management System</h1>
+        
+        <div class=\"card\">
+            <div class=\"card-header\">
+                <h1>
+                    <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">
+                        <path d=\"M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z\"></path>
+                    </svg>
+                    Create New Maintenance
+                </h1>
+            </div>
+            
+            <div class=\"card-body\">
+                {{ form_start(form, {'attr': {'novalidate': 'novalidate', 'class': 'maintenance-form', 'id': 'maintenance-form'}}) }}
+                    <div class=\"form-grid\">
+                        <div class=\"form-group\">
+                            {{ form_label(form.vehicle, 'Vehicle', {'label_attr': {'class': 'form-label'}}) }}
+                            {{ form_widget(form.vehicle, {
+                                'attr': {
+                                    'class': 'form-control' ~ (form.vehicle.vars.errors|length ? ' is-invalid' : ''),
+                                    'required': 'required'
+                                }
+                            }) }}
+                            <div class=\"input-icon\">
+                                <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">
+                                    <rect x=\"1\" y=\"3\" width=\"15\" height=\"13\"></rect>
+                                    <polyline points=\"16 8 20 8 23 11 23 16 20 16 20 18 9 18\"></polyline>
+                                    <circle cx=\"5.5\" cy=\"18.5\" r=\"2.5\"></circle>
+                                    <circle cx=\"18.5\" cy=\"18.5\" r=\"2.5\"></circle>
+                                </svg>
+                            </div>
+                            {{ form_errors(form.vehicle) }}
+                        </div>
+                        
+                        <div class=\"form-group\">
+                            {{ form_label(form.maintenanceDate, 'Maintenance Date', {'label_attr': {'class': 'form-label'}}) }}
+                            {{ form_widget(form.maintenanceDate, {
+                                'attr': {
+                                    'class': 'form-control' ~ (form.maintenanceDate.vars.errors|length ? ' is-invalid' : ''),
+                                    'required': 'required'
+                                }
+                            }) }}
+                            <div class=\"input-icon\">
+                                <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">
+                                    <rect x=\"3\" y=\"4\" width=\"18\" height=\"18\" rx=\"2\" ry=\"2\"></rect>
+                                    <line x1=\"16\" y1=\"2\" x2=\"16\" y2=\"6\"></line>
+                                    <line x1=\"8\" y1=\"2\" x2=\"8\" y2=\"6\"></line>
+                                    <line x1=\"3\" y1=\"10\" x2=\"21\" y2=\"10\"></line>
+                                </svg>
+                            </div>
+                            {{ form_errors(form.maintenanceDate) }}
+                        </div>
+                        
+                        <div class=\"form-group\">
+                            {{ form_label(form.serviceType, 'Service Type', {
+                                'label_attr': {
+                                    'class': 'form-label',
+                                    'data-tooltip': 'Select the type of service needed for this maintenance'
+                                }
+                            }) }}
+                            {{ form_widget(form.serviceType, {
+                                'attr': {
+                                    'class': 'form-control' ~ (form.serviceType.vars.errors|length ? ' is-invalid' : ''),
+                                    'required': 'required'
+                                }
+                            }) }}
+                            <div class=\"input-icon\">
+                                <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">
+                                    <path d=\"M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z\"></path>
+                                </svg>
+                            </div>
+                            {{ form_errors(form.serviceType) }}
+                        </div>
+                        
+                        <div class=\"form-group\">
+                            {{ form_label(form.serviceProvider, 'Service Provider', {'label_attr': {'class': 'form-label'}}) }}
+                            {{ form_widget(form.serviceProvider, {
+                                'attr': {
+                                    'class': 'form-control' ~ (form.serviceProvider.vars.errors|length ? ' is-invalid' : ''),
+                                    'required': 'required'
+                                }
+                            }) }}
+                            <div class=\"input-icon\">
+                                <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">
+                                    <path d=\"M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2\"></path>
+                                    <circle cx=\"12\" cy=\"7\" r=\"4\"></circle>
+                                </svg>
+                            </div>
+                            {{ form_errors(form.serviceProvider) }}
+                        </div>
+                        
+                        <div class=\"form-group\">
+                            {{ form_label(form.cost, 'Cost (€)', {'label_attr': {'class': 'form-label'}}) }}
+                            {{ form_widget(form.cost, {
+                                'attr': {
+                                    'class': 'form-control' ~ (form.cost.vars.errors|length ? ' is-invalid' : ''),
+                                    'required': 'required',
+                                    'readonly': 'readonly'
+                                }
+                            }) }}
+                            <div class=\"input-icon\">
+                                <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">
+                                    <line x1=\"12\" y1=\"1\" x2=\"12\" y2=\"23\"></line>
+                                    <path d=\"M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6\"></path>
+                                </svg>
+                            </div>
+                            {{ form_errors(form.cost) }}
+                        </div>
+                        
+                        <div class=\"form-group full-width\">
+                            {{ form_label(form.description, 'Description', {
+                                'label_attr': {
+                                    'class': 'form-label',
+                                    'data-tooltip': 'Provide details about the maintenance service needed'
+                                }
+                            }) }}
+                            {{ form_widget(form.description, {
+                                'attr': {
+                                    'class': 'form-control' ~ (form.description.vars.errors|length ? ' is-invalid' : ''),
+                                    'required': 'required',
+                                    'rows': 5
+                                }
+                            }) }}
+                            {{ form_errors(form.description) }}
+                        </div>
+                    </div>
+                    
+                    <div class=\"btn-group\">
+                        <button type=\"submit\" class=\"btn btn-primary\" id=\"submit-button\">
+                            <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">
+                                <path d=\"M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z\"></path>
+                                <polyline points=\"17 21 17 13 7 13 7 21\"></polyline>
+                                <polyline points=\"7 3 7 8 15 8\"></polyline>
+                            </svg>
+                            Create Maintenance & Pay
+                        </button>
+                        {% if is_granted('ROLE_ADMIN') %}
+                            <a href=\"{{ path('admin_maintenances_index') }}\" class=\"btn btn-secondary\">
+                                <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">
+                                    <line x1=\"19\" y1=\"12\" x2=\"5\" y2=\"12\"></line>
+                                    <polyline points=\"12 19 5 12 12 5\"></polyline>
+                                </svg>
+                                Back to list
+                            </a>
+                        {% else %}
+                            <a href=\"{{ path('my_vehicle') }}\" class=\"btn btn-secondary\">
+                                <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">
+                                    <line x1=\"19\" y1=\"12\" x2=\"5\" y2=\"12\"></line>
+                                    <polyline points=\"12 19 5 12 12 5\"></polyline>
+                                </svg>
+                                Back to list
+                            </a>
+                        {% endif %}
+                    </div>
+                {{ form_end(form) }}
+
+                <div class=\"payment-processing\" id=\"payment-processing\">
+                    <div class=\"spinner-border\" role=\"status\">
+                        <span class=\"visually-hidden\">Loading...</span>
+                    </div>
+                    <p>Processing your payment. Please wait...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Stripe.js library -->
+    <script src=\"https://js.stripe.com/v3/\"></script>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Initialize modals
+        const errorModal = document.getElementById('error-modal');
+        const successModal = document.getElementById('success-modal');
+        const modalClose = document.getElementById('modal-close');
+        const successModalClose = document.getElementById('success-modal-close');
+        const modalConfirm = document.getElementById('modal-confirm');
+        const successModalConfirm = document.getElementById('success-modal-confirm');
+        const errorList = document.getElementById('error-list');
+        const successMessage = document.getElementById('success-message');
+
+        // Modal control functions
+        function showErrorModal(errors) {
+            errorList.innerHTML = '';
+            errors.forEach(error => {
+                const li = document.createElement('li');
+                li.textContent = error;
+                errorList.appendChild(li);
+            });
+            errorModal.classList.add('active');
+        }
+
+        function showSuccessModal(message) {
+            successMessage.textContent = message;
+            successModal.classList.add('active');
+        }
+
+        function hideErrorModal() {
+            errorModal.classList.remove('active');
+        }
+
+        function hideSuccessModal() {
+            successModal.classList.remove('active');
+        }
+
+        // Modal event listeners
+        modalClose.addEventListener('click', hideErrorModal);
+        successModalClose.addEventListener('click', hideSuccessModal);
+        modalConfirm.addEventListener('click', hideErrorModal);
+        successModalConfirm.addEventListener('click', hideSuccessModal);
+
+        // Close modal when clicking outside
+        errorModal.addEventListener('click', function(e) {
+            if (e.target === errorModal) {
+                hideErrorModal();
+            }
+        });
+
+        successModal.addEventListener('click', function(e) {
+            if (e.target === successModal) {
+                hideSuccessModal();
+            }
+        });
+
+        // Form functionality
+        const serviceTypeSelect = document.getElementById('{{ form.serviceType.vars.id }}');
+        const serviceProviderSelect = document.getElementById('{{ form.serviceProvider.vars.id }}');
+        const costInput = document.getElementById('{{ form.cost.vars.id }}');
+        
+        const servicesData = {
+            {% for serviceType, serviceData in services %}
+                '{{ serviceType }}': {
+                    price: {{ serviceData.price }},
+                    providers: {{ serviceData.providers|json_encode|raw }}
+                },
+            {% endfor %}
+        };
+        
+        // Update service provider options when service type changes
+        serviceTypeSelect.addEventListener('change', function() {
+            const selectedService = this.value;
+            
+            if (selectedService && servicesData[selectedService]) {
+                // Clear existing options
+                serviceProviderSelect.innerHTML = '';
+                
+                // Add default option
+                const defaultOption = document.createElement('option');
+                defaultOption.value = '';
+                defaultOption.disabled = true;
+                defaultOption.selected = true;
+                defaultOption.textContent = '-- Select Provider --';
+                serviceProviderSelect.appendChild(defaultOption);
+                
+                // Add providers for selected service
+                const providers = servicesData[selectedService].providers;
+                providers.forEach(provider => {
+                    const option = document.createElement('option');
+                    option.value = provider;
+                    option.textContent = provider;
+                    serviceProviderSelect.appendChild(option);
+                });
+                
+                // Update cost
+                costInput.value = servicesData[selectedService].price;
+            } else {
+                serviceProviderSelect.innerHTML = '';
+                costInput.value = '';
+            }
+        });
+        
+        // Initialize form if returning with errors
+        if (serviceTypeSelect.value) {
+            serviceTypeSelect.dispatchEvent(new Event('change'));
+            
+            // Reselect previously selected provider if any
+            if ('{{ form.serviceProvider.vars.value }}') {
+                serviceProviderSelect.value = '{{ form.serviceProvider.vars.value }}';
+            }
+        }
+        
+        // Tooltip functionality
+        document.querySelectorAll('[data-tooltip]').forEach(element => {
+            const tooltip = document.createElement('span');
+            tooltip.className = 'tooltip';
+            tooltip.innerHTML = `
+                <span class=\"tooltip-icon\">i</span>
+                <span class=\"tooltip-text\">\${element.dataset.tooltip}</span>
+            `;
+            element.appendChild(tooltip);
+        });
+
+        // Stripe payment handling
+        const form = document.getElementById('maintenance-form');
+        const submitButton = document.getElementById('submit-button');
+        const paymentProcessing = document.getElementById('payment-processing');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Show processing UI
+            submitButton.disabled = true;
+            submitButton.innerHTML = `
+                <span class=\"spinner-border spinner-border-sm\" role=\"status\" aria-hidden=\"true\"></span>
+                Processing...
+            `;
+            paymentProcessing.style.display = 'block';
+            
+            // Submit the form via AJAX
+            fetch(form.action, {
+                method: form.method,
+                body: new FormData(form),
+                headers: {
+                    'Accept': 'application/json',
+                    'X-Requested-With': 'XMLHttpRequest'
+                }
+            })
+            .then(async response => {
+                const contentType = response.headers.get('content-type');
+                if (!contentType || !contentType.includes('application/json')) {
+                    const text = await response.text();
+                    throw new Error(`Expected JSON but got: \${text.substring(0, 100)}...`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                if (data.success && data.redirectUrl) {
+                    // Redirect to Stripe checkout
+                    window.location.href = data.redirectUrl;
+                } else {
+                    // Handle form errors
+                    paymentProcessing.style.display = 'none';
+                    submitButton.disabled = false;
+                    submitButton.innerHTML = `
+                        <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">
+                            <path d=\"M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z\"></path>
+                            <polyline points=\"17 21 17 13 7 13 7 21\"></polyline>
+                            <polyline points=\"7 3 7 8 15 8\"></polyline>
+                        </svg>
+                        Create Maintenance & Pay
+                    `;
+                    
+                    if (data.errors) {
+                        // Display form errors in modal
+                        const errorMessages = [];
+                        for (const field in data.errors) {
+                            // Format field names for display
+                            const fieldName = field.replace(/([A-Z])/g, ' \$1').replace(/^./, str => str.toUpperCase());
+                            errorMessages.push(`\${fieldName}: \${data.errors[field]}`);
+                        }
+                        showErrorModal(errorMessages);
+                    } else if (data.error) {
+                        showErrorModal([data.error]);
+                    } else {
+                        showErrorModal(['An unknown error occurred. Please try again.']);
+                    }
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                paymentProcessing.style.display = 'none';
+                submitButton.disabled = false;
+                submitButton.innerHTML = `
+                    <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">
+                        <path d=\"M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z\"></path>
+                        <polyline points=\"17 21 17 13 7 13 7 21\"></polyline>
+                        <polyline points=\"7 3 7 8 15 8\"></polyline>
+                    </svg>
+                    Create Maintenance & Pay
+                `;
+                showErrorModal(['Network error occurred. Please check your connection and try again.']);
+            });
+        });
+    });
+    </script>
+{% endblock %}", "maintenance/new.html.twig", "C:\\Users\\skonb\\Desktop\\UrbanLink_Symfony-Production\\templates\\maintenance\\new.html.twig");
+    }
+}

@@ -1,0 +1,1599 @@
+<?php
+
+use Twig\Environment;
+use Twig\Error\LoaderError;
+use Twig\Error\RuntimeError;
+use Twig\Extension\CoreExtension;
+use Twig\Extension\SandboxExtension;
+use Twig\Markup;
+use Twig\Sandbox\SecurityError;
+use Twig\Sandbox\SecurityNotAllowedTagError;
+use Twig\Sandbox\SecurityNotAllowedFilterError;
+use Twig\Sandbox\SecurityNotAllowedFunctionError;
+use Twig\Source;
+use Twig\Template;
+use Twig\TemplateWrapper;
+
+/* front_office/course/new.html.twig */
+class __TwigTemplate_df755466f770de9ea7675b9733f0ca73 extends Template
+{
+    private Source $source;
+    /**
+     * @var array<string, Template>
+     */
+    private array $macros = [];
+
+    public function __construct(Environment $env)
+    {
+        parent::__construct($env);
+
+        $this->source = $this->getSourceContext();
+
+        $this->blocks = [
+            'title' => [$this, 'block_title'],
+            'page_title' => [$this, 'block_page_title'],
+            'stylesheets' => [$this, 'block_stylesheets'],
+            'body' => [$this, 'block_body'],
+            'javascripts' => [$this, 'block_javascripts'],
+        ];
+    }
+
+    protected function doGetParent(array $context): bool|string|Template|TemplateWrapper
+    {
+        // line 1
+        return "basef.html.twig";
+    }
+
+    protected function doDisplay(array $context, array $blocks = []): iterable
+    {
+        $macros = $this->macros;
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "front_office/course/new.html.twig"));
+
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "front_office/course/new.html.twig"));
+
+        $this->parent = $this->load("basef.html.twig", 1);
+        yield from $this->parent->unwrap()->yield($context, array_merge($this->blocks, $blocks));
+        
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
+
+        
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
+
+    }
+
+    // line 2
+    /**
+     * @return iterable<null|scalar|\Stringable>
+     */
+    public function block_title(array $context, array $blocks = []): iterable
+    {
+        $macros = $this->macros;
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
+
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
+
+        yield "Book a Ride";
+        
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
+
+        
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
+
+        yield from [];
+    }
+
+    // line 3
+    /**
+     * @return iterable<null|scalar|\Stringable>
+     */
+    public function block_page_title(array $context, array $blocks = []): iterable
+    {
+        $macros = $this->macros;
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "page_title"));
+
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "page_title"));
+
+        yield "Book a Ride";
+        
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
+
+        
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
+
+        yield from [];
+    }
+
+    // line 5
+    /**
+     * @return iterable<null|scalar|\Stringable>
+     */
+    public function block_stylesheets(array $context, array $blocks = []): iterable
+    {
+        $macros = $this->macros;
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheets"));
+
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheets"));
+
+        // line 6
+        yield "  ";
+        yield from $this->yieldParentBlock("stylesheets", $context, $blocks);
+        yield "
+  <style>
+    :root {
+      --primary-color: #4361ee;
+      --secondary-color: #3f37c9;
+      --accent-color: #4895ef;
+      --success-color: #4cc9f0;
+      --light-bg: #f8f9fa;
+      --dark-text: #212529;
+      --border-radius: 12px;
+    }
+
+    body {
+      font-family: 'Roboto', 'Segoe UI', sans-serif;
+      background-color: var(--light-bg);
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      overflow-x: hidden;
+    }
+
+    .app-container {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      max-width: 100%;
+      margin: 0 auto;
+      padding: 0;
+    }
+
+    .header-section {
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      color: white;
+      padding: 2rem;
+      border-radius: 0 0 var(--border-radius) var(--border-radius);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      margin-bottom: 1.5rem;
+    }
+
+    .header-section h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .header-section p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      padding: 0 1.5rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    @media (min-width: 768px) {
+      .content-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .form-panel {
+      background-color: white;
+      border-radius: var(--border-radius);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      padding: 2rem;
+      transition: all 0.3s ease;
+      margin-bottom: 1.5rem;
+    }
+
+    .map-container {
+      background-color: white;
+      border-radius: var(--border-radius);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      padding: 2rem;
+    }
+
+    .form-fields-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    @media (min-width: 768px) {
+      .form-fields-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .form-fields-full {
+      grid-column: 1 / -1;
+    }
+
+    .map-controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .mode-btn {
+      background-color: #e9ecef;
+      color: var(--dark-text);
+      border: none;
+      border-radius: 30px;
+      padding: 0.8rem 1.5rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1rem;
+    }
+
+    .mode-btn:hover {
+      background-color: #dee2e6;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .mode-btn svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .active-mode {
+      background-color: var(--primary-color) !important;
+      color: white !important;
+      box-shadow: 0 6px 16px rgba(67, 97, 238, 0.3);
+    }
+
+    #userMapDiv {
+      height: 60vh;
+      width: 100%;
+      border-radius: var(--border-radius);
+      border: 2px solid #e9ecef;
+      overflow: hidden;
+    }
+
+    .map-instructions {
+      background-color: #f1f3f5;
+      border-left: 4px solid var(--accent-color);
+      padding: 1.25rem;
+      margin: 1rem 0 1.5rem 0;
+      border-radius: 0 var(--border-radius) var(--border-radius) 0;
+      font-size: 1rem;
+    }
+
+    .info-display {
+      background-color: #f8f9fa;
+      border-radius: var(--border-radius);
+      padding: 1rem 1.25rem;
+      border: 1px solid #e9ecef;
+      font-size: 1rem;
+      cursor: default;
+      transition: all 0.2s ease;
+      color: #495057;
+      font-weight: 500;
+    }
+
+    .info-display:hover {
+      background-color: #f1f3f5;
+      border-color: #ced4da;
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      color: #495057;
+      font-size: 1rem;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 0.9rem 1.2rem;
+      border: 1px solid #ced4da;
+      border-radius: var(--border-radius);
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      background-color: #f8f9fa;
+    }
+
+    .form-control:focus {
+      border-color: var(--primary-color);
+      box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.15);
+      outline: none;
+      background-color: #fff;
+    }
+
+    .footer-actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #e9ecef;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      color: white;
+      border: none;
+      border-radius: var(--border-radius);
+      padding: 1rem 2rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(67, 97, 238, 0.25);
+    }
+
+    .back-link {
+      color: #6c757d;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      padding: 0.75rem 1.25rem;
+      border-radius: var(--border-radius);
+    }
+
+    .back-link:hover {
+      color: var(--dark-text);
+      background-color: #f1f3f5;
+    }
+
+    .error-container {
+      background-color: #ffe3e3;
+      border-left: 4px solid #ff6b6b;
+      color: #c92a2a;
+      padding: 1.25rem;
+      margin-bottom: 1.5rem;
+      border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    }
+
+    .selection-mode-display {
+      display: inline-flex;
+      align-items: center;
+      background-color: #e9ecef;
+      padding: 0.7rem 1.25rem;
+      border-radius: 30px;
+      font-weight: 600;
+      margin-left: 1rem;
+      color: var(--dark-text);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .form-panel, .map-container {
+      animation: fadeIn 0.4s ease-out;
+    }
+
+    .booking-info-card {
+      background-color: #f1f3f5;
+      border-radius: var(--border-radius);
+      padding: 1.5rem;
+      margin-top: 1.5rem;
+      border: 1px solid #e9ecef;
+    }
+
+    .booking-info-title {
+      font-weight: 600;
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .info-item {
+      padding: 0.75rem;
+      background-color: white;
+      border-radius: var(--border-radius);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+    }
+
+    .info-label {
+      font-size: 0.85rem;
+      color: #6c757d;
+      margin-bottom: 0.25rem;
+    }
+
+    .info-value {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--dark-text);
+    }
+  </style>
+";
+        
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
+
+        
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
+
+        yield from [];
+    }
+
+    // line 327
+    /**
+     * @return iterable<null|scalar|\Stringable>
+     */
+    public function block_body(array $context, array $blocks = []): iterable
+    {
+        $macros = $this->macros;
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
+
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
+
+        // line 328
+        yield "<div class=\"app-container\">
+  <div class=\"header-section\">
+    <h1>Book a Ride</h1>
+    <p>Choose a taxi and select your pickup and drop-off locations</p>
+  </div>
+
+  ";
+        // line 334
+        if ((Twig\Extension\CoreExtension::length($this->env->getCharset(), CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 334, $this->source); })()), "vars", [], "any", false, false, false, 334), "errors", [], "any", false, false, false, 334)) > 0)) {
+            // line 335
+            yield "    <div class=\"error-container mx-auto px-4\" style=\"max-width: 1400px;\">
+      ";
+            // line 336
+            yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 336, $this->source); })()), 'errors');
+            yield "
+    </div>
+  ";
+        }
+        // line 339
+        yield "
+  <div class=\"content-grid\">
+    <div class=\"form-panel\">
+      ";
+        // line 342
+        yield         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 342, $this->source); })()), 'form_start', ["attr" => ["novalidate" => "novalidate"]]);
+        yield "
+        ";
+        // line 344
+        yield "        <div style=\"display: none;\">
+          ";
+        // line 345
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 345, $this->source); })()), "taxi", [], "any", false, false, false, 345), 'widget');
+        yield "
+          ";
+        // line 346
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 346, $this->source); })()), "villeDepart", [], "any", false, false, false, 346), 'widget');
+        yield "
+          ";
+        // line 347
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 347, $this->source); })()), "villeArrivee", [], "any", false, false, false, 347), 'widget');
+        yield "
+        </div>
+        
+        <div class=\"form-fields-grid\">
+          <div class=\"form-group\">
+            <label class=\"form-label\" for=\"";
+        // line 352
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 352, $this->source); })()), "dateCourse", [], "any", false, false, false, 352), "vars", [], "any", false, false, false, 352), "id", [], "any", false, false, false, 352), "html", null, true);
+        yield "\">Ride Date</label>
+            ";
+        // line 353
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 353, $this->source); })()), "dateCourse", [], "any", false, false, false, 353), 'widget', ["attr" => ["class" => "form-control"]]);
+        yield "
+            <div class=\"text-red-500 text-sm mt-1\">";
+        // line 354
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 354, $this->source); })()), "dateCourse", [], "any", false, false, false, 354), 'errors');
+        yield "</div>
+          </div>
+
+          <div class=\"form-group\">
+            <label class=\"form-label\">Pickup Location</label>
+            <div id=\"displayDepart\" class=\"info-display\">Select on map</div>
+          </div>
+
+          <div class=\"form-group\">
+            <label class=\"form-label\">Drop-off Location</label>
+            <div id=\"displayArrivee\" class=\"info-display\">Select on map</div>
+          </div>
+
+          <div class=\"form-group\">
+            <label class=\"form-label\" for=\"";
+        // line 368
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 368, $this->source); })()), "distanceKm", [], "any", false, false, false, 368), "vars", [], "any", false, false, false, 368), "id", [], "any", false, false, false, 368), "html", null, true);
+        yield "\">Distance (km)</label>
+            ";
+        // line 369
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 369, $this->source); })()), "distanceKm", [], "any", false, false, false, 369), 'widget', ["attr" => ["class" => "form-control", "readonly" => "readonly"]]);
+        yield "
+          </div>
+        </div>
+
+        <div class=\"booking-info-card\">
+          <div class=\"booking-info-title\">
+            <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" fill=\"currentColor\" viewBox=\"0 0 16 16\">
+              <path d=\"M11 5.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1z\"/>
+              <path d=\"M2 1a1 1 0 0 0-1 1v4.5a2.5 2.5 0 0 0 5 0V2a1 1 0 0 0-1-1H2zm3.5 3.5a.5.5 0 0 1-1 0V2a.5.5 0 0 1 1 0v2.5z\"/>
+              <path d=\"M2 11.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1zm5-5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1zm5 5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1z\"/>
+            </svg>
+            Fare Estimate
+          </div>
+          <div class=\"info-grid\">
+            <div class=\"info-item\">
+              <div class=\"info-label\">Estimated Fare (USD)</div>
+              <div class=\"info-value\">";
+        // line 385
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 385, $this->source); })()), "montant", [], "any", false, false, false, 385), 'widget', ["attr" => ["class" => "form-control", "readonly" => "readonly"]]);
+        yield "</div>
+            </div>
+            ";
+        // line 387
+        if (CoreExtension::getAttribute($this->env, $this->source, ($context["form"] ?? null), "statut", [], "any", true, true, false, 387)) {
+            // line 388
+            yield "            <div class=\"info-item\">
+              <div class=\"info-label\">Status</div>
+              <div class=\"info-value\">";
+            // line 390
+            yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 390, $this->source); })()), "statut", [], "any", false, false, false, 390), 'widget', ["attr" => ["class" => "form-control"]]);
+            yield "</div>
+            </div>
+            ";
+        }
+        // line 393
+        yield "          </div>
+        </div>
+
+        <div class=\"footer-actions\">
+          <button type=\"submit\" class=\"btn-primary\">
+            <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"18\" height=\"18\" fill=\"currentColor\" viewBox=\"0 0 16 16\">
+              <path d=\"M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5Z\"/>
+            </svg>
+            Book My Ride
+          </button>
+          <a href=\"";
+        // line 403
+        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("user_courses");
+        yield "\" class=\"back-link\">
+            <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" viewBox=\"0 0 16 16\">
+              <path fill-rule=\"evenodd\" d=\"M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z\"/>
+            </svg>
+            Back to Rides List
+          </a>
+        </div>
+      ";
+        // line 410
+        yield         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 410, $this->source); })()), 'form_end');
+        yield "
+    </div>
+
+    <div class=\"map-container\">
+      <div class=\"map-controls\">
+        <button type=\"button\" id=\"selectTaxiBtn\" class=\"mode-btn active-mode\">
+          <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" viewBox=\"0 0 16 16\">
+            <path d=\"M4.5 5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1ZM3 5a2 2 0 1 1 4 0 2 2 0 0 1-4 0Z\"/>
+            <path d=\"M14 10a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V5h2.64c.57 0 1.11.2 1.53.564.708-.566 1.703-.682 2.53-.32.922-.4 2.029-.131 2.82.43H14V4.5a1.5 1.5 0 0 0-1.5-1.5h-1.75a.75.75 0 1 1 0-1.5h1.75a3 3 0 0 1 3 3V10Z\"/>
+            <path fill-rule=\"evenodd\" d=\"M13 10a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v6Z\"/>
+          </svg>
+          Taxi
+        </button>
+        <button type=\"button\" id=\"selectDepartBtn\" class=\"mode-btn\">
+          <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" viewBox=\"0 0 16 16\">
+            <path d=\"M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z\"/>
+            <path d=\"M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4z\"/>
+          </svg>
+          Pickup
+        </button>
+        <button type=\"button\" id=\"selectArriveeBtn\" class=\"mode-btn\">
+          <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" viewBox=\"0 0 16 16\">
+            <path d=\"m14.12 10.163 1.715.858c.22.11.22.424 0 .534L8.267 15.34a.598.598 0 0 1-.534 0L.165 11.555a.299.299 0 0 1 0-.534l1.716-.858 5.317 2.659c.505.252 1.1.252 1.604 0l5.317-2.66z\"/>
+            <path d=\"M7.733.063a.598.598 0 0 1 .534 0l7.568 3.784a.3.3 0 0 1 0 .535L8.267 8.165a.598.598 0 0 1-.534 0L.165 4.382a.299.299 0 0 1 0-.535L7.733.063z\"/>
+            <path d=\"m14.12 6.576 1.715.858c.22.11.22.424 0 .534l-7.568 3.784a.598.598 0 0 1-.534 0L.165 7.968a.299.299 0 0 1 0-.534l1.716-.858 5.317 2.659c.505.252 1.1.252 1.604 0l5.317-2.659z\"/>
+          </svg>
+          Drop-off
+        </button>
+        <div id=\"selectionModeDisplay\" class=\"selection-mode-display\">Mode: Selecting taxi</div>
+      </div>
+
+      <div class=\"map-instructions\">
+        <p><strong>Instructions:</strong> First select a taxi (shown in blue), then set your pickup and drop-off points to calculate the ride fare.</p>
+      </div>
+      
+      <div id=\"userMapDiv\"></div>
+    </div>
+  </div>
+</div>
+";
+        
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
+
+        
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
+
+        yield from [];
+    }
+
+    // line 451
+    /**
+     * @return iterable<null|scalar|\Stringable>
+     */
+    public function block_javascripts(array $context, array $blocks = []): iterable
+    {
+        $macros = $this->macros;
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
+
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
+
+        // line 452
+        yield from $this->yieldParentBlock("javascripts", $context, $blocks);
+        yield "
+  <link rel=\"stylesheet\" href=\"https://js.arcgis.com/4.25/esri/themes/light/main.css\">
+  <script src=\"https://js.arcgis.com/4.25/\" defer></script>
+  <script>
+    window.addEventListener(\"load\", function() {
+      require([
+        \"esri/Map\",
+        \"esri/views/MapView\",
+        \"esri/Graphic\",
+        \"esri/geometry/geometryEngine\"
+      ], function(Map, MapView, Graphic, geometryEngine) {
+
+        // Variables to store markers and selected taxi rate
+        var departMarker = null;
+        var arriveeMarker = null;
+        var selectedTaxiMarker = null; // Allows only one taxi to be selected (in green)
+        var selectedTaxiRate = null;
+        var selectionMode = \"taxi\"; // Modes: \"taxi\", \"depart\", \"arrivee\"
+        document.getElementById(\"selectionModeDisplay\").textContent = \"Mode: Selecting taxi\";
+
+        // Buttons to change mode
+        document.getElementById(\"selectTaxiBtn\").addEventListener(\"click\", function() {
+          selectionMode = \"taxi\";
+          document.getElementById(\"selectionModeDisplay\").textContent = \"Mode: Selecting taxi\";
+          console.log(\"Taxi mode activated\");
+          updateModeButtons(\"selectTaxiBtn\");
+        });
+
+        document.getElementById(\"selectDepartBtn\").addEventListener(\"click\", function() {
+          selectionMode = \"depart\";
+          document.getElementById(\"selectionModeDisplay\").textContent = \"Mode: Selecting pickup\";
+          console.log(\"Pickup mode activated\");
+          updateModeButtons(\"selectDepartBtn\");
+        });
+
+        document.getElementById(\"selectArriveeBtn\").addEventListener(\"click\", function() {
+          selectionMode = \"arrivee\";
+          document.getElementById(\"selectionModeDisplay\").textContent = \"Mode: Selecting drop-off\";
+          console.log(\"Drop-off mode activated\");
+          updateModeButtons(\"selectArriveeBtn\");
+        });
+
+
+        // Create map
+        var map = new Map({ basemap: \"streets-navigation-vector\" });
+        var view = new MapView({
+          container: \"userMapDiv\",
+          map: map,
+          center: [10.18, 36.80],
+          zoom: 12
+        });
+
+        // Utility function to add a marker
+        function addMarker(geometry, color, size) {
+          return new Graphic({
+            geometry: geometry,
+            symbol: { type: \"simple-marker\", color: color, size: size || \"12px\" }
+          });
+        }
+        
+        function updateModeButtons(activeButtonId) {
+          var modeButtons = document.querySelectorAll(\".mode-btn\");
+          modeButtons.forEach(function(button) {
+            button.classList.remove(\"active-mode\");
+          });
+          document.getElementById(activeButtonId).classList.add(\"active-mode\");
+        }
+
+        // Utility function to calculate distance in kilometers
+        function computeDistance(from, to) {
+          return geometryEngine.distance(from, to, \"kilometers\");
+        }
+
+        // Get user position and load nearby taxis
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            var userLng = position.coords.longitude;
+            var userLat = position.coords.latitude;
+            view.center = [userLng, userLat];
+            var userMarker = addMarker({ type: \"point\", longitude: userLng, latitude: userLat }, \"red\", \"14px\");
+            view.graphics.add(userMarker);
+
+            fetch(\"";
+        // line 534
+        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("get_nearby_taxis");
+        yield "?longitude=\" + userLng + \"&latitude=\" + userLat)
+              .then(response => response.json())
+              .then(function(data) {
+                data.forEach(function(taxi) {
+                  var taxiPoint = { type: \"point\", longitude: taxi.longitude, latitude: taxi.latitude };
+                  var taxiMarker = addMarker(taxiPoint, \"blue\", \"12px\");
+                  taxiMarker.attributes = {
+                    taxiId: taxi.id,
+                    immatriculation: taxi.immatriculation,
+                    tarifBase: taxi.tarifBase
+                  };
+                  view.graphics.add(taxiMarker);
+                });
+              })
+              .catch(function(error) {
+                console.error(\"Error fetching nearby taxis:\", error);
+              });
+          });
+        } else {
+          console.warn(\"Geolocation is not supported by this browser.\");
+        }
+
+        // Handle map clicks
+        view.on(\"click\", function(event) {
+          console.log(\"Click detected in mode:\", selectionMode);
+          view.hitTest(event).then(function(response) {
+            var results = response.results;
+            console.log(\"HitTest results:\", results);
+            var clickedGeometry = null;
+
+            if (selectionMode === \"taxi\") {
+              // Taxi mode: Search for a taxi among graphics
+              var taxiGraphic = results.find(function(result) {
+                return result.graphic.attributes && result.graphic.attributes.taxiId;
+              });
+              if (taxiGraphic) {
+                clickedGeometry = taxiGraphic.graphic.geometry;
+                selectedTaxiRate = taxiGraphic.graphic.attributes.tarifBase;
+                console.log(\"Taxi selected, Rate:\", selectedTaxiRate);
+
+                // Remove previous selected taxi
+                if (selectedTaxiMarker) {
+                  view.graphics.remove(selectedTaxiMarker);
+                }
+
+                // Add new marker in green
+                selectedTaxiMarker = addMarker(clickedGeometry, \"green\", \"14px\");
+                selectedTaxiMarker.attributes = taxiGraphic.graphic.attributes;
+                view.graphics.add(selectedTaxiMarker);
+                document.getElementById('";
+        // line 583
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 583, $this->source); })()), "taxi", [], "any", false, false, false, 583), "vars", [], "any", false, false, false, 583), "id", [], "any", false, false, false, 583), "html", null, true);
+        yield "').value = taxiGraphic.graphic.attributes.taxiId;
+
+                // Recalculate distance and amount if pickup and drop-off exist
+                if (departMarker && arriveeMarker && selectedTaxiRate) {
+                  var distanceKm = computeDistance(departMarker.geometry, arriveeMarker.geometry);
+                  console.log(\"Distance recalculated:\", distanceKm);
+                  document.getElementById('";
+        // line 589
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 589, $this->source); })()), "distanceKm", [], "any", false, false, false, 589), "vars", [], "any", false, false, false, 589), "id", [], "any", false, false, false, 589), "html", null, true);
+        yield "').value = distanceKm.toFixed(2);
+                  var montant = distanceKm * selectedTaxiRate;
+                  console.log(\"Amount recalculated:\", montant);
+                  document.getElementById('";
+        // line 592
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 592, $this->source); })()), "montant", [], "any", false, false, false, 592), "vars", [], "any", false, false, false, 592), "id", [], "any", false, false, false, 592), "html", null, true);
+        yield "').value = montant.toFixed(2);
+                }
+                return;
+              } else {
+                console.log(\"No taxi detected in taxi mode.\");
+                return;
+              }
+            }
+            else if (selectionMode === \"depart\") {
+              // Pickup mode: Processing pickup point
+              var nonTaxiResults = results.filter(function(result) {
+                return !(result.graphic.attributes && result.graphic.attributes.taxiId);
+              });
+              if (nonTaxiResults.length > 0) {
+                clickedGeometry = nonTaxiResults[0].graphic.geometry;
+                console.log(\"HitTest non-taxi found for pickup:\", clickedGeometry);
+              }
+              if (!clickedGeometry) {
+                clickedGeometry = event.mapPoint;
+                console.log(\"Using event.mapPoint for pickup:\", clickedGeometry);
+              }
+              var lat = clickedGeometry.latitude || clickedGeometry.y;
+              var lng = clickedGeometry.longitude || clickedGeometry.x;
+              var coordText = lat.toFixed(4) + \", \" + lng.toFixed(4);
+              document.getElementById('";
+        // line 616
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 616, $this->source); })()), "villeDepart", [], "any", false, false, false, 616), "vars", [], "any", false, false, false, 616), "id", [], "any", false, false, false, 616), "html", null, true);
+        yield "').value = coordText;      // Update hidden input
+              document.getElementById(\"displayDepart\").textContent = coordText;        
+              // Update pickup marker
+              if (departMarker) { view.graphics.remove(departMarker); }
+              departMarker = addMarker(clickedGeometry, \"orange\", \"12px\");
+              view.graphics.add(departMarker);
+            }
+            else if (selectionMode === \"arrivee\") {
+              // Drop-off mode: Processing drop-off point
+              var nonTaxiResults = results.filter(function(result) {
+                return !(result.graphic.attributes && result.graphic.attributes.taxiId);
+              });
+              if (nonTaxiResults.length > 0) {
+                clickedGeometry = nonTaxiResults[0].graphic.geometry;
+                console.log(\"HitTest non-taxi found for drop-off:\", clickedGeometry);
+              }
+              if (!clickedGeometry) {
+                clickedGeometry = event.mapPoint;
+                console.log(\"Using event.mapPoint for drop-off:\", clickedGeometry);
+              }
+              var lat = clickedGeometry.latitude || clickedGeometry.y;
+              var lng = clickedGeometry.longitude || clickedGeometry.x;
+              var coordText = lat.toFixed(4) + \", \" + lng.toFixed(4);
+              document.getElementById('";
+        // line 639
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 639, $this->source); })()), "villeArrivee", [], "any", false, false, false, 639), "vars", [], "any", false, false, false, 639), "id", [], "any", false, false, false, 639), "html", null, true);
+        yield "').value = coordText;
+              document.getElementById(\"displayArrivee\").textContent = coordText;  
+              if (arriveeMarker) { view.graphics.remove(arriveeMarker); }
+              arriveeMarker = addMarker(clickedGeometry, \"purple\", \"12px\");
+              view.graphics.add(arriveeMarker);
+            }
+
+            // Calculate amount if there are already pickup and drop-off points and a selected taxi
+            if (departMarker && arriveeMarker && selectedTaxiRate) {
+              var distanceKm = computeDistance(departMarker.geometry, arriveeMarker.geometry);
+              console.log(\"Distance calculated:\", distanceKm);
+              document.getElementById('";
+        // line 650
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 650, $this->source); })()), "distanceKm", [], "any", false, false, false, 650), "vars", [], "any", false, false, false, 650), "id", [], "any", false, false, false, 650), "html", null, true);
+        yield "').value = distanceKm.toFixed(2);
+              var montant = distanceKm * selectedTaxiRate;
+              console.log(\"Amount calculated:\", montant);
+              document.getElementById('";
+        // line 653
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 653, $this->source); })()), "montant", [], "any", false, false, false, 653), "vars", [], "any", false, false, false, 653), "id", [], "any", false, false, false, 653), "html", null, true);
+        yield "').value = montant.toFixed(2);
+            }
+          });
+        });
+      });
+    });
+  </script>
+";
+        
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
+
+        
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
+
+        yield from [];
+    }
+
+    /**
+     * @codeCoverageIgnore
+     */
+    public function getTemplateName(): string
+    {
+        return "front_office/course/new.html.twig";
+    }
+
+    /**
+     * @codeCoverageIgnore
+     */
+    public function isTraitable(): bool
+    {
+        return false;
+    }
+
+    /**
+     * @codeCoverageIgnore
+     */
+    public function getDebugInfo(): array
+    {
+        return array (  894 => 653,  888 => 650,  874 => 639,  848 => 616,  821 => 592,  815 => 589,  806 => 583,  754 => 534,  669 => 452,  656 => 451,  605 => 410,  595 => 403,  583 => 393,  577 => 390,  573 => 388,  571 => 387,  566 => 385,  547 => 369,  543 => 368,  526 => 354,  522 => 353,  518 => 352,  510 => 347,  506 => 346,  502 => 345,  499 => 344,  495 => 342,  490 => 339,  484 => 336,  481 => 335,  479 => 334,  471 => 328,  458 => 327,  126 => 6,  113 => 5,  90 => 3,  67 => 2,  44 => 1,);
+    }
+
+    public function getSourceContext(): Source
+    {
+        return new Source("{% extends 'basef.html.twig' %}
+{% block title %}Book a Ride{% endblock %}
+{% block page_title %}Book a Ride{% endblock %}
+
+{% block stylesheets %}
+  {{ parent() }}
+  <style>
+    :root {
+      --primary-color: #4361ee;
+      --secondary-color: #3f37c9;
+      --accent-color: #4895ef;
+      --success-color: #4cc9f0;
+      --light-bg: #f8f9fa;
+      --dark-text: #212529;
+      --border-radius: 12px;
+    }
+
+    body {
+      font-family: 'Roboto', 'Segoe UI', sans-serif;
+      background-color: var(--light-bg);
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      overflow-x: hidden;
+    }
+
+    .app-container {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      max-width: 100%;
+      margin: 0 auto;
+      padding: 0;
+    }
+
+    .header-section {
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      color: white;
+      padding: 2rem;
+      border-radius: 0 0 var(--border-radius) var(--border-radius);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      margin-bottom: 1.5rem;
+    }
+
+    .header-section h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .header-section p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      padding: 0 1.5rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    @media (min-width: 768px) {
+      .content-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .form-panel {
+      background-color: white;
+      border-radius: var(--border-radius);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      padding: 2rem;
+      transition: all 0.3s ease;
+      margin-bottom: 1.5rem;
+    }
+
+    .map-container {
+      background-color: white;
+      border-radius: var(--border-radius);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      padding: 2rem;
+    }
+
+    .form-fields-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    @media (min-width: 768px) {
+      .form-fields-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .form-fields-full {
+      grid-column: 1 / -1;
+    }
+
+    .map-controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .mode-btn {
+      background-color: #e9ecef;
+      color: var(--dark-text);
+      border: none;
+      border-radius: 30px;
+      padding: 0.8rem 1.5rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1rem;
+    }
+
+    .mode-btn:hover {
+      background-color: #dee2e6;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .mode-btn svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .active-mode {
+      background-color: var(--primary-color) !important;
+      color: white !important;
+      box-shadow: 0 6px 16px rgba(67, 97, 238, 0.3);
+    }
+
+    #userMapDiv {
+      height: 60vh;
+      width: 100%;
+      border-radius: var(--border-radius);
+      border: 2px solid #e9ecef;
+      overflow: hidden;
+    }
+
+    .map-instructions {
+      background-color: #f1f3f5;
+      border-left: 4px solid var(--accent-color);
+      padding: 1.25rem;
+      margin: 1rem 0 1.5rem 0;
+      border-radius: 0 var(--border-radius) var(--border-radius) 0;
+      font-size: 1rem;
+    }
+
+    .info-display {
+      background-color: #f8f9fa;
+      border-radius: var(--border-radius);
+      padding: 1rem 1.25rem;
+      border: 1px solid #e9ecef;
+      font-size: 1rem;
+      cursor: default;
+      transition: all 0.2s ease;
+      color: #495057;
+      font-weight: 500;
+    }
+
+    .info-display:hover {
+      background-color: #f1f3f5;
+      border-color: #ced4da;
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      color: #495057;
+      font-size: 1rem;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 0.9rem 1.2rem;
+      border: 1px solid #ced4da;
+      border-radius: var(--border-radius);
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      background-color: #f8f9fa;
+    }
+
+    .form-control:focus {
+      border-color: var(--primary-color);
+      box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.15);
+      outline: none;
+      background-color: #fff;
+    }
+
+    .footer-actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #e9ecef;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      color: white;
+      border: none;
+      border-radius: var(--border-radius);
+      padding: 1rem 2rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(67, 97, 238, 0.25);
+    }
+
+    .back-link {
+      color: #6c757d;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      padding: 0.75rem 1.25rem;
+      border-radius: var(--border-radius);
+    }
+
+    .back-link:hover {
+      color: var(--dark-text);
+      background-color: #f1f3f5;
+    }
+
+    .error-container {
+      background-color: #ffe3e3;
+      border-left: 4px solid #ff6b6b;
+      color: #c92a2a;
+      padding: 1.25rem;
+      margin-bottom: 1.5rem;
+      border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    }
+
+    .selection-mode-display {
+      display: inline-flex;
+      align-items: center;
+      background-color: #e9ecef;
+      padding: 0.7rem 1.25rem;
+      border-radius: 30px;
+      font-weight: 600;
+      margin-left: 1rem;
+      color: var(--dark-text);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .form-panel, .map-container {
+      animation: fadeIn 0.4s ease-out;
+    }
+
+    .booking-info-card {
+      background-color: #f1f3f5;
+      border-radius: var(--border-radius);
+      padding: 1.5rem;
+      margin-top: 1.5rem;
+      border: 1px solid #e9ecef;
+    }
+
+    .booking-info-title {
+      font-weight: 600;
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .info-item {
+      padding: 0.75rem;
+      background-color: white;
+      border-radius: var(--border-radius);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+    }
+
+    .info-label {
+      font-size: 0.85rem;
+      color: #6c757d;
+      margin-bottom: 0.25rem;
+    }
+
+    .info-value {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--dark-text);
+    }
+  </style>
+{% endblock %}
+
+{% block body %}
+<div class=\"app-container\">
+  <div class=\"header-section\">
+    <h1>Book a Ride</h1>
+    <p>Choose a taxi and select your pickup and drop-off locations</p>
+  </div>
+
+  {% if form.vars.errors|length > 0 %}
+    <div class=\"error-container mx-auto px-4\" style=\"max-width: 1400px;\">
+      {{ form_errors(form) }}
+    </div>
+  {% endif %}
+
+  <div class=\"content-grid\">
+    <div class=\"form-panel\">
+      {{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
+        {# Hidden fields #}
+        <div style=\"display: none;\">
+          {{ form_widget(form.taxi) }}
+          {{ form_widget(form.villeDepart) }}
+          {{ form_widget(form.villeArrivee) }}
+        </div>
+        
+        <div class=\"form-fields-grid\">
+          <div class=\"form-group\">
+            <label class=\"form-label\" for=\"{{ form.dateCourse.vars.id }}\">Ride Date</label>
+            {{ form_widget(form.dateCourse, {'attr': {'class': 'form-control'}}) }}
+            <div class=\"text-red-500 text-sm mt-1\">{{ form_errors(form.dateCourse) }}</div>
+          </div>
+
+          <div class=\"form-group\">
+            <label class=\"form-label\">Pickup Location</label>
+            <div id=\"displayDepart\" class=\"info-display\">Select on map</div>
+          </div>
+
+          <div class=\"form-group\">
+            <label class=\"form-label\">Drop-off Location</label>
+            <div id=\"displayArrivee\" class=\"info-display\">Select on map</div>
+          </div>
+
+          <div class=\"form-group\">
+            <label class=\"form-label\" for=\"{{ form.distanceKm.vars.id }}\">Distance (km)</label>
+            {{ form_widget(form.distanceKm, {'attr': {'class': 'form-control', 'readonly': 'readonly'}}) }}
+          </div>
+        </div>
+
+        <div class=\"booking-info-card\">
+          <div class=\"booking-info-title\">
+            <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" fill=\"currentColor\" viewBox=\"0 0 16 16\">
+              <path d=\"M11 5.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1z\"/>
+              <path d=\"M2 1a1 1 0 0 0-1 1v4.5a2.5 2.5 0 0 0 5 0V2a1 1 0 0 0-1-1H2zm3.5 3.5a.5.5 0 0 1-1 0V2a.5.5 0 0 1 1 0v2.5z\"/>
+              <path d=\"M2 11.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1zm5-5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1zm5 5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1z\"/>
+            </svg>
+            Fare Estimate
+          </div>
+          <div class=\"info-grid\">
+            <div class=\"info-item\">
+              <div class=\"info-label\">Estimated Fare (USD)</div>
+              <div class=\"info-value\">{{ form_widget(form.montant, {'attr': {'class': 'form-control', 'readonly': 'readonly'}}) }}</div>
+            </div>
+            {% if form.statut is defined %}
+            <div class=\"info-item\">
+              <div class=\"info-label\">Status</div>
+              <div class=\"info-value\">{{ form_widget(form.statut, {'attr': {'class': 'form-control'}}) }}</div>
+            </div>
+            {% endif %}
+          </div>
+        </div>
+
+        <div class=\"footer-actions\">
+          <button type=\"submit\" class=\"btn-primary\">
+            <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"18\" height=\"18\" fill=\"currentColor\" viewBox=\"0 0 16 16\">
+              <path d=\"M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5Z\"/>
+            </svg>
+            Book My Ride
+          </button>
+          <a href=\"{{ path('user_courses') }}\" class=\"back-link\">
+            <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" viewBox=\"0 0 16 16\">
+              <path fill-rule=\"evenodd\" d=\"M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z\"/>
+            </svg>
+            Back to Rides List
+          </a>
+        </div>
+      {{ form_end(form) }}
+    </div>
+
+    <div class=\"map-container\">
+      <div class=\"map-controls\">
+        <button type=\"button\" id=\"selectTaxiBtn\" class=\"mode-btn active-mode\">
+          <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" viewBox=\"0 0 16 16\">
+            <path d=\"M4.5 5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1ZM3 5a2 2 0 1 1 4 0 2 2 0 0 1-4 0Z\"/>
+            <path d=\"M14 10a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V5h2.64c.57 0 1.11.2 1.53.564.708-.566 1.703-.682 2.53-.32.922-.4 2.029-.131 2.82.43H14V4.5a1.5 1.5 0 0 0-1.5-1.5h-1.75a.75.75 0 1 1 0-1.5h1.75a3 3 0 0 1 3 3V10Z\"/>
+            <path fill-rule=\"evenodd\" d=\"M13 10a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v6Z\"/>
+          </svg>
+          Taxi
+        </button>
+        <button type=\"button\" id=\"selectDepartBtn\" class=\"mode-btn\">
+          <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" viewBox=\"0 0 16 16\">
+            <path d=\"M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z\"/>
+            <path d=\"M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4z\"/>
+          </svg>
+          Pickup
+        </button>
+        <button type=\"button\" id=\"selectArriveeBtn\" class=\"mode-btn\">
+          <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" viewBox=\"0 0 16 16\">
+            <path d=\"m14.12 10.163 1.715.858c.22.11.22.424 0 .534L8.267 15.34a.598.598 0 0 1-.534 0L.165 11.555a.299.299 0 0 1 0-.534l1.716-.858 5.317 2.659c.505.252 1.1.252 1.604 0l5.317-2.66z\"/>
+            <path d=\"M7.733.063a.598.598 0 0 1 .534 0l7.568 3.784a.3.3 0 0 1 0 .535L8.267 8.165a.598.598 0 0 1-.534 0L.165 4.382a.299.299 0 0 1 0-.535L7.733.063z\"/>
+            <path d=\"m14.12 6.576 1.715.858c.22.11.22.424 0 .534l-7.568 3.784a.598.598 0 0 1-.534 0L.165 7.968a.299.299 0 0 1 0-.534l1.716-.858 5.317 2.659c.505.252 1.1.252 1.604 0l5.317-2.659z\"/>
+          </svg>
+          Drop-off
+        </button>
+        <div id=\"selectionModeDisplay\" class=\"selection-mode-display\">Mode: Selecting taxi</div>
+      </div>
+
+      <div class=\"map-instructions\">
+        <p><strong>Instructions:</strong> First select a taxi (shown in blue), then set your pickup and drop-off points to calculate the ride fare.</p>
+      </div>
+      
+      <div id=\"userMapDiv\"></div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block javascripts %}
+{{ parent() }}
+  <link rel=\"stylesheet\" href=\"https://js.arcgis.com/4.25/esri/themes/light/main.css\">
+  <script src=\"https://js.arcgis.com/4.25/\" defer></script>
+  <script>
+    window.addEventListener(\"load\", function() {
+      require([
+        \"esri/Map\",
+        \"esri/views/MapView\",
+        \"esri/Graphic\",
+        \"esri/geometry/geometryEngine\"
+      ], function(Map, MapView, Graphic, geometryEngine) {
+
+        // Variables to store markers and selected taxi rate
+        var departMarker = null;
+        var arriveeMarker = null;
+        var selectedTaxiMarker = null; // Allows only one taxi to be selected (in green)
+        var selectedTaxiRate = null;
+        var selectionMode = \"taxi\"; // Modes: \"taxi\", \"depart\", \"arrivee\"
+        document.getElementById(\"selectionModeDisplay\").textContent = \"Mode: Selecting taxi\";
+
+        // Buttons to change mode
+        document.getElementById(\"selectTaxiBtn\").addEventListener(\"click\", function() {
+          selectionMode = \"taxi\";
+          document.getElementById(\"selectionModeDisplay\").textContent = \"Mode: Selecting taxi\";
+          console.log(\"Taxi mode activated\");
+          updateModeButtons(\"selectTaxiBtn\");
+        });
+
+        document.getElementById(\"selectDepartBtn\").addEventListener(\"click\", function() {
+          selectionMode = \"depart\";
+          document.getElementById(\"selectionModeDisplay\").textContent = \"Mode: Selecting pickup\";
+          console.log(\"Pickup mode activated\");
+          updateModeButtons(\"selectDepartBtn\");
+        });
+
+        document.getElementById(\"selectArriveeBtn\").addEventListener(\"click\", function() {
+          selectionMode = \"arrivee\";
+          document.getElementById(\"selectionModeDisplay\").textContent = \"Mode: Selecting drop-off\";
+          console.log(\"Drop-off mode activated\");
+          updateModeButtons(\"selectArriveeBtn\");
+        });
+
+
+        // Create map
+        var map = new Map({ basemap: \"streets-navigation-vector\" });
+        var view = new MapView({
+          container: \"userMapDiv\",
+          map: map,
+          center: [10.18, 36.80],
+          zoom: 12
+        });
+
+        // Utility function to add a marker
+        function addMarker(geometry, color, size) {
+          return new Graphic({
+            geometry: geometry,
+            symbol: { type: \"simple-marker\", color: color, size: size || \"12px\" }
+          });
+        }
+        
+        function updateModeButtons(activeButtonId) {
+          var modeButtons = document.querySelectorAll(\".mode-btn\");
+          modeButtons.forEach(function(button) {
+            button.classList.remove(\"active-mode\");
+          });
+          document.getElementById(activeButtonId).classList.add(\"active-mode\");
+        }
+
+        // Utility function to calculate distance in kilometers
+        function computeDistance(from, to) {
+          return geometryEngine.distance(from, to, \"kilometers\");
+        }
+
+        // Get user position and load nearby taxis
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            var userLng = position.coords.longitude;
+            var userLat = position.coords.latitude;
+            view.center = [userLng, userLat];
+            var userMarker = addMarker({ type: \"point\", longitude: userLng, latitude: userLat }, \"red\", \"14px\");
+            view.graphics.add(userMarker);
+
+            fetch(\"{{ path('get_nearby_taxis') }}?longitude=\" + userLng + \"&latitude=\" + userLat)
+              .then(response => response.json())
+              .then(function(data) {
+                data.forEach(function(taxi) {
+                  var taxiPoint = { type: \"point\", longitude: taxi.longitude, latitude: taxi.latitude };
+                  var taxiMarker = addMarker(taxiPoint, \"blue\", \"12px\");
+                  taxiMarker.attributes = {
+                    taxiId: taxi.id,
+                    immatriculation: taxi.immatriculation,
+                    tarifBase: taxi.tarifBase
+                  };
+                  view.graphics.add(taxiMarker);
+                });
+              })
+              .catch(function(error) {
+                console.error(\"Error fetching nearby taxis:\", error);
+              });
+          });
+        } else {
+          console.warn(\"Geolocation is not supported by this browser.\");
+        }
+
+        // Handle map clicks
+        view.on(\"click\", function(event) {
+          console.log(\"Click detected in mode:\", selectionMode);
+          view.hitTest(event).then(function(response) {
+            var results = response.results;
+            console.log(\"HitTest results:\", results);
+            var clickedGeometry = null;
+
+            if (selectionMode === \"taxi\") {
+              // Taxi mode: Search for a taxi among graphics
+              var taxiGraphic = results.find(function(result) {
+                return result.graphic.attributes && result.graphic.attributes.taxiId;
+              });
+              if (taxiGraphic) {
+                clickedGeometry = taxiGraphic.graphic.geometry;
+                selectedTaxiRate = taxiGraphic.graphic.attributes.tarifBase;
+                console.log(\"Taxi selected, Rate:\", selectedTaxiRate);
+
+                // Remove previous selected taxi
+                if (selectedTaxiMarker) {
+                  view.graphics.remove(selectedTaxiMarker);
+                }
+
+                // Add new marker in green
+                selectedTaxiMarker = addMarker(clickedGeometry, \"green\", \"14px\");
+                selectedTaxiMarker.attributes = taxiGraphic.graphic.attributes;
+                view.graphics.add(selectedTaxiMarker);
+                document.getElementById('{{ form.taxi.vars.id }}').value = taxiGraphic.graphic.attributes.taxiId;
+
+                // Recalculate distance and amount if pickup and drop-off exist
+                if (departMarker && arriveeMarker && selectedTaxiRate) {
+                  var distanceKm = computeDistance(departMarker.geometry, arriveeMarker.geometry);
+                  console.log(\"Distance recalculated:\", distanceKm);
+                  document.getElementById('{{ form.distanceKm.vars.id }}').value = distanceKm.toFixed(2);
+                  var montant = distanceKm * selectedTaxiRate;
+                  console.log(\"Amount recalculated:\", montant);
+                  document.getElementById('{{ form.montant.vars.id }}').value = montant.toFixed(2);
+                }
+                return;
+              } else {
+                console.log(\"No taxi detected in taxi mode.\");
+                return;
+              }
+            }
+            else if (selectionMode === \"depart\") {
+              // Pickup mode: Processing pickup point
+              var nonTaxiResults = results.filter(function(result) {
+                return !(result.graphic.attributes && result.graphic.attributes.taxiId);
+              });
+              if (nonTaxiResults.length > 0) {
+                clickedGeometry = nonTaxiResults[0].graphic.geometry;
+                console.log(\"HitTest non-taxi found for pickup:\", clickedGeometry);
+              }
+              if (!clickedGeometry) {
+                clickedGeometry = event.mapPoint;
+                console.log(\"Using event.mapPoint for pickup:\", clickedGeometry);
+              }
+              var lat = clickedGeometry.latitude || clickedGeometry.y;
+              var lng = clickedGeometry.longitude || clickedGeometry.x;
+              var coordText = lat.toFixed(4) + \", \" + lng.toFixed(4);
+              document.getElementById('{{ form.villeDepart.vars.id }}').value = coordText;      // Update hidden input
+              document.getElementById(\"displayDepart\").textContent = coordText;        
+              // Update pickup marker
+              if (departMarker) { view.graphics.remove(departMarker); }
+              departMarker = addMarker(clickedGeometry, \"orange\", \"12px\");
+              view.graphics.add(departMarker);
+            }
+            else if (selectionMode === \"arrivee\") {
+              // Drop-off mode: Processing drop-off point
+              var nonTaxiResults = results.filter(function(result) {
+                return !(result.graphic.attributes && result.graphic.attributes.taxiId);
+              });
+              if (nonTaxiResults.length > 0) {
+                clickedGeometry = nonTaxiResults[0].graphic.geometry;
+                console.log(\"HitTest non-taxi found for drop-off:\", clickedGeometry);
+              }
+              if (!clickedGeometry) {
+                clickedGeometry = event.mapPoint;
+                console.log(\"Using event.mapPoint for drop-off:\", clickedGeometry);
+              }
+              var lat = clickedGeometry.latitude || clickedGeometry.y;
+              var lng = clickedGeometry.longitude || clickedGeometry.x;
+              var coordText = lat.toFixed(4) + \", \" + lng.toFixed(4);
+              document.getElementById('{{ form.villeArrivee.vars.id }}').value = coordText;
+              document.getElementById(\"displayArrivee\").textContent = coordText;  
+              if (arriveeMarker) { view.graphics.remove(arriveeMarker); }
+              arriveeMarker = addMarker(clickedGeometry, \"purple\", \"12px\");
+              view.graphics.add(arriveeMarker);
+            }
+
+            // Calculate amount if there are already pickup and drop-off points and a selected taxi
+            if (departMarker && arriveeMarker && selectedTaxiRate) {
+              var distanceKm = computeDistance(departMarker.geometry, arriveeMarker.geometry);
+              console.log(\"Distance calculated:\", distanceKm);
+              document.getElementById('{{ form.distanceKm.vars.id }}').value = distanceKm.toFixed(2);
+              var montant = distanceKm * selectedTaxiRate;
+              console.log(\"Amount calculated:\", montant);
+              document.getElementById('{{ form.montant.vars.id }}').value = montant.toFixed(2);
+            }
+          });
+        });
+      });
+    });
+  </script>
+{% endblock %}", "front_office/course/new.html.twig", "C:\\Users\\skonb\\Desktop\\UrbanLink_Symfony-Production\\templates\\front_office\\course\\new.html.twig");
+    }
+}

@@ -1,0 +1,1293 @@
+<?php
+
+use Twig\Environment;
+use Twig\Error\LoaderError;
+use Twig\Error\RuntimeError;
+use Twig\Extension\CoreExtension;
+use Twig\Extension\SandboxExtension;
+use Twig\Markup;
+use Twig\Sandbox\SecurityError;
+use Twig\Sandbox\SecurityNotAllowedTagError;
+use Twig\Sandbox\SecurityNotAllowedFilterError;
+use Twig\Sandbox\SecurityNotAllowedFunctionError;
+use Twig\Source;
+use Twig\Template;
+use Twig\TemplateWrapper;
+
+/* dashboard/admin.html.twig */
+class __TwigTemplate_ff41aa0cc4c66fae78a4385f0d24368b extends Template
+{
+    private Source $source;
+    /**
+     * @var array<string, Template>
+     */
+    private array $macros = [];
+
+    public function __construct(Environment $env)
+    {
+        parent::__construct($env);
+
+        $this->source = $this->getSourceContext();
+
+        $this->blocks = [
+            'title' => [$this, 'block_title'],
+            'stylesheets' => [$this, 'block_stylesheets'],
+            'body' => [$this, 'block_body'],
+        ];
+    }
+
+    protected function doGetParent(array $context): bool|string|Template|TemplateWrapper
+    {
+        // line 2
+        return "base.html.twig";
+    }
+
+    protected function doDisplay(array $context, array $blocks = []): iterable
+    {
+        $macros = $this->macros;
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "dashboard/admin.html.twig"));
+
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "dashboard/admin.html.twig"));
+
+        $this->parent = $this->load("base.html.twig", 2);
+        yield from $this->parent->unwrap()->yield($context, array_merge($this->blocks, $blocks));
+        
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
+
+        
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
+
+    }
+
+    // line 4
+    /**
+     * @return iterable<null|scalar|\Stringable>
+     */
+    public function block_title(array $context, array $blocks = []): iterable
+    {
+        $macros = $this->macros;
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
+
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
+
+        yield "Admin Dashboard | RideShare Analytics";
+        
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
+
+        
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
+
+        yield from [];
+    }
+
+    // line 6
+    /**
+     * @return iterable<null|scalar|\Stringable>
+     */
+    public function block_stylesheets(array $context, array $blocks = []): iterable
+    {
+        $macros = $this->macros;
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheets"));
+
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheets"));
+
+        // line 7
+        yield "    ";
+        yield from $this->yieldParentBlock("stylesheets", $context, $blocks);
+        yield "
+    <link href=\"https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap\" rel=\"stylesheet\">
+    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css\">
+    <!-- Chart.js -->
+    <script src=\"https://cdn.jsdelivr.net/npm/chart.js\"></script>
+    <!-- ApexCharts -->
+    <script src=\"https://cdn.jsdelivr.net/npm/apexcharts\"></script>
+    
+    <style>
+        :root {
+            --primary: #4F46E5;
+            --primary-light: #6366F1;
+            --secondary: #10B981;
+            --danger: #EF4444;
+            --warning: #F59E0B;
+            --dark: #1F2937;
+            --light: #F9FAFB;
+            --gray: #6B7280;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F3F4F6;
+            color: var(--dark);
+        }
+        
+        .dashboard-header {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
+            border-radius: 0 0 20px 20px;
+            box-shadow: 0 4px 20px rgba(79, 70, 229, 0.3);
+        }
+        
+        .stat-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .chart-container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            padding: 20px;
+        }
+        
+        .progress-bar {
+            height: 8px;
+            border-radius: 4px;
+            background: #E5E7EB;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            border-radius: 4px;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+        
+        .badge-primary {
+            background: #E0E7FF;
+            color: var(--primary);
+        }
+        
+        .badge-success {
+            background: #D1FAE5;
+            color: #065F46;
+        }
+        
+        .badge-warning {
+            background: #FEF3C7;
+            color: #92400E;
+        }
+        
+        .badge-danger {
+            background: #FEE2E2;
+            color: #991B1B;
+        }
+        
+        .iphone-calendar {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            background: white;
+        }
+        
+        .calendar-header {
+            background: linear-gradient(to right, var(--primary), var(--primary-light));
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        
+        .calendar-weekdays {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            padding: 10px 0;
+            background: #f8fafc;
+            text-align: center;
+            font-weight: 500;
+            color: var(--gray);
+        }
+        
+        .calendar-days {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 5px;
+            padding: 10px;
+        }
+        
+        .calendar-day {
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+        
+        .calendar-day.today {
+            background: var(--primary);
+            color: white;
+            font-weight: bold;
+        }
+        
+        .calendar-day:not(.today):hover {
+            background-color: #e2e8f0;
+            color: var(--dark);
+        }
+    </style>
+";
+        
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
+
+        
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
+
+        yield from [];
+    }
+
+    // line 153
+    /**
+     * @return iterable<null|scalar|\Stringable>
+     */
+    public function block_body(array $context, array $blocks = []): iterable
+    {
+        $macros = $this->macros;
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
+
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
+
+        // line 154
+        yield "<div class=\"min-h-screen\">
+    <!-- Header -->
+    <header class=\"dashboard-header py-6 px-4 lg:px-8\">
+        <div class=\"container mx-auto\">
+            <div class=\"flex justify-between items-center\">
+                <div>
+                    <h1 class=\"text-2xl lg:text-3xl font-bold\">Admin Dashboard</h1>
+                    <p class=\"opacity-90 mt-1\">Platform Analytics & Management</p>
+                </div>
+                <div class=\"flex items-center space-x-4\">
+                    <div class=\"relative\">
+                        <div class=\"w-10 h-10 rounded-full bg-white flex items-center justify-center text-indigo-600 font-bold\">
+                            A
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class=\"container mx-auto px-4 lg:px-8 py-8 -mt-8\">
+        <!-- Key Metrics -->
+        <div class=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8\">
+            <div class=\"stat-card p-6\">
+                <div class=\"flex justify-between\">
+                    <div>
+                        <h3 class=\"text-gray-500 text-sm font-medium\">TOTAL USERS</h3>
+                        <div class=\"mt-2 flex items-end\">
+                            <span class=\"text-3xl font-bold\">1,248</span>
+                            <span class=\"ml-2 text-green-500 text-sm font-medium\">+12%</span>
+                        </div>
+                    </div>
+                    <div class=\"w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center text-indigo-600\">
+                        <i class=\"fas fa-users\"></i>
+                    </div>
+                </div>
+                <div class=\"mt-4\">
+                    <div class=\"flex justify-between text-sm text-gray-600 mb-1\">
+                        <span>Drivers: 428</span>
+                        <span>Riders: 820</span>
+                    </div>
+                    <div class=\"progress-bar\">
+                        <div class=\"progress-fill bg-indigo-500\" style=\"width: 65%\"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class=\"stat-card p-6\">
+                <div class=\"flex justify-between\">
+                    <div>
+                        <h3 class=\"text-gray-500 text-sm font-medium\">ACTIVE VEHICLES</h3>
+                        <div class=\"mt-2 flex items-end\">
+                            <span class=\"text-3xl font-bold\">387</span>
+                            <span class=\"ml-2 text-green-500 text-sm font-medium\">+8%</span>
+                        </div>
+                    </div>
+                    <div class=\"w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-green-600\">
+                        <i class=\"fas fa-car\"></i>
+                    </div>
+                </div>
+                <div class=\"mt-4\">
+                    <div class=\"flex justify-between text-sm text-gray-600 mb-1\">
+                        <span>Verified: 342</span>
+                        <span>Pending: 45</span>
+                    </div>
+                    <div class=\"progress-bar\">
+                        <div class=\"progress-fill bg-green-500\" style=\"width: 88%\"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class=\"stat-card p-6\">
+                <div class=\"flex justify-between\">
+                    <div>
+                        <h3 class=\"text-gray-500 text-sm font-medium\">TODAY'S RIDES</h3>
+                        <div class=\"mt-2 flex items-end\">
+                            <span class=\"text-3xl font-bold\">216</span>
+                            <span class=\"ml-2 text-green-500 text-sm font-medium\">+5%</span>
+                        </div>
+                    </div>
+                    <div class=\"w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-600\">
+                        <i class=\"fas fa-route\"></i>
+                    </div>
+                </div>
+                <div class=\"mt-4\">
+                    <div class=\"flex justify-between text-sm text-gray-600 mb-1\">
+                        <span>Completed: 184</span>
+                        <span>In Progress: 32</span>
+                    </div>
+                    <div class=\"progress-bar\">
+                        <div class=\"progress-fill bg-blue-500\" style=\"width: 85%\"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class=\"stat-card p-6\">
+                <div class=\"flex justify-between\">
+                    <div>
+                        <h3 class=\"text-gray-500 text-sm font-medium\">REVENUE</h3>
+                        <div class=\"mt-2 flex items-end\">
+                            <span class=\"text-3xl font-bold\">\$8,742</span>
+                            <span class=\"ml-2 text-green-500 text-sm font-medium\">+18%</span>
+                        </div>
+                    </div>
+                    <div class=\"w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center text-purple-600\">
+                        <i class=\"fas fa-wallet\"></i>
+                    </div>
+                </div>
+                <div class=\"mt-4\">
+                    <div class=\"flex justify-between text-sm text-gray-600 mb-1\">
+                        <span>Today: \$1,245</span>
+                        <span>This week: \$5,672</span>
+                    </div>
+                    <div class=\"progress-bar\">
+                        <div class=\"progress-fill bg-purple-500\" style=\"width: 72%\"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Charts Section -->
+        <div class=\"grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8\">
+            <!-- User Growth Chart -->
+            <div class=\"chart-container lg:col-span-2\">
+                <div class=\"flex justify-between items-center mb-4\">
+                    <h2 class=\"text-lg font-bold\">User Growth</h2>
+                    <div class=\"flex space-x-2\">
+                        <button class=\"text-xs px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full\">Monthly</button>
+                        <button class=\"text-xs px-3 py-1 bg-gray-100 text-gray-600 rounded-full\">Weekly</button>
+                        <button class=\"text-xs px-3 py-1 bg-gray-100 text-gray-600 rounded-full\">Daily</button>
+                    </div>
+                </div>
+                <canvas id=\"userGrowthChart\" height=\"250\"></canvas>
+            </div>
+            
+            <!-- Calendar -->
+            <div class=\"iphone-calendar\">
+                <div class=\"calendar-header\">
+                    <h3 class=\"text-xl font-bold\">";
+        // line 293
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Twig\Extension\CoreExtension']->formatDate("now", "F Y"), "html", null, true);
+        yield "</h3>
+                </div>
+                <div class=\"calendar-weekdays\">
+                    ";
+        // line 296
+        $context['_parent'] = $context;
+        $context['_seq'] = CoreExtension::ensureTraversable(["S", "M", "T", "W", "T", "F", "S"]);
+        foreach ($context['_seq'] as $context["_key"] => $context["day"]) {
+            // line 297
+            yield "                        <div>";
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($context["day"], "html", null, true);
+            yield "</div>
+                    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_key'], $context['day'], $context['_parent']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 299
+        yield "                </div>
+                <div class=\"calendar-days\">
+                    ";
+        // line 301
+        $context["firstDayOfMonth"] = $this->extensions['Twig\Extension\CoreExtension']->formatDate($this->extensions['Twig\Extension\CoreExtension']->formatDate("now", "Y-m-01"), "w");
+        // line 302
+        yield "                    ";
+        $context["daysInMonth"] = $this->extensions['Twig\Extension\CoreExtension']->formatDate("now", "t");
+        // line 303
+        yield "                    ";
+        $context["today"] = $this->extensions['Twig\Extension\CoreExtension']->formatDate("now", "j");
+        // line 304
+        yield "
+                    ";
+        // line 305
+        $context['_parent'] = $context;
+        $context['_seq'] = CoreExtension::ensureTraversable(range(0, ((isset($context["firstDayOfMonth"]) || array_key_exists("firstDayOfMonth", $context) ? $context["firstDayOfMonth"] : (function () { throw new RuntimeError('Variable "firstDayOfMonth" does not exist.', 305, $this->source); })()) - 1)));
+        foreach ($context['_seq'] as $context["_key"] => $context["i"]) {
+            // line 306
+            yield "                        <div class=\"calendar-day\"></div>
+                    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_key'], $context['i'], $context['_parent']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 308
+        yield "
+                    ";
+        // line 309
+        $context['_parent'] = $context;
+        $context['_seq'] = CoreExtension::ensureTraversable(range(1, (isset($context["daysInMonth"]) || array_key_exists("daysInMonth", $context) ? $context["daysInMonth"] : (function () { throw new RuntimeError('Variable "daysInMonth" does not exist.', 309, $this->source); })())));
+        foreach ($context['_seq'] as $context["_key"] => $context["day"]) {
+            // line 310
+            yield "                        <div class=\"calendar-day ";
+            if (($context["day"] == (isset($context["today"]) || array_key_exists("today", $context) ? $context["today"] : (function () { throw new RuntimeError('Variable "today" does not exist.', 310, $this->source); })()))) {
+                yield "today";
+            }
+            yield "\">
+                            ";
+            // line 311
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($context["day"], "html", null, true);
+            yield "
+                        </div>
+                    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_key'], $context['day'], $context['_parent']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 314
+        yield "                </div>
+            </div>
+        </div>
+
+        <!-- Second Row Charts -->
+        <div class=\"grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8\">
+            <!-- Ride Types Distribution -->
+            <div class=\"chart-container\">
+                <h2 class=\"text-lg font-bold mb-4\">Ride Types</h2>
+                <canvas id=\"rideTypesChart\" height=\"250\"></canvas>
+            </div>
+            
+            <!-- Vehicle Types -->
+            <div class=\"chart-container\">
+                <h2 class=\"text-lg font-bold mb-4\">Vehicle Types</h2>
+                <canvas id=\"vehicleTypesChart\" height=\"250\"></canvas>
+            </div>
+            
+            <!-- Subscription Plans -->
+            <div class=\"chart-container\">
+                <h2 class=\"text-lg font-bold mb-4\">Subscription Plans</h2>
+                <div id=\"subscriptionChart\" style=\"height: 250px;\"></div>
+            </div>
+        </div>
+
+        <!-- Recent Activity -->
+        <div class=\"stat-card p-6 mb-8\">
+            <div class=\"flex justify-between items-center mb-4\">
+                <h2 class=\"text-lg font-bold\">Recent Activity</h2>
+                <a href=\"#\" class=\"text-sm text-indigo-600 font-medium\">View All</a>
+            </div>
+            
+            <div class=\"space-y-4\">
+                <div class=\"flex items-start p-3 hover:bg-gray-50 rounded-lg transition\">
+                    <div class=\"w-10 h-10 bg-green-100 rounded-full flex items-center justify-center text-green-600 mr-3 mt-1\">
+                        <i class=\"fas fa-car\"></i>
+                    </div>
+                    <div class=\"flex-1\">
+                        <div class=\"flex justify-between\">
+                            <h4 class=\"font-medium\">New vehicle registered</h4>
+                            <span class=\"text-xs text-gray-500\">2 min ago</span>
+                        </div>
+                        <p class=\"text-sm text-gray-600\">Toyota Camry (ABC-1234) by driver Michael S.</p>
+                    </div>
+                </div>
+                
+                <div class=\"flex items-start p-3 hover:bg-gray-50 rounded-lg transition\">
+                    <div class=\"w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 mr-3 mt-1\">
+                        <i class=\"fas fa-route\"></i>
+                    </div>
+                    <div class=\"flex-1\">
+                        <div class=\"flex justify-between\">
+                            <h4 class=\"font-medium\">Ride completed</h4>
+                            <span class=\"text-xs text-gray-500\">15 min ago</span>
+                        </div>
+                        <p class=\"text-sm text-gray-600\">8.2 mi trip from Downtown to Airport</p>
+                    </div>
+                </div>
+                
+                <div class=\"flex items-start p-3 hover:bg-gray-50 rounded-lg transition\">
+                    <div class=\"w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center text-purple-600 mr-3 mt-1\">
+                        <i class=\"fas fa-user-plus\"></i>
+                    </div>
+                    <div class=\"flex-1\">
+                        <div class=\"flex justify-between\">
+                            <h4 class=\"font-medium\">New user registered</h4>
+                            <span class=\"text-xs text-gray-500\">1 hour ago</span>
+                        </div>
+                        <p class=\"text-sm text-gray-600\">Sarah J. signed up as a rider</p>
+                    </div>
+                </div>
+                
+                <div class=\"flex items-start p-3 hover:bg-gray-50 rounded-lg transition\">
+                    <div class=\"w-10 h-10 bg-yellow-100 rounded-full flex items-center justify-center text-yellow-600 mr-3 mt-1\">
+                        <i class=\"fas fa-star\"></i>
+                    </div>
+                    <div class=\"flex-1\">
+                        <div class=\"flex justify-between\">
+                            <h4 class=\"font-medium\">New 5-star rating</h4>
+                            <span class=\"text-xs text-gray-500\">3 hours ago</span>
+                        </div>
+                        <p class=\"text-sm text-gray-600\">Driver Alex K. received perfect rating</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // User Growth Chart (Line Chart)
+    const userGrowthCtx = document.getElementById('userGrowthChart').getContext('2d');
+    const userGrowthChart = new Chart(userGrowthCtx, {
+        type: 'line',
+        data: {
+            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+            datasets: [
+                {
+                    label: 'Drivers',
+                    data: [120, 190, 170, 220, 250, 290, 310, 350, 380, 410, 420, 428],
+                    borderColor: '#4F46E5',
+                    backgroundColor: 'rgba(79, 70, 229, 0.1)',
+                    tension: 0.3,
+                    fill: true
+                },
+                {
+                    label: 'Riders',
+                    data: [350, 420, 450, 500, 550, 600, 650, 700, 750, 800, 810, 820],
+                    borderColor: '#10B981',
+                    backgroundColor: 'rgba(16, 185, 129, 0.1)',
+                    tension: 0.3,
+                    fill: true
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'top',
+                },
+                tooltip: {
+                    mode: 'index',
+                    intersect: false,
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+    // Ride Types Distribution (Doughnut Chart)
+    const rideTypesCtx = document.getElementById('rideTypesChart').getContext('2d');
+    const rideTypesChart = new Chart(rideTypesCtx, {
+        type: 'doughnut',
+        data: {
+            labels: ['Standard', 'Premium', 'Pool', 'Luxury', 'XL'],
+            datasets: [{
+                data: [45, 20, 25, 5, 5],
+                backgroundColor: [
+                    '#4F46E5',
+                    '#10B981',
+                    '#3B82F6',
+                    '#F59E0B',
+                    '#EF4444'
+                ],
+                borderWidth: 0
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'right',
+                }
+            }
+        }
+    });
+
+    // Vehicle Types (Bar Chart)
+    const vehicleTypesCtx = document.getElementById('vehicleTypesChart').getContext('2d');
+    const vehicleTypesChart = new Chart(vehicleTypesCtx, {
+        type: 'bar',
+        data: {
+            labels: ['Sedan', 'SUV', 'Van', 'Luxury', 'Electric'],
+            datasets: [{
+                label: 'Vehicle Count',
+                data: [180, 120, 50, 20, 17],
+                backgroundColor: [
+                    'rgba(79, 70, 229, 0.7)',
+                    'rgba(16, 185, 129, 0.7)',
+                    'rgba(59, 130, 246, 0.7)',
+                    'rgba(245, 158, 11, 0.7)',
+                    'rgba(239, 68, 68, 0.7)'
+                ],
+                borderColor: [
+                    'rgba(79, 70, 229, 1)',
+                    'rgba(16, 185, 129, 1)',
+                    'rgba(59, 130, 246, 1)',
+                    'rgba(245, 158, 11, 1)',
+                    'rgba(239, 68, 68, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+    // Subscription Plans (ApexCharts Radial Bar)
+    const subscriptionChart = new ApexCharts(document.querySelector(\"#subscriptionChart\"), {
+        series: [75, 50, 25],
+        chart: {
+            height: 350,
+            type: 'radialBar',
+        },
+        plotOptions: {
+            radialBar: {
+                dataLabels: {
+                    name: {
+                        fontSize: '22px',
+                    },
+                    value: {
+                        fontSize: '16px',
+                    },
+                    total: {
+                        show: true,
+                        label: 'Subscriptions',
+                        formatter: function (w) {
+                            return '150/500';
+                        }
+                    }
+                }
+            }
+        },
+        labels: ['Premium', 'Business', 'Standard'],
+        colors: ['#4F46E5', '#10B981', '#3B82F6'],
+    });
+    subscriptionChart.render();
+});
+</script>
+";
+        
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
+
+        
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
+
+        yield from [];
+    }
+
+    /**
+     * @codeCoverageIgnore
+     */
+    public function getTemplateName(): string
+    {
+        return "dashboard/admin.html.twig";
+    }
+
+    /**
+     * @codeCoverageIgnore
+     */
+    public function isTraitable(): bool
+    {
+        return false;
+    }
+
+    /**
+     * @codeCoverageIgnore
+     */
+    public function getDebugInfo(): array
+    {
+        return array (  480 => 314,  471 => 311,  464 => 310,  460 => 309,  457 => 308,  450 => 306,  446 => 305,  443 => 304,  440 => 303,  437 => 302,  435 => 301,  431 => 299,  422 => 297,  418 => 296,  412 => 293,  271 => 154,  258 => 153,  101 => 7,  88 => 6,  65 => 4,  42 => 2,);
+    }
+
+    public function getSourceContext(): Source
+    {
+        return new Source("{# templates/dashboard/admin.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block title %}Admin Dashboard | RideShare Analytics{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link href=\"https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap\" rel=\"stylesheet\">
+    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css\">
+    <!-- Chart.js -->
+    <script src=\"https://cdn.jsdelivr.net/npm/chart.js\"></script>
+    <!-- ApexCharts -->
+    <script src=\"https://cdn.jsdelivr.net/npm/apexcharts\"></script>
+    
+    <style>
+        :root {
+            --primary: #4F46E5;
+            --primary-light: #6366F1;
+            --secondary: #10B981;
+            --danger: #EF4444;
+            --warning: #F59E0B;
+            --dark: #1F2937;
+            --light: #F9FAFB;
+            --gray: #6B7280;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F3F4F6;
+            color: var(--dark);
+        }
+        
+        .dashboard-header {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
+            border-radius: 0 0 20px 20px;
+            box-shadow: 0 4px 20px rgba(79, 70, 229, 0.3);
+        }
+        
+        .stat-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .chart-container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            padding: 20px;
+        }
+        
+        .progress-bar {
+            height: 8px;
+            border-radius: 4px;
+            background: #E5E7EB;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            border-radius: 4px;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+        
+        .badge-primary {
+            background: #E0E7FF;
+            color: var(--primary);
+        }
+        
+        .badge-success {
+            background: #D1FAE5;
+            color: #065F46;
+        }
+        
+        .badge-warning {
+            background: #FEF3C7;
+            color: #92400E;
+        }
+        
+        .badge-danger {
+            background: #FEE2E2;
+            color: #991B1B;
+        }
+        
+        .iphone-calendar {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            background: white;
+        }
+        
+        .calendar-header {
+            background: linear-gradient(to right, var(--primary), var(--primary-light));
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        
+        .calendar-weekdays {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            padding: 10px 0;
+            background: #f8fafc;
+            text-align: center;
+            font-weight: 500;
+            color: var(--gray);
+        }
+        
+        .calendar-days {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 5px;
+            padding: 10px;
+        }
+        
+        .calendar-day {
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+        
+        .calendar-day.today {
+            background: var(--primary);
+            color: white;
+            font-weight: bold;
+        }
+        
+        .calendar-day:not(.today):hover {
+            background-color: #e2e8f0;
+            color: var(--dark);
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+<div class=\"min-h-screen\">
+    <!-- Header -->
+    <header class=\"dashboard-header py-6 px-4 lg:px-8\">
+        <div class=\"container mx-auto\">
+            <div class=\"flex justify-between items-center\">
+                <div>
+                    <h1 class=\"text-2xl lg:text-3xl font-bold\">Admin Dashboard</h1>
+                    <p class=\"opacity-90 mt-1\">Platform Analytics & Management</p>
+                </div>
+                <div class=\"flex items-center space-x-4\">
+                    <div class=\"relative\">
+                        <div class=\"w-10 h-10 rounded-full bg-white flex items-center justify-center text-indigo-600 font-bold\">
+                            A
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class=\"container mx-auto px-4 lg:px-8 py-8 -mt-8\">
+        <!-- Key Metrics -->
+        <div class=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8\">
+            <div class=\"stat-card p-6\">
+                <div class=\"flex justify-between\">
+                    <div>
+                        <h3 class=\"text-gray-500 text-sm font-medium\">TOTAL USERS</h3>
+                        <div class=\"mt-2 flex items-end\">
+                            <span class=\"text-3xl font-bold\">1,248</span>
+                            <span class=\"ml-2 text-green-500 text-sm font-medium\">+12%</span>
+                        </div>
+                    </div>
+                    <div class=\"w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center text-indigo-600\">
+                        <i class=\"fas fa-users\"></i>
+                    </div>
+                </div>
+                <div class=\"mt-4\">
+                    <div class=\"flex justify-between text-sm text-gray-600 mb-1\">
+                        <span>Drivers: 428</span>
+                        <span>Riders: 820</span>
+                    </div>
+                    <div class=\"progress-bar\">
+                        <div class=\"progress-fill bg-indigo-500\" style=\"width: 65%\"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class=\"stat-card p-6\">
+                <div class=\"flex justify-between\">
+                    <div>
+                        <h3 class=\"text-gray-500 text-sm font-medium\">ACTIVE VEHICLES</h3>
+                        <div class=\"mt-2 flex items-end\">
+                            <span class=\"text-3xl font-bold\">387</span>
+                            <span class=\"ml-2 text-green-500 text-sm font-medium\">+8%</span>
+                        </div>
+                    </div>
+                    <div class=\"w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-green-600\">
+                        <i class=\"fas fa-car\"></i>
+                    </div>
+                </div>
+                <div class=\"mt-4\">
+                    <div class=\"flex justify-between text-sm text-gray-600 mb-1\">
+                        <span>Verified: 342</span>
+                        <span>Pending: 45</span>
+                    </div>
+                    <div class=\"progress-bar\">
+                        <div class=\"progress-fill bg-green-500\" style=\"width: 88%\"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class=\"stat-card p-6\">
+                <div class=\"flex justify-between\">
+                    <div>
+                        <h3 class=\"text-gray-500 text-sm font-medium\">TODAY'S RIDES</h3>
+                        <div class=\"mt-2 flex items-end\">
+                            <span class=\"text-3xl font-bold\">216</span>
+                            <span class=\"ml-2 text-green-500 text-sm font-medium\">+5%</span>
+                        </div>
+                    </div>
+                    <div class=\"w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-600\">
+                        <i class=\"fas fa-route\"></i>
+                    </div>
+                </div>
+                <div class=\"mt-4\">
+                    <div class=\"flex justify-between text-sm text-gray-600 mb-1\">
+                        <span>Completed: 184</span>
+                        <span>In Progress: 32</span>
+                    </div>
+                    <div class=\"progress-bar\">
+                        <div class=\"progress-fill bg-blue-500\" style=\"width: 85%\"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class=\"stat-card p-6\">
+                <div class=\"flex justify-between\">
+                    <div>
+                        <h3 class=\"text-gray-500 text-sm font-medium\">REVENUE</h3>
+                        <div class=\"mt-2 flex items-end\">
+                            <span class=\"text-3xl font-bold\">\$8,742</span>
+                            <span class=\"ml-2 text-green-500 text-sm font-medium\">+18%</span>
+                        </div>
+                    </div>
+                    <div class=\"w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center text-purple-600\">
+                        <i class=\"fas fa-wallet\"></i>
+                    </div>
+                </div>
+                <div class=\"mt-4\">
+                    <div class=\"flex justify-between text-sm text-gray-600 mb-1\">
+                        <span>Today: \$1,245</span>
+                        <span>This week: \$5,672</span>
+                    </div>
+                    <div class=\"progress-bar\">
+                        <div class=\"progress-fill bg-purple-500\" style=\"width: 72%\"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Charts Section -->
+        <div class=\"grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8\">
+            <!-- User Growth Chart -->
+            <div class=\"chart-container lg:col-span-2\">
+                <div class=\"flex justify-between items-center mb-4\">
+                    <h2 class=\"text-lg font-bold\">User Growth</h2>
+                    <div class=\"flex space-x-2\">
+                        <button class=\"text-xs px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full\">Monthly</button>
+                        <button class=\"text-xs px-3 py-1 bg-gray-100 text-gray-600 rounded-full\">Weekly</button>
+                        <button class=\"text-xs px-3 py-1 bg-gray-100 text-gray-600 rounded-full\">Daily</button>
+                    </div>
+                </div>
+                <canvas id=\"userGrowthChart\" height=\"250\"></canvas>
+            </div>
+            
+            <!-- Calendar -->
+            <div class=\"iphone-calendar\">
+                <div class=\"calendar-header\">
+                    <h3 class=\"text-xl font-bold\">{{ \"now\"|date(\"F Y\") }}</h3>
+                </div>
+                <div class=\"calendar-weekdays\">
+                    {% for day in ['S', 'M', 'T', 'W', 'T', 'F', 'S'] %}
+                        <div>{{ day }}</div>
+                    {% endfor %}
+                </div>
+                <div class=\"calendar-days\">
+                    {% set firstDayOfMonth = \"now\"|date(\"Y-m-01\")|date(\"w\") %}
+                    {% set daysInMonth = \"now\"|date(\"t\") %}
+                    {% set today = \"now\"|date(\"j\") %}
+
+                    {% for i in 0..(firstDayOfMonth-1) %}
+                        <div class=\"calendar-day\"></div>
+                    {% endfor %}
+
+                    {% for day in 1..daysInMonth %}
+                        <div class=\"calendar-day {% if day == today %}today{% endif %}\">
+                            {{ day }}
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+        <!-- Second Row Charts -->
+        <div class=\"grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8\">
+            <!-- Ride Types Distribution -->
+            <div class=\"chart-container\">
+                <h2 class=\"text-lg font-bold mb-4\">Ride Types</h2>
+                <canvas id=\"rideTypesChart\" height=\"250\"></canvas>
+            </div>
+            
+            <!-- Vehicle Types -->
+            <div class=\"chart-container\">
+                <h2 class=\"text-lg font-bold mb-4\">Vehicle Types</h2>
+                <canvas id=\"vehicleTypesChart\" height=\"250\"></canvas>
+            </div>
+            
+            <!-- Subscription Plans -->
+            <div class=\"chart-container\">
+                <h2 class=\"text-lg font-bold mb-4\">Subscription Plans</h2>
+                <div id=\"subscriptionChart\" style=\"height: 250px;\"></div>
+            </div>
+        </div>
+
+        <!-- Recent Activity -->
+        <div class=\"stat-card p-6 mb-8\">
+            <div class=\"flex justify-between items-center mb-4\">
+                <h2 class=\"text-lg font-bold\">Recent Activity</h2>
+                <a href=\"#\" class=\"text-sm text-indigo-600 font-medium\">View All</a>
+            </div>
+            
+            <div class=\"space-y-4\">
+                <div class=\"flex items-start p-3 hover:bg-gray-50 rounded-lg transition\">
+                    <div class=\"w-10 h-10 bg-green-100 rounded-full flex items-center justify-center text-green-600 mr-3 mt-1\">
+                        <i class=\"fas fa-car\"></i>
+                    </div>
+                    <div class=\"flex-1\">
+                        <div class=\"flex justify-between\">
+                            <h4 class=\"font-medium\">New vehicle registered</h4>
+                            <span class=\"text-xs text-gray-500\">2 min ago</span>
+                        </div>
+                        <p class=\"text-sm text-gray-600\">Toyota Camry (ABC-1234) by driver Michael S.</p>
+                    </div>
+                </div>
+                
+                <div class=\"flex items-start p-3 hover:bg-gray-50 rounded-lg transition\">
+                    <div class=\"w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 mr-3 mt-1\">
+                        <i class=\"fas fa-route\"></i>
+                    </div>
+                    <div class=\"flex-1\">
+                        <div class=\"flex justify-between\">
+                            <h4 class=\"font-medium\">Ride completed</h4>
+                            <span class=\"text-xs text-gray-500\">15 min ago</span>
+                        </div>
+                        <p class=\"text-sm text-gray-600\">8.2 mi trip from Downtown to Airport</p>
+                    </div>
+                </div>
+                
+                <div class=\"flex items-start p-3 hover:bg-gray-50 rounded-lg transition\">
+                    <div class=\"w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center text-purple-600 mr-3 mt-1\">
+                        <i class=\"fas fa-user-plus\"></i>
+                    </div>
+                    <div class=\"flex-1\">
+                        <div class=\"flex justify-between\">
+                            <h4 class=\"font-medium\">New user registered</h4>
+                            <span class=\"text-xs text-gray-500\">1 hour ago</span>
+                        </div>
+                        <p class=\"text-sm text-gray-600\">Sarah J. signed up as a rider</p>
+                    </div>
+                </div>
+                
+                <div class=\"flex items-start p-3 hover:bg-gray-50 rounded-lg transition\">
+                    <div class=\"w-10 h-10 bg-yellow-100 rounded-full flex items-center justify-center text-yellow-600 mr-3 mt-1\">
+                        <i class=\"fas fa-star\"></i>
+                    </div>
+                    <div class=\"flex-1\">
+                        <div class=\"flex justify-between\">
+                            <h4 class=\"font-medium\">New 5-star rating</h4>
+                            <span class=\"text-xs text-gray-500\">3 hours ago</span>
+                        </div>
+                        <p class=\"text-sm text-gray-600\">Driver Alex K. received perfect rating</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // User Growth Chart (Line Chart)
+    const userGrowthCtx = document.getElementById('userGrowthChart').getContext('2d');
+    const userGrowthChart = new Chart(userGrowthCtx, {
+        type: 'line',
+        data: {
+            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+            datasets: [
+                {
+                    label: 'Drivers',
+                    data: [120, 190, 170, 220, 250, 290, 310, 350, 380, 410, 420, 428],
+                    borderColor: '#4F46E5',
+                    backgroundColor: 'rgba(79, 70, 229, 0.1)',
+                    tension: 0.3,
+                    fill: true
+                },
+                {
+                    label: 'Riders',
+                    data: [350, 420, 450, 500, 550, 600, 650, 700, 750, 800, 810, 820],
+                    borderColor: '#10B981',
+                    backgroundColor: 'rgba(16, 185, 129, 0.1)',
+                    tension: 0.3,
+                    fill: true
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'top',
+                },
+                tooltip: {
+                    mode: 'index',
+                    intersect: false,
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+    // Ride Types Distribution (Doughnut Chart)
+    const rideTypesCtx = document.getElementById('rideTypesChart').getContext('2d');
+    const rideTypesChart = new Chart(rideTypesCtx, {
+        type: 'doughnut',
+        data: {
+            labels: ['Standard', 'Premium', 'Pool', 'Luxury', 'XL'],
+            datasets: [{
+                data: [45, 20, 25, 5, 5],
+                backgroundColor: [
+                    '#4F46E5',
+                    '#10B981',
+                    '#3B82F6',
+                    '#F59E0B',
+                    '#EF4444'
+                ],
+                borderWidth: 0
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'right',
+                }
+            }
+        }
+    });
+
+    // Vehicle Types (Bar Chart)
+    const vehicleTypesCtx = document.getElementById('vehicleTypesChart').getContext('2d');
+    const vehicleTypesChart = new Chart(vehicleTypesCtx, {
+        type: 'bar',
+        data: {
+            labels: ['Sedan', 'SUV', 'Van', 'Luxury', 'Electric'],
+            datasets: [{
+                label: 'Vehicle Count',
+                data: [180, 120, 50, 20, 17],
+                backgroundColor: [
+                    'rgba(79, 70, 229, 0.7)',
+                    'rgba(16, 185, 129, 0.7)',
+                    'rgba(59, 130, 246, 0.7)',
+                    'rgba(245, 158, 11, 0.7)',
+                    'rgba(239, 68, 68, 0.7)'
+                ],
+                borderColor: [
+                    'rgba(79, 70, 229, 1)',
+                    'rgba(16, 185, 129, 1)',
+                    'rgba(59, 130, 246, 1)',
+                    'rgba(245, 158, 11, 1)',
+                    'rgba(239, 68, 68, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+    // Subscription Plans (ApexCharts Radial Bar)
+    const subscriptionChart = new ApexCharts(document.querySelector(\"#subscriptionChart\"), {
+        series: [75, 50, 25],
+        chart: {
+            height: 350,
+            type: 'radialBar',
+        },
+        plotOptions: {
+            radialBar: {
+                dataLabels: {
+                    name: {
+                        fontSize: '22px',
+                    },
+                    value: {
+                        fontSize: '16px',
+                    },
+                    total: {
+                        show: true,
+                        label: 'Subscriptions',
+                        formatter: function (w) {
+                            return '150/500';
+                        }
+                    }
+                }
+            }
+        },
+        labels: ['Premium', 'Business', 'Standard'],
+        colors: ['#4F46E5', '#10B981', '#3B82F6'],
+    });
+    subscriptionChart.render();
+});
+</script>
+{% endblock %}", "dashboard/admin.html.twig", "C:\\Users\\skonb\\Desktop\\UrbanLink_Symfony-Production\\templates\\dashboard\\admin.html.twig");
+    }
+}

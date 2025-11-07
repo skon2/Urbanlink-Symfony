@@ -1,0 +1,192 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Taxi{% endblock %}
+
+{% block body %}
+<div class="bg-white shadow-md rounded-2xl max-w-3xl mx-auto border border-yellow-300">
+  <!-- Title Section -->
+  <div class="px-6 py-3 rounded-t-2xl" style="background-color: rgb(163, 209, 207);">
+    <h1 class="text-xl font-bold" style="color: rgb(0, 11, 222);">Edit a Taxi</h1>
+  </div>
+  
+  <!-- Form -->
+  <div class="p-6">
+    {{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <!-- License Plate Field -->
+        <div class="mb-4">
+          {{ form_label(form.immatriculation, 'License Plate') }}
+          {{ form_widget(form.immatriculation, {'attr': {'class': 'w-full px-4 py-2 border rounded-lg'}}) }}
+          <div class="text-red-500 text-sm mt-1">{{ form_errors(form.immatriculation) }}</div>
+        </div>
+        <!-- Brand Field -->
+        <div class="mb-4">
+          {{ form_label(form.marque, 'Make') }}
+          {{ form_widget(form.marque, {'attr': {'class': 'w-full px-4 py-2 border rounded-lg'}}) }}
+          <div class="text-red-500 text-sm mt-1">{{ form_errors(form.marque) }}</div>
+        </div>
+        <!-- Model Field -->
+        <div class="mb-4">
+          {{ form_label(form.modele, 'Model') }}
+          {{ form_widget(form.modele, {'attr': {'class': 'w-full px-4 py-2 border rounded-lg'}}) }}
+          <div class="text-red-500 text-sm mt-1">{{ form_errors(form.modele) }}</div>
+        </div>
+        <!-- Manufacturing Year Field -->
+        <div class="mb-4">
+          {{ form_label(form.anneeFabrication, 'Manufacturing Year') }}
+          {{ form_widget(form.anneeFabrication, {'attr': {'class': 'w-full px-4 py-2 border rounded-lg'}}) }}
+          <div class="text-red-500 text-sm mt-1">{{ form_errors(form.anneeFabrication) }}</div>
+        </div>
+        <!-- Capacity Field -->
+        <div class="mb-4">
+          {{ form_label(form.capacite, 'Capacity') }}
+          {{ form_widget(form.capacite, {'attr': {'class': 'w-full px-4 py-2 border rounded-lg'}}) }}
+          <div class="text-red-500 text-sm mt-1">{{ form_errors(form.capacite) }}</div>
+        </div>
+        <!-- Service Area Field -->
+        <div class="mb-4">
+          {{ form_label(form.zoneDesserte, 'Service Area') }}
+          {{ form_widget(form.zoneDesserte, {'attr': {'class': 'w-full px-4 py-2 border rounded-lg'}}) }}
+          <div class="text-red-500 text-sm mt-1">{{ form_errors(form.zoneDesserte) }}</div>
+        </div>
+        <!-- Status Field -->
+        <div class="mb-4">
+          {{ form_label(form.statut, 'Status') }}
+          {{ form_widget(form.statut, {'attr': {'class': 'w-full px-4 py-2 border rounded-lg'}}) }}
+          <div class="text-red-500 text-sm mt-1">{{ form_errors(form.statut) }}</div>
+        </div>
+        <!-- License Number Field -->
+        <div class="mb-4">
+          {{ form_label(form.licenceNumero, 'License Number') }}
+          {{ form_widget(form.licenceNumero, {'attr': {'class': 'w-full px-4 py-2 border rounded-lg'}}) }}
+          <div class="text-red-500 text-sm mt-1">{{ form_errors(form.licenceNumero) }}</div>
+        </div>
+        <!-- License Date Field -->
+        <div class="mb-4">
+          {{ form_label(form.licenceDateObtention, 'License Date') }}
+          {{ form_widget(form.licenceDateObtention, {'attr': {'class': 'w-full px-4 py-2 border rounded-lg'}}) }}
+          <div class="text-red-500 text-sm mt-1">{{ form_errors(form.licenceDateObtention) }}</div>
+        </div>
+        <!-- Base Rate Field -->
+        <div class="mb-4">
+          {{ form_label(form.tarifBase, 'Base Rate') }}
+          {{ form_widget(form.tarifBase, {'attr': {'class': 'w-full px-4 py-2 border rounded-lg'}}) }}
+          <div class="text-red-500 text-sm mt-1">{{ form_errors(form.tarifBase) }}</div>
+        </div>
+      </div>
+
+      <!-- Map Section -->
+      <div class="mb-4">
+        <label class="block font-medium mb-2">
+          Taxi Location (click on the map to select):
+        </label>
+        <div id="mapDiv" style="height: 400px; width: 100%; border: 1px solid #ccc;"></div>
+      </div>
+
+      <!-- Hidden fields for Longitude & Latitude -->
+      {{ form_widget(form.longitude) }}
+      {{ form_widget(form.latitude) }}
+
+      <div class="mt-6 flex justify-between items-center">
+        <button type="submit" class="bg-[#FFEB3B] hover:bg-[#FF9800] text-white font-bold py-2 px-6 rounded-lg shadow-md transition" style="background-color: rgb(116, 104, 2); color: #FFFFFF;">
+          Update Taxi
+        </button>
+        <a href="{{ path('taxi_index') }}" class="text-sm text-slate-500 hover:underline">← Back to list</a>
+      </div>
+    {{ form_end(form) }}
+  </div>
+</div>
+{% endblock %}
+
+{% block javascripts %}
+  {{ parent() }}
+  {# ArcGIS API inclusion with defer #}
+  <link rel="stylesheet" href="https://js.arcgis.com/4.25/esri/themes/light/main.css">
+  <script src="https://js.arcgis.com/4.25/" defer></script>
+  <script>
+    window.addEventListener("load", function () {
+      console.log("DOM fully loaded for Edit Taxi");
+      require([
+        "esri/Map",
+        "esri/views/MapView",
+        "esri/Graphic"
+      ], function(Map, MapView, Graphic) {
+
+        console.log("ArcGIS modules loaded (Edit Taxi)");
+
+        const map = new Map({ basemap: "streets-navigation-vector" });
+
+        // Get existing coordinates or default values
+        const longitude = {{ form.vars.value.longitude|default(10.18) }};
+        const latitude = {{ form.vars.value.latitude|default(36.80) }};
+        console.log("Initial coordinates (Edit Taxi):", longitude, latitude);
+
+        const view = new MapView({
+          container: "mapDiv",
+          map: map,
+          zoom: 12,
+          center: [longitude, latitude]
+        });
+
+        {% if form.vars.value and form.vars.value.longitude is not null and form.vars.value.latitude is not null %}
+          const initialGraphic = new Graphic({
+            geometry: { type: "point", longitude: longitude, latitude: latitude },
+            symbol: { type: "simple-marker", color: "blue", size: "12px" }
+          });
+          view.graphics.add(initialGraphic);
+          console.log("Initial marker added (Edit Taxi)");
+        {% endif %}
+
+        view.on("click", function(event) {
+          console.log("Map click (Edit Taxi):", event.mapPoint);
+          view.graphics.removeAll();
+          const point = { type: "point", longitude: event.mapPoint.longitude, latitude: event.mapPoint.latitude };
+          const marker = new Graphic({
+            geometry: point,
+            symbol: { type: "simple-marker", color: "blue", size: "12px" }
+          });
+          view.graphics.add(marker);
+
+          const lngField = document.getElementById('{{ form.longitude.vars.id }}');
+          const latField = document.getElementById('{{ form.latitude.vars.id }}');
+          if(lngField && latField){
+            lngField.value = event.mapPoint.longitude;
+            latField.value = event.mapPoint.latitude;
+            console.log("Coordinate fields updated (Edit Taxi):", lngField.value, latField.value);
+          } else {
+            console.error("Coordinate fields not found (Edit Taxi)");
+          }
+        });
+      });
+    });
+  </script>
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('#{{ form.marque.vars.id }}').on('change', function () {
+        const marque = $(this).val();
+        const modeleField = $('#{{ form.modele.vars.id }}');
+        if (marque) {
+          $.ajax({
+            url: '{{ path("get_models") }}',
+            method: 'POST',
+            data: { marque: marque },
+            success: function (data) {
+              modeleField.empty();
+              modeleField.append('<option value="">Select a model</option>');
+              data.forEach(function (model) {
+                modeleField.append('<option value="' + model + '">' + model + '</option>');
+              });
+            },
+            error: function () {
+              alert('An error occurred while loading models.');
+            }
+          });
+        } else {
+          modeleField.empty();
+          modeleField.append('<option value="">Select a brand first</option>');
+        }
+      });
+    });
+  </script>
+{% endblock %}
